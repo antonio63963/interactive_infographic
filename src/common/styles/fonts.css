@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Arabic';
+  src: url(../../assets/fonts/MadaniArabic-Bold.otf) format("opentype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Arabic';
+  src: url(../../assets/fonts/MadaniArabic-ExtraBold.otf) format("opentype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Arabic';
+  src: url(../../assets/fonts/MadaniArabic-Regular.otf) format("opentype");
+  font-weight: normal;
+}

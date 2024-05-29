@@ -1,0 +1,8 @@
+@import '../../common/styles/constants.css';
+
+.header {
+  background-color: var(--color-yellow-xl);
+}
+.header__close-button {
+  background-color: var(--color-yellow-l);
+}

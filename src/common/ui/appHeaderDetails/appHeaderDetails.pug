@@ -1,0 +1,6 @@
+mixin appHeaderDetails(options)
+  -const {title} = options || {};
+  header.header 
+    h1.header__title= title
+    .header__close-button 
+      img(src=require('../../assets/svg/close.svg'))
