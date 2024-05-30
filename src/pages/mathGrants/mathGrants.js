@@ -1,6 +1,7 @@
 import "../../common/styles/index.css";
 import "../../common/ui/twoValuesRow/twoValuesRow.css";
 import "./mathGrants.css";
+import "./mediaMathGrants.css";
 import Chart from "chart.js/auto";
 
 const canvas = document.querySelector("#grant-chart");
