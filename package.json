@@ -1,5 +1,5 @@
 {
-  "name": "toxin",
+  "name": "interactive_infographic",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -35,6 +35,6 @@
     "webpack-dev-server": "^5.0.4"
   },
   "dependencies": {
-    "swiper": "^11.1.1"
+    "chart.js": "^4.4.3"
   }
 }

@@ -29,8 +29,14 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: devMode ? "[name].js" : "js/[name].[hash].js",
+    
   },
   plugins: [
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     {form: 'static', to: "static/[path][name].[contenthash][ext]"}
+    //   ]
+    // }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: devMode ? "[name].[contenthash].css ": "styles/[name].[contenthash].css",

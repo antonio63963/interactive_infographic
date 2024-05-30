@@ -1,0 +1,7 @@
+mixin twoValuesRow(options)
+  -const {val1, val2} = options || {};
+  -const firstVal = `${val1}%`;
+  -const secondVal = `(${val2})`;
+  .twoValuesRow(class!= attributes.class)
+    span.twoValues__val1= firstVal
+    span.twoValues__val2= secondVal

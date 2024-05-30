@@ -39,9 +39,25 @@ p {
 .main {
   width: 100%;
   max-width: var(--app-width);
-  height: 100vh;
+  height: 100%;
 }
 
-.big-num {
+ul {
+  list-style-type: none;
+}
+
+.large-num {
   font-size: 40px;
+  color: var(--color-orange);
+  font-weight: 700;
+}
+.big-num {
+  font-size: 24px;
+  color: var(--color-orange-l);
+  font-weight: 700;
+}
+.middle-num {
+  font-size: 18px;
+  color: var(--color-blue);
+  font-weight: 700;
 }

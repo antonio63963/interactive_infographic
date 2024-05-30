@@ -1,6 +1,7 @@
 mixin appHeaderDetails(options)
   -const {title} = options || {};
   header.header 
-    h1.header__title= title
-    .header__close-button 
-      img(src=require('../../assets/svg/close.svg'))
+    .header__content 
+      h1.header__title= title
+      a.header__close-button(role= "button" href="./index.html") 
+        img(src=require('../../assets/svg/close.svg'))

@@ -1,7 +1,15 @@
 .header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100vw;
+  max-width: var(--app-width);
 }
 .header__title {
   margin-left: 40px;
