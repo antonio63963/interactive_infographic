@@ -78,7 +78,14 @@
   }
   .gender-row {
     display: flex;
-
+    .gender-svg-wrapper {
+      /* width: 100%; */
+      flex-shrink: 2;
+      .gender-svg {
+        object-fit: contain;
+        max-width: 100%;
+      }
+    }
     .gender-row__col {
       display: flex;
       flex-direction: column;
@@ -87,3 +94,9 @@
     }
   }
 }
+
+/* @media screen and (max-width: 992px) {
+  .sidebar {
+    flex-direction: row;
+  }
+} */

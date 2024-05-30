@@ -61,3 +61,11 @@ ul {
   color: var(--color-blue);
   font-weight: 700;
 }
+
+@media screen and (max-width: 576px) {
+ h2 {
+  text-align: center;
+ }
+  
+  
+}

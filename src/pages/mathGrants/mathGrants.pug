@@ -41,7 +41,8 @@ include ../../common/ui/twoValuesRow/twoValuesRow.pug
         section.gender
           h2.gender-title Gender Breakdown
           .gender-row
-            img.gender-svg(src=require("../../assets/svg/mathGrant/gender.svg"))
+            .gender-svg-wrapper
+              img.gender-svg(src=require("../../assets/svg/mathGrant/gender.svg"))
             .gender-row__col 
               +twoValuesRow({val1: 56, val2: 40})
               +twoValuesRow({val1: 40, val2: 364})
