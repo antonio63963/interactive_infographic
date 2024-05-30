@@ -1,4 +1,5 @@
 @import "../../common/styles/constants.css";
+@import "../../common/styles/animation.css";
 
 .header {
   background-color: var(--color-yellow-xl);
@@ -11,14 +12,15 @@
   display: flex;
 }
 .sidebar {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100%;
-  /* padding-right: 40px; */
   padding: 0 20px;
 }
-.sidebar > img {
+.sidebar__img {
   margin-top: 60px;
+  transition: all 1s ease-in-out;
 }
 .divider {
   height: 100%;
@@ -57,6 +59,8 @@
       display: flex;
       align-items: center;
       margin-bottom: 14px;
+      transition: all 1s ease-in-out;
+
       .binefic__item-value {
         display: block;
         text-align: center;
@@ -94,5 +98,19 @@
       justify-content: space-evenly;
       margin-left: clamp(16px, 3.3rem, 33px);
     }
+    .mathGender {
+      transition: all 1s ease-in-out;
+    }
   }
 }
+
+/* @keyframes moveToRight {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+} */

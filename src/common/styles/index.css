@@ -1,5 +1,6 @@
 @import "./fonts.css";
 @import "./constants.css";
+@import "./animation.css";
 @import "../ui/appHeaderDetails/appHeaderDetails.css";
 
 * {

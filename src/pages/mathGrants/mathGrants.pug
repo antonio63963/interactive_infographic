@@ -12,9 +12,9 @@ mixin MathGrantPage()
       +appHeaderDetails({title: 'Math and Science Education - Grants', closeClass: 'mathGrantClose'})
       .container 
         aside.sidebar 
-          img.sidebar__img(src=require('../../assets/svg/mathGrant/events.svg'))
-          img.sidebar__img(src=require('../../assets/svg/mathGrant/benific.svg'))
-          img.sidebar__img(src=require('../../assets/svg/mathGrant/amount.svg'))
+          img.sidebar__img.moveToRight(src=require('../../assets/svg/mathGrant/events.svg'))
+          img.sidebar__img.moveToRight(src=require('../../assets/svg/mathGrant/benific.svg'))
+          img.sidebar__img.moveToRight(src=require('../../assets/svg/mathGrant/amount.svg'))
         .divider
         .mathGrant__graph-main 
           .binefic-row 
@@ -23,24 +23,24 @@ mixin MathGrantPage()
               .binefic__chart
                 canvas#grant-chart
             ul.binefic__list
-              li.binefic__list-item
+              li.binefic__list-item.moveToLeft
                 span.binefic__item-value.large-num 62
                 p.binefic__item-text US Academy virtual program (Boston University)
-              li.binefic__list-item
+              li.binefic__list-item.moveToLeft
                 span.binefic__item-value.big-num 25
                 p.binefic__item-text US Academy virtual program (Embry Riddle Aeronautical University)
-              li.binefic__list-item
+              li.binefic__list-item.moveToLeft
                 span.binefic__item-value.big-num 25
                 p.binefic__item-text US Academy virtual program (University of Wisconsin)
-              li.binefic__list-item
+              li.binefic__list-item.moveToLeft
                 span.binefic__item-value.middle-num 7
                 p(dir="rtl" lang="ar").binefic__item-text Python (1st group) - الجمعیة الكویتیھ لتقنیة المعلومات
 
-              li.binefic__list-item
+              li.binefic__list-item.moveToLeft
                 span.binefic__item-value.middle-num 7
                 p.binefic__item-text Python (2nd group) - الجمعیة الكویتیھ لتقنیة المعلومات
 
-              li.binefic__list-item
+              li.binefic__list-item.moveToLeft
                 span.binefic__item-value.middle-num 7
                 p.binefic__item-text مبادرة نحمیھا
           section.gender
@@ -49,7 +49,7 @@ mixin MathGrantPage()
               .gender-svg-wrapper
                 img.gender-svg(src=require("../../assets/svg/mathGrant/gender.svg"))
               .gender-row__col 
-                +twoValuesRow({val1: 56, val2: 40})
-                +twoValuesRow({val1: 40, val2: 364, isOrange: true})
+                +twoValuesRow({val1: 56, val2: 40})(class="mathGender moveUp")
+                +twoValuesRow({val1: 40, val2: 364, isOrange: true})(class="mathGender moveUp")
 
 

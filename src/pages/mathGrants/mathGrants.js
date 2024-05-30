@@ -41,7 +41,6 @@ const options = {
   options: {
     cutout: 80,
     borderColor: "#ffffff",
-
   },
 };
 
@@ -49,6 +48,7 @@ let mathBineficChart;
 function initMathGrantChart() {
   const t = setTimeout(() => {
     mathBineficChart = new Chart(canvas, options);
+    clearTimeout(t);
   }, 500);
 }
 
@@ -58,11 +58,57 @@ const mathGrantPage = document.querySelector(".mathGrantPage");
 
 function showMathGrantPage(e) {
   displayPopup(mathGrantPage);
-  initMathGrantChart()
+  initMathGrantChart();
+  animationMathGrant();
 }
 function closeMathGrantPage() {
+  reverseAnimation();
   hidePopup(mathGrantPage);
+  // const t = setTimeout(() => {
+  //   clearTimeout(t);
+  // }, 500);
   mathBineficChart.destroy();
 }
 toMathGrant.addEventListener("click", showMathGrantPage);
 mathGrantClose.addEventListener("click", closeMathGrantPage);
+
+//animation elements
+
+const sidebarIcons = document.querySelectorAll(".sidebar__img");
+const binefitItems = document.querySelectorAll(".binefic__list-item");
+const mathGender = document.querySelectorAll(".mathGender");
+
+console.log(mathGender)
+
+function animationMathGrant() {
+  sidebarIcons.forEach((item, idx) => {
+    const t = setTimeout(() => {
+      item.classList.remove("moveToRight");
+      clearTimeout(t);
+    }, idx * 100 + 50);
+  });
+  binefitItems.forEach((item, idx) => {
+    const t = setTimeout(() => {
+      item.classList.remove("moveToLeft");
+      clearTimeout(t);
+    }, idx * 100);
+  });
+  mathGender.forEach((item, idx) => {
+    const t = setTimeout(() => {
+      item.classList.remove("moveUp");
+      clearTimeout(t);
+    }, idx * 110);
+  });
+}
+
+function reverseAnimation() {
+  sidebarIcons.forEach((item, idx) => {
+    item.classList.add("moveToRight");
+  });
+  binefitItems.forEach((item, idx) => {
+    item.classList.add("moveToLeft");
+  });
+  mathGender.forEach((item, idx) => {
+    item.classList.add("moveUp");
+  });
+}
