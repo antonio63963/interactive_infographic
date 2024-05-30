@@ -1,6 +1,9 @@
 include ../../common/ui/appPageLayout/appPageLayout.pug
+include ../mathGrants/mathGrants.pug
 
 +appPageLayout()
+  +MathGrantPage()
   main.main 
-    a.link(role= "button", href= './mathGrants.html') Math Grants
+    a.mock.toMathGrant(role= "button", href= '#') Math Grants
     
+

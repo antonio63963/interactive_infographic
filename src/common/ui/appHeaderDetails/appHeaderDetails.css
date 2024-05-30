@@ -1,20 +1,16 @@
 .header {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header__content {
+  max-width: var(--app-width);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
-  max-width: var(--app-width);
+  width: 100%;
 }
+
 .header__title {
   margin: 0 clamp(20px, 4rem, 40px);
 }
 .header__close-button {
+  border: none;
   cursor: pointer;
   width: 90px;
   height: 90px;
