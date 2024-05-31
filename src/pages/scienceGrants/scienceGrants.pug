@@ -1,0 +1,34 @@
+include ../../common/ui/appHeaderDetails/appHeaderDetails.pug
+include ../../common/ui/popupPage/popupPage.pug
+include ../../common/ui/sidebar/sidebar.pug
+include ../../common/ui/chart_info_icons/chart_info_icons.pug
+
+
+
+mixin ScienceGrantPage()
+  +popupPage()(class="scienceGrantPage")
+    main.main
+      +appHeaderDetails({title: 'Science Dissemination - Grants', closeClass: 'scienceGrantClose'})(class="scienceGrant__header")
+      .container  
+        +appSidebar()  
+          img.sidebar__img.moveToRight(src=require('../../assets/svg/scienceGrant/app.svg'))
+          img.sidebar__img.moveToRight(src=require('../../assets/svg/scienceGrant/app_approved.svg'))
+          img.sidebar__img.moveToRight(src=require('../../assets/svg/scienceGrant/amount.svg'))
+     
+        .chart-grants 
+          .grant-ngo.scaleX.grant-item
+          .grant-public.scaleX.grant-item
+          .grant-academic.scaleX.grant-item
+          .grant-private.scaleX.grant-item
+
+        .chart-description 
+          .chart-description-row.moveUp 
+            +chartInfoIcons({digit: 20, text: 'NGO'})
+              img(src=require('../../assets/svg/scienceGrant/ngo.svg'))
+            +chartInfoIcons({digit: 7, text: 'Public'})
+              img(src=require('../../assets/svg/scienceGrant/public.svg'))
+          .chart-description-row.moveUp
+            +chartInfoIcons({digit: 20, text: 'Academic / Research'})
+              img(src=require('../../assets/svg/scienceGrant/academic.svg'))
+            +chartInfoIcons({digit: 7, text: 'Private'})
+              img(src=require('../../assets/svg/scienceGrant/private.svg'))

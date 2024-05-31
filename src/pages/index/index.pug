@@ -1,12 +1,15 @@
 include ../../common/ui/appPageLayout/appPageLayout.pug
 include ../mathGrants/mathGrants.pug
 include ../mathCuration/mathCuration.pug
+include ../scienceGrants/scienceGrants.pug
 
 +appPageLayout()
   +MathGrantPage()
   +MathCurationPage()
+  +ScienceGrantPage()
   main.main 
     a.mock.toMathGrant(role= "button", href= '#') Math Grants
     a.mock.toMathCuration(role= "button", href= '#') Math Curation
+    a.mock.toScienceGrant(role= "button", href= '#') Science Grants
     
 

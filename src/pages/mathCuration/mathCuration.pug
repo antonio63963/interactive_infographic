@@ -13,7 +13,7 @@ include ../../common/ui/genderChart/genderChart.pug
 mixin MathCurationPage()
   +popupPage()(class="mathCurationPage")
     main.main
-      +appHeaderDetails({title: 'Math and Science Education - Curation', closeClass: 'mathCurationClose'})
+      +appHeaderDetails({title: 'Math and Science Education - Curation', closeClass: 'mathCurationClose'})(class="mathCuration__header")
       .container 
         +appSidebar() 
           img.sidebar__img.moveToRight(src=require('../../assets/svg/mathCuration/events.svg'))

@@ -2,8 +2,9 @@
 @import "../../common/styles/animation.css";
 @import "./components/bineficLogoChart/bineficLogoChart.css";
 
-.header {
+.mathCuration__header {
   background-color: #d6edff;
+  width: 994px;
 }
 .header__close-button {
   background-color: #b4dfff;

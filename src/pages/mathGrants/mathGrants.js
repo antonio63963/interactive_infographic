@@ -3,7 +3,7 @@ import "../../common/ui/twoValuesRow/twoValuesRow.css";
 import "./mathGrants.css";
 import "./mediaMathGrants.css";
 import Chart from "chart.js/auto";
-import { displayPopup, hidePopup } from "../index";
+import { displayPopup, hidePopup } from "../index/index";
 
 const canvas = document.querySelector("#grant-chart");
 const mathGrants = {

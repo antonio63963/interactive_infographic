@@ -1,6 +1,6 @@
 mixin appHeaderDetails(options)
   -const {title, closeClass} = options || {};
-  header.header 
+  header.header(class!= attributes.class) 
     h1.header__title= title
     button.header__close-button(class= closeClass) 
       img(src=require('../../assets/svg/close.svg'))
