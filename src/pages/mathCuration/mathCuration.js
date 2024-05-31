@@ -50,7 +50,7 @@ function initBineficsCharts() {
     allCharts.push(
       initGenderChart(
         document.querySelector("#gender_1"),
-        [60, 40], ["#569FD6", "#FFB455"]
+        [60, 40], ["#569FD6", "#F47D39"]
       )
     );
     clearTimeout(t);

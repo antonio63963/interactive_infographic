@@ -32,8 +32,11 @@ mixin MathCurationPage()
               img.bineficImg-camp(src=require('../../assets/svg/mathCuration/camp.svg'))
             +bineficLogoChart({title: 'Korean', title2: 'STEM Trip', amount: 14, amountStyle: 'blue-style ', canvasId: 'binefic_5'})
               img.bineficImg(src=require('../../assets/svg/mathCuration/stem.svg'))
-          .content-row 
+          .content-row.gender-row 
             h2 Gender Breakdown
             .gender-info 
               +genderChart({man: 63, woman: 37, canvasId: 'gender_1'})
+              .gender-info-col 
+                +twoValuesRow({val1: 60, val2: 542, isOrange: false})
+                +twoValuesRow({val1: 40, val2: 364, isOrange: true})(class="male-info")
 

@@ -35,6 +35,7 @@
   }
   .content-row {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-bottom: 42px;
   }
@@ -46,6 +47,22 @@
   margin-top: 10px;
 }
 
+/* GENDER */
+.gender-info {
+  margin-left: 55px;
+  display: flex;
+  .gender-info-col {
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .male-info {
+      margin-top: 14px;
+    }
+  }
+}
+
 /* @media screen and (max-width: 992px) {
   .container {
     flex-direction: column;
@@ -53,18 +70,26 @@
   .mathGrant__graph-main {
     margin: 0 20px;
   }
-}
+} */
+
 @media screen and (max-width: 576px) {
-}
-@media screen and (max-width: 576px) {
-  .mathGrant__graph-main {
-    margin: 0 20px;
+  .content-math-curation {
+    .binefic-title {
+      margin-left: 0;
+    }
+    
   }
-  .binefic-row {
+  .content-row {
+    justify-content: center;
+  }
+  .gender-row {
     flex-direction: column;
     align-items: center;
   }
-  .binefic__chart-title {
-    text-align: center;
+  .gender-info {
+    margin-left: 0;
   }
-} */
+  .sidebar__img {
+    max-width: 30%;
+  }
+}
