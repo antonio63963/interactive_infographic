@@ -73,6 +73,7 @@ mathCurationClose.addEventListener("click", closeMathCurationPage);
 //animation elements
 
 const sidebarIcons = document.querySelectorAll(".sidebar__img");
+const maleInfo = document.querySelectorAll(".male-info");
 
 function animationMathCuration() {
   sidebarIcons.forEach((item, idx) => {
@@ -81,10 +82,19 @@ function animationMathCuration() {
       clearTimeout(t);
     }, idx * 100 + 50);
   });
+  maleInfo.forEach((item, idx) => {
+    const t = setTimeout(() => {
+      item.classList.remove("moveUp");
+      clearTimeout(t);
+    }, idx * 100 + 50);
+  });
 }
 
 function reverseAnimation() {
   sidebarIcons.forEach((item, idx) => {
     item.classList.add("moveToRight");
+  });
+  maleInfo.forEach((item, idx) => {
+    item.classList.add("moveUp");
   });
 }
