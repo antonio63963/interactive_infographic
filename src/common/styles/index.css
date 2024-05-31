@@ -2,6 +2,7 @@
 @import "./constants.css";
 @import "./animation.css";
 @import "../ui/appHeaderDetails/appHeaderDetails.css";
+@import "../ui/sidebar/sidebar.css";
 
 * {
   margin: 0;

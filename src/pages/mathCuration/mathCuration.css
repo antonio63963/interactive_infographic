@@ -1,0 +1,70 @@
+@import "../../common/styles/constants.css";
+@import "../../common/styles/animation.css";
+@import "./components/bineficLogoChart/bineficLogoChart.css";
+
+.header {
+  background-color: #d6edff;
+}
+.header__close-button {
+  background-color: #b4dfff;
+}
+
+.container {
+  display: flex;
+}
+
+.orangeStyle {
+  color: var(--color-orange);
+}
+.light-orange-style {
+  color: #FFB455;
+}
+.blue-style {
+  color: var(--color-blue);
+}
+.content-math-curation {
+  display: flex;
+  flex-direction: column;
+  padding-top: 55px;
+  margin-left: clamp(20px, 4rem, 40px);
+  margin-right: clamp(20px, 4rem, 40px);
+
+  .binefic-title {
+    margin-left: 12px;
+    margin-bottom: 24px;
+  }
+  .content-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 42px;
+  }
+}
+.bineficImg {
+  margin-top: 14px;
+}
+.bineficImg-camp {
+  margin-top: 10px;
+}
+
+/* @media screen and (max-width: 992px) {
+  .container {
+    flex-direction: column;
+  }
+  .mathGrant__graph-main {
+    margin: 0 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+}
+@media screen and (max-width: 576px) {
+  .mathGrant__graph-main {
+    margin: 0 20px;
+  }
+  .binefic-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .binefic__chart-title {
+    text-align: center;
+  }
+} */

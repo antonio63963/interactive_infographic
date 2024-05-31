@@ -7,8 +7,11 @@ import '../mathGrants/mathGrants.css';
 import '../mathGrants/mediaMathGrants.css';
 import '../mathGrants/mathGrants.js';
 
-import {Chart} from 'chart.js/auto';
+//Math Curation
 
+import '../mathCuration/mathCuration.css';
+// import '../mathGrants/mediaMathGrants.css';
+import '../mathCuration/mathCuration.js';
 
 function displayPopup(popup) {
   popup.classList.remove('hidden');

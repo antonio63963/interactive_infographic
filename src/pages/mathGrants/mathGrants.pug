@@ -2,6 +2,8 @@ include ../../common/ui/appPageLayout/appPageLayout.pug
 include ../../common/ui/appHeaderDetails/appHeaderDetails.pug
 include ../../common/ui/twoValuesRow/twoValuesRow.pug
 include ../../common/ui/popupPage/popupPage.pug
+include ../../common/ui/sidebar/sidebar.pug
+
 
       //- +appPageLayout()
       //-   +appHeaderDetails({title: 'Math and Science Education - Grants'})
@@ -11,11 +13,12 @@ mixin MathGrantPage()
     main.main
       +appHeaderDetails({title: 'Math and Science Education - Grants', closeClass: 'mathGrantClose'})
       .container 
-        aside.sidebar 
+  
+        +appSidebar()  
           img.sidebar__img.moveToRight(src=require('../../assets/svg/mathGrant/events.svg'))
           img.sidebar__img.moveToRight(src=require('../../assets/svg/mathGrant/benific.svg'))
           img.sidebar__img.moveToRight(src=require('../../assets/svg/mathGrant/amount.svg'))
-        .divider
+
         .mathGrant__graph-main 
           .binefic-row 
             .binefic__chart-wrapper

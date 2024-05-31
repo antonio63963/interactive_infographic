@@ -11,24 +11,6 @@
 .container {
   display: flex;
 }
-.sidebar {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 0 20px;
-}
-.sidebar__img {
-  margin-top: 60px;
-  transition: all 1s ease-in-out;
-}
-.divider {
-  height: 100%;
-  border: 1px solid var(--color-grey-l);
-  height: 566px;
-  margin-top: 24px;
-  margin-bottom: 60px;
-}
 
 .mathGrant__graph-main {
   display: flex;
@@ -52,8 +34,6 @@
       }
     }
 
-    .binefic__list {
-    }
     .binefic__list-item {
       margin-top: 30px;
       display: flex;
@@ -103,14 +83,3 @@
     }
   }
 }
-
-/* @keyframes moveToRight {
-  from {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-} */
