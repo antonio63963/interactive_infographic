@@ -1,0 +1,31 @@
+.gender-breakdown {
+  margin: 52px 0;
+  .gender-title {
+    margin-bottom: 24px;
+  }
+  .gender-breakdown-title {
+    margin-bottom: 24px;
+  }
+  .gender-breakdown-row {
+    display: flex;
+
+    .gender-breakdown-svg-wrapper {
+      max-width: 70%;
+      flex-shrink: 2;
+      .gender-breakdown-svg {
+        object-fit: contain;
+        max-width: 100%;
+      }
+    }
+    .gender-breakdown-row__col {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-left: clamp(16px, 3.3rem, 33px);
+    }
+    .gender-breakdown-values {
+      margin-top: 3px;
+      transition: all 1s ease-in-out;
+    }
+  }
+}

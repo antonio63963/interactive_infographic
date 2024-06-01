@@ -3,7 +3,7 @@
 include ../../common/ui/appHeaderDetails/appHeaderDetails.pug
 include ../../common/ui/twoValuesRow/twoValuesRow.pug
 include ../../common/ui/popupPage/popupPage.pug
-include ../../common/ui/sidebar/sidebar.pug
+//- include ../../common/ui/sidebarVertical/sidebarVertical.pug
 include ./components/bineficLogoChart/bineficLogoChart.pug
 include ../../common/ui/genderChart/genderChart.pug
 
@@ -14,11 +14,13 @@ mixin MathCurationPage()
   +popupPage()(class="mathCurationPage")
     main.main
       +appHeaderDetails({title: 'Math and Science Education - Curation', closeClass: 'mathCurationClose'})(class="mathCuration__header")
-      .container 
-        +appSidebar() 
+      .container-math-curation 
+        .sidebar-vertical
           img.sidebar__img.moveToRight(src=require('../../assets/svg/mathCuration/events.svg'))
           img.sidebar__img.moveToRight(src=require('../../assets/svg/mathCuration/binefic.svg'))
           img.sidebar__img.moveToRight(src=require('../../assets/svg/mathCuration/amount.svg'))
+        .divider-vertical 
+
         .content-math-curation 
           h2.binefic-title Beneficiaries
           .content-row 

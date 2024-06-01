@@ -1,0 +1,19 @@
+@import '../../../common/styles/constants.css';
+
+.sidebar-horizontal {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding: 0 20px;
+}
+.sidebar__img {
+  margin-top: 60px;
+  transition: all 1s ease-in-out;
+}
+.divider-horizontal {
+  height: 1px;
+  width: 100%;
+  margin: 40px clamp(20px, 5rem, 50px);
+}
+

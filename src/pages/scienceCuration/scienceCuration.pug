@@ -1,0 +1,18 @@
+
+include ../../common/ui/appHeaderDetails/appHeaderDetails.pug
+include ../../common/ui/twoValuesRow/twoValuesRow.pug
+include ../../common/ui/popupPage/popupPage.pug
+include ../../common/ui/sidebarVertical/sidebarVertical.pug
+
+
+mixin ScienceCurationPage()
+  +popupPage()(class="scienceCurationPage")
+    main.main
+      +appHeaderDetails({title: 'Science Dissemination - Curation', closeClass: 'scienceCurationClose'})(class="scienceCuration__header")
+      .container 
+        .sidebar-vertical
+          img.sidebar__img.moveToRight(src=require('../../assets/svg/scienceCuration/events.svg'))
+          img.sidebar__img.moveToRight(src=require('../../assets/svg/scienceCuration/binefic.svg'))
+          img.sidebar__img.moveToRight(src=require('../../assets/svg/scienceCuration/amount.svg'))
+        .divider-vertical
+

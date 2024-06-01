@@ -29,7 +29,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: devMode ? "[name].js" : "js/[name].[hash].js",
-    
   },
   plugins: [
     // new CopyWebpackPlugin({
@@ -39,7 +38,9 @@ module.exports = {
     // }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: devMode ? "[name].[contenthash].css ": "styles/[name].[contenthash].css",
+      filename: devMode
+        ? "[name].[contenthash].css "
+        : "styles/[name].[contenthash].css",
     }),
     // new FileManagerPlugin({
     //   events: {
@@ -99,7 +100,7 @@ module.exports = {
         type: "asset/resource",
         generator: {
           filename: "images/[name].[contenthash][ext]",
-        }
+        },
       },
       {
         test: /\.svg$/,
@@ -112,8 +113,8 @@ module.exports = {
         test: /\.(woff2?|eot|ttf|otf)$/i,
         type: "asset/resource",
         generator: {
-          filename: "fonts/[name][ext]"
-        } 
+          filename: "fonts/[name][ext]",
+        },
       },
     ],
   },

@@ -1,6 +1,6 @@
 @import '../../../common/styles/constants.css';
 
-.sidebar {
+.sidebar-vertical {
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -11,10 +11,10 @@
   margin-top: 60px;
   transition: all 1s ease-in-out;
 }
-.divider {
+.divider-vertical {
   height: 100%;
   border: 1px solid var(--color-grey-l);
-  height: 566px;
+  height: 100%;
   margin-top: 24px;
   margin-bottom: 60px;
 }
@@ -22,18 +22,18 @@
 /* Media */
 
 @media screen and (max-width: 992px) {
-  .divider {
+  .divider-vertical {
     margin: 0;
     width: 100%;
     height: 0;
     border-width: 0 0 1px 0;
   }
-  .sidebar {
+  .sidebar-vertical {
     flex-direction: row;
     justify-content: space-around;
     padding: 0 20px;
   }
-  .sidebar > img {
+  .sidebar-vertical > img {
     margin: 20px 0;
   }
 }

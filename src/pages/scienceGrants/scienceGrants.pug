@@ -1,6 +1,6 @@
 include ../../common/ui/appHeaderDetails/appHeaderDetails.pug
 include ../../common/ui/popupPage/popupPage.pug
-include ../../common/ui/sidebar/sidebar.pug
+include ../../common/ui/sidebarHorizontal/sidebarHorizontal.pug
 include ../../common/ui/chart_info_icons/chart_info_icons.pug
 
 
@@ -9,12 +9,12 @@ mixin ScienceGrantPage()
   +popupPage()(class="scienceGrantPage")
     main.main
       +appHeaderDetails({title: 'Science Dissemination - Grants', closeClass: 'scienceGrantClose'})(class="scienceGrant__header")
-      .container  
-        +appSidebar()  
+      .container-science-grants  
+        +sidebarHorizontal()(class="scienceGrant__sidebar")  
           img.sidebar__img.moveToRight(src=require('../../assets/svg/scienceGrant/app.svg'))
           img.sidebar__img.moveToRight(src=require('../../assets/svg/scienceGrant/app_approved.svg'))
           img.sidebar__img.moveToRight(src=require('../../assets/svg/scienceGrant/amount.svg'))
-     
+
         .chart-grants 
           .grant-ngo.scaleX.grant-item
           .grant-public.scaleX.grant-item

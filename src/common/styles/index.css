@@ -2,9 +2,11 @@
 @import "./constants.css";
 @import "./animation.css";
 @import "../ui/appHeaderDetails/appHeaderDetails.css";
-@import "../ui/sidebar/sidebar.css";
+/* @import "../ui/sidebarVertical/sidebarVertical.css"; */
+@import "../ui/sidebarHorizontal/sidebarHorizontal.css";
 @import "../ui/twoValuesRow/twoValuesRow.css";
 @import "../ui/chart_info_icons/chart_info_icons.css";
+@import "../ui/genderBreakdown/genderBreakdown.css";
 
 * {
   margin: 0;
@@ -66,6 +68,48 @@ ul {
   font-size: 18px;
   color: var(--color-blue);
   font-weight: 700;
+}
+
+.sidebar-vertical {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 20px;
+}
+.sidebar__img {
+  margin-top: 60px;
+  transition: all 1s ease-in-out;
+}
+
+.divider-horizontal {
+  height: 1px;
+  width: 100%;
+  margin: 40px clamp(20px, 5rem, 50px);
+}
+.divider-vertical {
+  height: 100%;
+  border: 1px solid var(--color-grey-l);
+  height: 566px;
+  margin-top: 24px;
+  margin-bottom: 60px;
+}
+
+@media screen and (max-width: 992px) {
+  .divider-vertical {
+    height: 1px;
+    width: 90%;
+    max-width: 90vw;
+    margin: 0 clamp(20px, 5rem, 50px);
+  }
+  .sidebar-vertical {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 20px;
+  }
+  .sidebar-vertical > img {
+    margin: 40px 0;
+  }
 }
 
 @media screen and (max-width: 576px) {

@@ -11,7 +11,10 @@ import '../mathGrants/mathGrants.js';
 import '../mathCuration/mathCuration.js';
 
 // Science Grants
-import '../scienceGrants/scienceGrants.js'
+import '../scienceGrants/scienceGrants.js';
+
+//Science Curation
+import '../scienceCuration/scienceCuration.js';
 
 function displayPopup(popup) {
   popup.classList.remove('hidden');

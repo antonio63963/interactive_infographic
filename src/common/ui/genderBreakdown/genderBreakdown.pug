@@ -1,0 +1,10 @@
+mixin genderBreakdown(options)
+  -const {maleVal1, maleVal2, femaleVal1, femaleVal2} = options || {};
+  section.gender-breakdown
+    h2.gender-breakdown-title Gender Breakdown
+    .gender-breakdown-row
+      .gender-breakdown-svg-wrapper
+        img.gender-breakdown-svg(src=require("../../assets/svg/mathGrant/gender.svg"))
+      .gender-breakdown-row__col 
+        +twoValuesRow({val1: maleVal1, val2: maleVal2})(class="gender-breakdown-values moveUp")
+        +twoValuesRow({val1: femaleVal1, val2: femaleVal2, isOrange: true})(class="gender-breakdown-values moveUp")

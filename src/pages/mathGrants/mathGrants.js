@@ -76,7 +76,7 @@ mathGrantClose.addEventListener("click", closeMathGrantPage);
 
 const sidebarIcons = document.querySelectorAll(".sidebar__img");
 const binefitItems = document.querySelectorAll(".binefic__list-item");
-const mathGender = document.querySelectorAll(".mathGender");
+const mathGender = document.querySelectorAll(".gender-breakdown-values");
 
 console.log(mathGender)
 
