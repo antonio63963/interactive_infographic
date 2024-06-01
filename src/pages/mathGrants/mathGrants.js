@@ -78,8 +78,6 @@ const sidebarIcons = document.querySelectorAll(".sidebar__img");
 const binefitItems = document.querySelectorAll(".binefic__list-item");
 const mathGender = document.querySelectorAll(".gender-breakdown-values");
 
-console.log(mathGender)
-
 function animationMathGrant() {
   sidebarIcons.forEach((item, idx) => {
     const t = setTimeout(() => {

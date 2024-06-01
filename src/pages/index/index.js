@@ -16,6 +16,11 @@ import '../scienceGrants/scienceGrants.js';
 //Science Curation
 import '../scienceCuration/scienceCuration.js';
 
+
+
+//PilotProjects
+import '../pilotProjects/pilotProjects.js';
+
 function displayPopup(popup) {
   popup.classList.remove('hidden');
 }
@@ -27,3 +32,5 @@ export {
   displayPopup,
   hidePopup,
 }
+
+console.log('Utilization of Industrially Produced Carbon Dioxide in Protected Horticulture Facilities for Food Security Enhancement and Contribution to Climate Change Mitigation'.length)

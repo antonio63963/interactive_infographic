@@ -12,3 +12,8 @@ a.mock {
   color: white;
   font-size: 22px;
 }
+
+a.mock.toPilotProjects {
+  background-color: #B4DFFF;
+  
+}

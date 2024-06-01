@@ -9,6 +9,63 @@
   background-color: #FFCF90;
 }
 
-.container {
+.container-science-curation {
   display: flex;
+}
+.content-science-curration {
+  display: flex;
+  flex-direction: column;
+}
+/* CHART */
+.science-curation-title {
+  margin-bottom: 20px;
+}
+
+.science-curation-binefic-chart {
+  width: 560px;
+  max-width: calc(100vw - 40px);
+  display: flex;
+  .science-curation-binefic-graph {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border: 2px solid var(--color-black);
+    border-width: 0 2px 0 0;
+
+    .binefic-item-s-cur {
+      height: 17px;
+      background: var(--color-orange);
+      transition: all 1s ease-in-out;
+      margin: 8px 0;
+      transform-origin: right;
+    }
+    .cso-sinior {
+      width: 100%;
+    }
+    .coded {
+      width: 96%;
+    }
+    .cso-junior {
+      width: 90%;
+    }
+    .citizen {
+      width: 72%;
+    }
+    .nasa {
+      width: 42%;
+    }
+    .ds2 {
+      width: 32%;
+    }
+    .ds {
+      width: 28%;
+    }
+    .ds-workshop {
+      width: 21%;
+    }
+    .gust {
+      width: 16%;
+    }
+  }
 }

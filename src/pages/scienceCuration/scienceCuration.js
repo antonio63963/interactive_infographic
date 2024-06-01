@@ -51,8 +51,8 @@ function initBineficsCharts() {
 
 function showMathCurationPage(e) {
   displayPopup(scienceCurationPage);
-  initBineficsCharts();
-  animationMathCuration();
+  // initBineficsCharts();
+  animationScienceCuration();
 }
 function closeMathCurationPage() {
   reverseAnimation();
@@ -64,15 +64,22 @@ scienceCurationClose.addEventListener("click", closeMathCurationPage);
 
 //animation elements
 
-const sidebarIcons = document.querySelectorAll(".sidebar__img");
+const sidebarIcons = document.querySelectorAll(".sidebar-icons-science-curation");
+const chartBarsScienceCuration = document.querySelectorAll(".binefic-item-s-cur");
 
 
-function animationMathCuration() {
+function animationScienceCuration() {
   sidebarIcons.forEach((item, idx) => {
     const t = setTimeout(() => {
       item.classList.remove("moveToRight");
       clearTimeout(t);
     }, idx * 100 + 50);
+  });
+  chartBarsScienceCuration.forEach((item, idx) => {
+    const t = setTimeout(() => {
+      item.classList.remove("scaleX");
+      clearTimeout(t);
+    }, idx * 100);
   });
 
 }
@@ -80,6 +87,9 @@ function animationMathCuration() {
 function reverseAnimation() {
   sidebarIcons.forEach((item, idx) => {
     item.classList.add("moveToRight");
+  });
+  chartBarsScienceCuration.forEach((item, idx) => {
+    item.classList.add("scaleX");
   });
  
 }
