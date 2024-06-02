@@ -21,6 +21,9 @@ import '../scienceCuration/scienceCuration.js';
 //PilotProjects
 import '../pilotProjects/pilotProjects.js';
 
+// AssignedProjects
+import '../assignedProjects/assignedProjects.js';
+
 function displayPopup(popup) {
   popup.classList.remove('hidden');
 }
