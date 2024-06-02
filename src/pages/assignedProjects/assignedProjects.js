@@ -9,54 +9,47 @@ const assignedProjectsClose = document.querySelector(".assignedProjectsClose");
 
 const assignedProjectsCharts = [
   {
-    title: "electric",
+    title: "camel",
     canvas: document.querySelector('#assigned-project-1'),
     values: [10, 90],
     valuesColors: ["#569FD6", "#E0E0E0"],
   },
   {
-    title: "green",
+    title: "space",
     canvas: document.querySelector('#assigned-project-2'),
-    values: [50, 50],
-    valuesColors: ["#569FD6", "#E0E0E0"],
+    values: [95, 5],
+    valuesColors: ["#FFB455", "#E0E0E0"],
   },
   {
-    title: "bio",
+    title: "energy",
     canvas: document.querySelector('#assigned-project-3'),
-    values: [80, 20],
-    valuesColors: ["#FFB455", "#E0E0E0"],
+    values: [100, 0],
+    valuesColors: ["#F47D39", "#E0E0E0"],
   },
   {
-    title: "kfas",
+    title: "secure",
     canvas: document.querySelector('#assigned-project-4'),
-    values: [80, 20],
-    valuesColors: ["#FFB455", "#E0E0E0"],
+    values: [100, 0],
+    valuesColors: ["#F47D39", "#E0E0E0"],
   },
   {
     title: "transition",
     canvas: document.querySelector('#assigned-project-5'),
-    values: [80, 20],
-    valuesColors: ["#FFB455", "#E0E0E0"],
+    values: [100, 0],
+    valuesColors: ["#F47D39", "#E0E0E0"],
   },
   {
-    title: "solar",
+    title: "trash",
     canvas: document.querySelector('#assigned-project-6'),
     values: [100, 0],
     valuesColors: ["#F47D39", "#E0E0E0"],
   },
   {
-    title: "co",
+    title: "house",
     canvas: document.querySelector('#assigned-project-7'),
     values: [100, 0],
     valuesColors: ["#F47D39", "#E0E0E0"],
   },
-  {
-    title: "service",
-    canvas: document.querySelector('#assigned-project-8'),
-    values: [100, 0],
-    valuesColors: ["#F47D39", "#E0E0E0"],
-  },
-  
 ];
 
 const allCharts = [];

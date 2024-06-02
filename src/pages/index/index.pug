@@ -5,6 +5,7 @@ include ../scienceGrants/scienceGrants.pug
 include ../scienceCuration/scienceCuration.pug
 include ../pilotProjects/pilotProjects.pug
 include ../assignedProjects/assignedProjects.pug
+include ../privateSectorProjects/privateSectorProjects.pug
 
 +appPageLayout()
   +MathGrantPage()
@@ -13,6 +14,8 @@ include ../assignedProjects/assignedProjects.pug
   +ScienceCurationPage()
   +PilotProjectsPage()
   +AssignedProjectsPage()
+  +PrivateSectorProjectsPage()
+
   main.main 
     a.mock.toMathGrant(role= "button", href= '#') Math Grants
     a.mock.toMathCuration(role= "button", href= '#') Math Curation
@@ -20,4 +23,5 @@ include ../assignedProjects/assignedProjects.pug
     a.mock.toScienceCuration(role= "button", href= '#') Science Curation
     a.mock.toPilotProjects(role= "button", href= '#') Pilot Projects
     a.mock.toAssignedProjects(role= "button", href= '#') Assigned Projects
+    a.mock.toPrivateSectorProjects(role= "button", href= '#') Private Sector Projects
 

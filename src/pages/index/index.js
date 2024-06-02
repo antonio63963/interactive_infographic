@@ -24,6 +24,9 @@ import '../pilotProjects/pilotProjects.js';
 // AssignedProjects
 import '../assignedProjects/assignedProjects.js';
 
+//PrivateSectorProjects
+import '../privateSectorProjects/priviteSectorProjects.js';
+
 function displayPopup(popup) {
   popup.classList.remove('hidden');
 }
