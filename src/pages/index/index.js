@@ -1,46 +1,67 @@
-import '../../common/styles/index.css';
-import './index.css';
-import '../../common/ui/popupPage/popupPage.css'
+import "../../common/styles/index.css";
+import "./index.css";
+import "../../common/ui/popupPage/popupPage.css";
 
 //Math Grants
-import '../mathGrants/mathGrants.css';
-import '../mathGrants/mediaMathGrants.css';
-import '../mathGrants/mathGrants.js';
+import "../mathGrants/mathGrants.css";
+import "../mathGrants/mediaMathGrants.css";
+import "../mathGrants/mathGrants.js";
 
 //Math Curation
-import '../mathCuration/mathCuration.js';
+import "../mathCuration/mathCuration.js";
 
 // Science Grants
-import '../scienceGrants/scienceGrants.js';
+import "../scienceGrants/scienceGrants.js";
 
 //Science Curation
-import '../scienceCuration/scienceCuration.js';
+import "../scienceCuration/scienceCuration.js";
 
-
+//Innovation Grants
+import "../innovationGrants/innovationGrants.js";
 
 //PilotProjects
-import '../pilotProjects/pilotProjects.js';
+import "../pilotProjects/pilotProjects.js";
 
 // AssignedProjects
-import '../assignedProjects/assignedProjects.js';
+import "../assignedProjects/assignedProjects.js";
 
 //PrivateSectorProjects
-import '../privateSectorProjects/priviteSectorProjects.js';
+import "../privateSectorProjects/priviteSectorProjects.js";
 
 //Organization Projects
-import '../organizationalProjects/organizationalProjects.js';
-
+import "../organizationalProjects/organizationalProjects.js";
 
 function displayPopup(popup) {
-  popup.classList.remove('hidden');
+  popup.classList.remove("hidden");
 }
 function hidePopup(popup) {
-  popup.classList.add('hidden');
+  popup.classList.add("hidden");
 }
 
-export {
-  displayPopup,
-  hidePopup,
+function animatedCounter(options) {
+  const {elem, numFrom, numTo, step, interval} = options;
+  let numToShow = numFrom;
+
+  const c = setTimeout(() => {
+    console.log(`${numTo} timeout start`)
+    const t = setInterval(() => {
+      console.log('Interval')
+      let difference = numTo - numToShow;
+      if (numToShow < numTo) {
+        if (difference >= step) {
+          numToShow += step;
+          elem.textContent = numToShow;
+        } else if (difference < step) {
+          numToShow += difference;
+          elem.textContent = numToShow;
+        }
+      } else {
+        clearInterval(t);
+      }
+    }, interval ?? 100);
+    clearTimeout(c);
+    console.log(`${numTo} timeout finish`)
+  }, 500);
 }
 
-console.log('Utilization of Industrially Produced Carbon Dioxide in Protected Horticulture Facilities for Food Security Enhancement and Contribution to Climate Change Mitigation'.length)
+export { displayPopup, hidePopup, animatedCounter };

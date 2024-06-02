@@ -3,6 +3,7 @@ include ../mathGrants/mathGrants.pug
 include ../mathCuration/mathCuration.pug
 include ../scienceGrants/scienceGrants.pug
 include ../scienceCuration/scienceCuration.pug
+include ../innovationGrants/innovationGrants.pug
 include ../pilotProjects/pilotProjects.pug
 include ../assignedProjects/assignedProjects.pug
 include ../privateSectorProjects/privateSectorProjects.pug
@@ -13,18 +14,21 @@ include ../organizationalProjects/organizationalProjects.pug
   +MathCurationPage()
   +ScienceGrantPage()
   +ScienceCurationPage()
+  +InnovationGrantPage()
   +PilotProjectsPage()
   +AssignedProjectsPage()
   +PrivateSectorProjectsPage()
   +OrganizationalProjectsPage()
 
   main.main 
-    a.mock.toMathGrant(role= "button", href= '#') Math Grants
-    a.mock.toMathCuration(role= "button", href= '#') Math Curation
-    a.mock.toScienceGrant(role= "button", href= '#') Science Grants
-    a.mock.toScienceCuration(role= "button", href= '#') Science Curation
-    a.mock.toPilotProjects(role= "button", href= '#') Pilot Projects
-    a.mock.toAssignedProjects(role= "button", href= '#') Assigned Projects
-    a.mock.toPrivateSectorProjects(role= "button", href= '#') Private Sector Projects
-    a.mock.toOrganizationalProjects(role= "button", href= '#') Organizational Projects
+    .buttons-row 
+      a.mock.toMathGrant(role= "button", href= '#') Math Grants
+      a.mock.toMathCuration(role= "button", href= '#') Math Curation
+      a.mock.toScienceGrant(role= "button", href= '#') Science Grants
+      a.mock.toScienceCuration(role= "button", href= '#') Science Curation
+      a.mock.toPilotProjects(role= "button", href= '#') Pilot Projects
+      a.mock.toAssignedProjects(role= "button", href= '#') Assigned Projects
+      a.mock.toPrivateSectorProjects(role= "button", href= '#') Private Sector Projects
+      a.mock.toOrganizationalProjects(role= "button", href= '#') Organizational Projects
+      a.mock.toInnovationGrant(role= "button", href= '#') Innovation grants
 

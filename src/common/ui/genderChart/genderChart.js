@@ -31,5 +31,5 @@ function initGenderChart(canvas, values, valuesColors) {
   Chart.defaults.borderColor = "#ffffff";
   return new Chart(canvas, options);
 }
-// export default 
+
 export { initGenderChart };
