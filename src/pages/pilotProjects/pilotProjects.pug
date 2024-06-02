@@ -4,6 +4,7 @@ include ../../common/ui/twoValuesRow/twoValuesRow.pug
 include ../../common/ui/popupPage/popupPage.pug
 include ../../common/ui/sidebarVertical/sidebarVertical.pug
 include ../../common/ui/card/card.pug
+include ../../common/ui/labelWithColor/labelWithColor.pug
 
 
 mixin PilotProjectsPage()
@@ -11,6 +12,10 @@ mixin PilotProjectsPage()
     main.main.pilotProjects-main
       +appHeaderDetails({title: 'Pilot Projects', closeClass: 'pilotProjectsClose'})(class="pilotProjects__header")
       .content-pilot-projects
+        .pilot-projects-labels 
+          +labelWithColor({color: '#7DC0F1', text: 'New Project in 2023'})(class="pilot-project-label")
+          +labelWithColor({color: '#FFB455', text: 'Ongoing Project'})(class="pilot-project-label")
+          +labelWithColor({color: '#F47D39', text: 'Completed Project'})
         .container-pilotProjects
           +card({
             canvasId: 'pilot-project-1', 

@@ -4,6 +4,15 @@
 .content-pilot-projects {
   padding: 40px clamp(20px, 3.2rem, 32px);
 }
+.pilot-projects-labels {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  .pilot-project-label {
+    margin-right: 50px;
+  }
+}
 .pilotProjects-main {
   display: flex;
   flex-direction: column;
@@ -58,7 +67,7 @@
 }
 .pilot-university {
   border: 1px solid #b3a3a3a3;
-  border-width: 0 0 1px 0;
+  border-width: 0;
 }
 .pilot-solar {
   border: 1px solid #b3a3a3a3;
@@ -72,6 +81,8 @@
   border: 1px solid #b3a3a3a3;
   border-width: 0 0px 0 0px;
 }
+
+
 
 @media screen and (max-width: 1033px) {
   .container-pilotProjects {
@@ -94,10 +105,13 @@
     border-width: 0;
   }
   .pilot-service {
-    border-width: 0 0 0 1px;
+    border-width: 0 1px;
   }
 }
 @media screen and (max-width: 731px) {
+  .pilot-projects-labels {
+    width: 80%;
+  }
   .container-pilotProjects {
     width: 500px;
   }
@@ -116,6 +130,9 @@
   }
   .pilot-solar {
     border-width: 0 0 1px 1px;
+  }
+  .pilot-service {
+    border-width: 0 0 0 1px;
   }
 }
 
@@ -136,5 +153,9 @@
   }
   .pilot-service {
     border-width: 0;
+  }
+
+  .pilot-projects-labels {
+    flex-direction: column;
   }
 }

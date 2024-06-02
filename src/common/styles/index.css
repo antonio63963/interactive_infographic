@@ -8,6 +8,7 @@
 @import "../ui/chart_info_icons/chart_info_icons.css";
 @import "../ui/genderBreakdown/genderBreakdown.css";
 @import "../ui/card/card.css";
+@import "../ui/labelWithColor/labelWithColor.css";
 
 * {
   margin: 0;
