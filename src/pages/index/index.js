@@ -16,6 +16,9 @@ import "../scienceGrants/scienceGrants.js";
 //Science Curation
 import "../scienceCuration/scienceCuration.js";
 
+//Policy Grant
+import "../policyGrants/policyGrants.js";
+
 //Innovation Grants
 import "../innovationGrants/innovationGrants.js";
 

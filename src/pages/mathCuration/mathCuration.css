@@ -6,7 +6,7 @@
   background-color: #d6edff;
   width: 994px;
   max-width: 100vw;
-  
+
   .header__close-button {
     background-color: #b4dfff;
   }
@@ -23,7 +23,7 @@
   color: var(--color-orange);
 }
 .light-orange-style {
-  color: #FFB455;
+  color: #ffb455;
 }
 .blue-style {
   color: var(--color-blue);
@@ -81,7 +81,6 @@
     .binefic-title {
       margin-left: 0;
     }
-    
   }
   /* .content-row {
     justify-content: center;
@@ -95,8 +94,5 @@
   }
   .gender-info {
     margin-left: 0;
-  }
-  .sidebar__img {
-    max-width: 30%;
   }
 }

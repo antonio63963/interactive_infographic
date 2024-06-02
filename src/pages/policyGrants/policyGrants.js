@@ -19,8 +19,8 @@ policyGrantClose.addEventListener("click", closeMathGrantPage);
 //animation elements
 
 const sidebarIcons = document.querySelectorAll(".policy-grant-icon");
-const grantItems = document.querySelectorAll(".grant-item");
-const chartValues = document.querySelectorAll(".chart-description-row");
+const domainItems = document.querySelectorAll(".policyGrantPage .domain-item");
+
 
 function animationMathGrant() {
   Array.from(sidebarIcons)
@@ -31,17 +31,11 @@ function animationMathGrant() {
         clearTimeout(t);
       }, idx * 100 + 50);
     });
-  grantItems.forEach((item, idx) => {
-    const t = setTimeout(() => {
-      item.classList.remove("scaleX");
-      clearTimeout(t);
-    }, idx * 100);
-  });
-  chartValues.forEach((item, idx) => {
+    domainItems.forEach((item, idx) => {
     const t = setTimeout(() => {
       item.classList.remove("moveUp");
       clearTimeout(t);
-    }, idx * 110);
+    }, idx * 100);
   });
 }
 
@@ -49,10 +43,7 @@ function reverseAnimation() {
   sidebarIcons.forEach((item, idx) => {
     item.classList.add("moveToRight");
   });
-  grantItems.forEach((item, idx) => {
-    item.classList.add("scaleX");
-  });
-  chartValues.forEach((item, idx) => {
+  domainItems.forEach((item, idx) => {
     item.classList.add("moveUp");
   });
 }

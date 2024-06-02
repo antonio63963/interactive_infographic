@@ -3,19 +3,19 @@ include ../mathGrants/mathGrants.pug
 include ../mathCuration/mathCuration.pug
 include ../scienceGrants/scienceGrants.pug
 include ../scienceCuration/scienceCuration.pug
+include ../policyGrants/policyGrants.pug
 include ../innovationGrants/innovationGrants.pug
 include ../pilotProjects/pilotProjects.pug
 include ../assignedProjects/assignedProjects.pug
 include ../privateSectorProjects/privateSectorProjects.pug
 include ../organizationalProjects/organizationalProjects.pug
-//- include ../policyGrants/policyGrants.pug
 
 +appPageLayout()
   +MathGrantPage()
   +MathCurationPage()
   +ScienceGrantPage()
   +ScienceCurationPage()
-  //- +PolicyGrantPage()
+  +PolicyGrantPage()
   +InnovationGrantPage()
   +PilotProjectsPage()
   +AssignedProjectsPage()
@@ -34,4 +34,5 @@ include ../organizationalProjects/organizationalProjects.pug
       a.mock.toPrivateSectorProjects(role= "button", href= '#') Private Sector Projects
       a.mock.toOrganizationalProjects(role= "button", href= '#') Organizational Projects
       a.mock.toInnovationGrant(role= "button", href= '#') Innovation grants
+      a.mock.toPolicyGrant(role= "button", href= '#') Policy grants
 

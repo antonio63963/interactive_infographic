@@ -2,12 +2,12 @@
 @import "../../common/styles/animation.css";
 
 .policyGrant__header {
-  background-color: #D6EDFF;
+  background-color: #d6edff;
   width: 800px;
   max-width: 100vw;
-  
+
   .header__close-button {
-    background-color: #B4DFFF;
+    background-color: #b4dfff;
   }
 }
 
@@ -15,6 +15,60 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 800px;
+}
+
+.policyGrant__sidebar {
+  align-items: start;
 }
 
 /* Content */
+.content-policy-grant {
+  padding: 0 clamp(20px, 10rem, 60px);
+  display: flex;
+  margin: 6px 0 62px 0;
+
+  img.policy-grant-icon {
+    transition: all 1s ease-in-out;
+  }
+
+  .policy-grant-col {
+    display: flex;
+    flex-direction: column;
+    margin-left: 28px;
+
+    .col-title {
+      margin-bottom: 22px;
+    }
+    .domain-item {
+      display: flex;
+      margin-bottom: 15px;
+      transition: all 1s ease-in-out;
+
+      .dot {
+        margin-top: 4px;
+        width: 10px;
+        min-width: 10px;
+        height: 10px;
+        background-color: var(--color-orange-l);
+        border-radius: 100%;
+      }
+      .domain-item-text {
+        flex-shrink: 2;
+        margin-left: 22px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .content-policy-grant {
+    flex-direction: column;
+    align-items: center;
+    
+    .policy-grant-col {
+      margin: 40px 0 0 0;
+    }
+  }
+}
