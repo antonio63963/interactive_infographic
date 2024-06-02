@@ -8,17 +8,20 @@ include ../pilotProjects/pilotProjects.pug
 include ../assignedProjects/assignedProjects.pug
 include ../privateSectorProjects/privateSectorProjects.pug
 include ../organizationalProjects/organizationalProjects.pug
+//- include ../policyGrants/policyGrants.pug
 
 +appPageLayout()
   +MathGrantPage()
   +MathCurationPage()
   +ScienceGrantPage()
   +ScienceCurationPage()
+  //- +PolicyGrantPage()
   +InnovationGrantPage()
   +PilotProjectsPage()
   +AssignedProjectsPage()
   +PrivateSectorProjectsPage()
   +OrganizationalProjectsPage()
+
 
   main.main 
     .buttons-row 

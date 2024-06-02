@@ -26,7 +26,7 @@ import "../pilotProjects/pilotProjects.js";
 import "../assignedProjects/assignedProjects.js";
 
 //PrivateSectorProjects
-import "../privateSectorProjects/priviteSectorProjects.js";
+import "../privateSectorProjects/privateSectorProjects.js";
 
 //Organization Projects
 import "../organizationalProjects/organizationalProjects.js";

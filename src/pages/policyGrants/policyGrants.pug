@@ -1,0 +1,15 @@
+include ../../common/ui/appHeaderDetails/appHeaderDetails.pug
+include ../../common/ui/popupPage/popupPage.pug
+include ../../common/ui/sidebarHorizontal/sidebarHorizontal.pug
+
+mixin PolicyGrantPage()
+  +popupPage()(class="policyGrantPage")
+    main.main
+      +appHeaderDetails({title: 'Policy Research Grants', closeClass: 'policyGrantClose'})(class="policyGrant__header")
+      .container-policy-grants  
+        +sidebarHorizontal()(class="policyGrant__sidebar")  
+          img.sidebar__img.policy-grant-icon.moveToRight(src=require('../../assets/svg/policyGrant/proposals.svg'))
+          img.sidebar__img.policy-grant-icon.moveToRight(src=require('../../assets/svg/policyGrant/proposals_approved.svg'))
+          img.sidebar__img.policy-grant-icon.moveToRight(src=require('../../assets/svg/policyGrant/amount.svg'))
+
+        
