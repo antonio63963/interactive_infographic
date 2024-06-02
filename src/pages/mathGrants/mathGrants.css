@@ -3,9 +3,10 @@
 
 .header {
   background-color: var(--color-yellow-xl);
-}
-.header__close-button {
-  background-color: var(--color-yellow-l);
+
+  .header__close-button {
+    background-color: var(--color-yellow-l);
+  }
 }
 
 .container-math-grant {

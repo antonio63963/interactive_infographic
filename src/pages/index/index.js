@@ -27,6 +27,10 @@ import '../assignedProjects/assignedProjects.js';
 //PrivateSectorProjects
 import '../privateSectorProjects/priviteSectorProjects.js';
 
+//Organization Projects
+import '../organizationalProjects/organizationalProjects.js';
+
+
 function displayPopup(popup) {
   popup.classList.remove('hidden');
 }

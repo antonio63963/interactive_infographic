@@ -5,9 +5,10 @@
   background-color: #ffe1d0;
   width: 800px;
   max-width: 100vw;
-}
-.header__close-button {
-  background-color: #ffccaf;
+  
+  .header__close-button {
+    background-color: #ffccaf;
+  }
 }
 
 .container-science-grants {

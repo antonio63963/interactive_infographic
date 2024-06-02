@@ -52,6 +52,13 @@
       line-height: 19.6px;
       text-align: center;
     }
+    .card-additionalDescription {
+      font-size: 14px;
+      line-height: 19.6px;
+      text-align: center;
+      color: #8C8C8C;
+      margin-top: 20px;
+    }
   }
   .card-total-text {
     font-size: 12px;

@@ -6,9 +6,10 @@
   background-color: #d6edff;
   width: 994px;
   max-width: 100vw;
-}
-.header__close-button {
-  background-color: #b4dfff;
+  
+  .header__close-button {
+    background-color: #b4dfff;
+  }
 }
 
 .container-math-curation {

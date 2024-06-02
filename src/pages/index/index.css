@@ -20,3 +20,6 @@ a.mock.toAssignedProjects {
 a.mock.toPrivateSectorProjects {
   background-color: #FFCF90;
 }
+a.mock.toOrganizationalProjects {
+  background-color: #B4DFFF;
+}

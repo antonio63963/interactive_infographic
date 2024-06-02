@@ -4,9 +4,10 @@
 .scienceCuration__header {
   background-color: #FFE4C1;
   width: 994px;
-}
-.header__close-button {
-  background-color: #FFCF90;
+  
+  .header__close-button {
+    background-color: #FFCF90;
+  }
 }
 
 .container-science-curation {
