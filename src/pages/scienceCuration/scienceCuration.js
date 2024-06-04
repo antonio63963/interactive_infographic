@@ -67,6 +67,9 @@ const sidebarIcons = document.querySelectorAll(
 const mobileBarsSinceCuration = document.querySelectorAll(
   ".scienceCurationPage .bar-graph"
 );
+const moveUpScienceCuration = document.querySelectorAll(
+  ".scienceCurationPage .moveUp"
+);
 console.log('MOBILE: ', mobileBarsSinceCuration)
 const chartBarsScienceCuration = document.querySelectorAll(
   ".binefic-item-s-cur"
@@ -91,6 +94,12 @@ function animationScienceCuration() {
       clearTimeout(t);
     }, idx * 100);
   });
+  moveUpScienceCuration.forEach((item, idx) => {
+    const t = setTimeout(() => {
+      item.classList.remove("moveUp");
+      clearTimeout(t);
+    }, idx * 100);
+  });
 }
 
 function reverseAnimation() {
@@ -102,5 +111,8 @@ function reverseAnimation() {
   });
   chartBarsScienceCuration.forEach((item, idx) => {
     item.classList.add("scaleX");
+  });
+  moveUpScienceCuration.forEach((item, idx) => {
+    item.classList.add("moveUp");
   });
 }
