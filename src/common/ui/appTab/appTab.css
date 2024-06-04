@@ -1,0 +1,44 @@
+.app-tab {
+  position: relative;
+  --tab-height: 72px;
+  height: var(--tab-height);
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F2F2F2;
+  transition: all 0.5s ease-in-out;
+
+  .icon-wrapper {
+    position: relative;
+    transform: translateX(9px);
+    z-index: 10;
+  }
+  .marker {
+    --size: 18px;
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+    transform: rotate(45deg);
+    background-color: #F2F2F2;
+    transition: all .5s ease-in-out;
+  }
+
+  svg {
+   fill: #C0C0C0;
+  }
+}
+.app-tab.active {
+  background-color: #be4ef9;
+  .marker {
+    bottom: -36px;
+    right: var(--size);
+    background-color: #be4ef9;
+  }
+  svg {
+    fill: #fff
+  }
+}
+.app-tab:hover {
+  opacity: 0.5;
+}

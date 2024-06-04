@@ -1,0 +1,6 @@
+mixin appTab(options)
+  -const {id} = options || {};
+  .app-tab(class!= attributes.class, id= id) 
+    .icon-wrapper 
+        block
+    .marker 
