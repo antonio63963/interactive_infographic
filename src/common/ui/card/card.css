@@ -13,7 +13,7 @@
     position: relative;
     width: 140px;
     max-width: 140px;
-    margin-bottom: 14px;
+    height: 140px;
 
     .cover-layer {
       position: absolute;
@@ -45,6 +45,7 @@
   .card-description-wrapper {
     height: 105px;
     width: 100%;
+    margin-top: 14px;
     margin-bottom: 10px;
     
     .card-description {
