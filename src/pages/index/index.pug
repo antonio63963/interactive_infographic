@@ -5,6 +5,7 @@ include ../scienceGrants/scienceGrants.pug
 include ../scienceCuration/scienceCuration.pug
 include ../policyGrants/policyGrants.pug
 include ../innovationGrants/innovationGrants.pug
+include ../kfasMedia/kfasMedia.pug
 include ../pilotProjects/pilotProjects.pug
 include ../assignedProjects/assignedProjects.pug
 include ../privateSectorProjects/privateSectorProjects.pug
@@ -17,6 +18,7 @@ include ../organizationalProjects/organizationalProjects.pug
   +ScienceCurationPage()
   +PolicyGrantPage()
   +InnovationGrantPage()
+  +KfasMediaPage()
   +PilotProjectsPage()
   +AssignedProjectsPage()
   +PrivateSectorProjectsPage()
@@ -35,4 +37,5 @@ include ../organizationalProjects/organizationalProjects.pug
       a.mock.toOrganizationalProjects(role= "button", href= '#') Organizational Projects
       a.mock.toInnovationGrant(role= "button", href= '#') Innovation grants
       a.mock.toPolicyGrant(role= "button", href= '#') Policy grants
+      a.mock.toKfasMedia(role= "button", href= '#') KFAS Media
 

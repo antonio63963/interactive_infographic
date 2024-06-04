@@ -9,6 +9,8 @@
 @import "../ui/genderBreakdown/genderBreakdown.css";
 @import "../ui/card/card.css";
 @import "../ui/labelWithColor/labelWithColor.css";
+@import "../ui/appTab/appTab.css";
+@import "../ui/barChartItem/barChartItem.css";
 
 * {
   margin: 0;
@@ -112,6 +114,7 @@ ul {
   }
   .sidebar-vertical > img {
     margin: 40px 0;
+    max-width: 30%;
   }
 }
 

@@ -3,6 +3,7 @@ include ../../common/ui/appHeaderDetails/appHeaderDetails.pug
 include ../../common/ui/twoValuesRow/twoValuesRow.pug
 include ../../common/ui/popupPage/popupPage.pug
 include ../../common/ui/sidebarVertical/sidebarVertical.pug
+include ../../common/ui/barChartItem/barChartItem.pug
 
 
 mixin ScienceCurationPage()
@@ -29,5 +30,15 @@ mixin ScienceCurationPage()
               .binefic-item-s-cur.scaleX.ds-workshop
               .binefic-item-s-cur.scaleX.gust
             .science-curation-binefic-info
+              +barChartItem({title: 'CSO Seior Season 7', num: 106,  percent: '100%'})
+              +barChartItem({title: 'CODED Mobile App development', num: 101,  percent: '96%'})
+              +barChartItem({title: 'CSO Junior Season 6', num: 90,  percent: '90%'})
+              +barChartItem({title: 'Citizen Science Forum', num: 72,  percent: '72%'})
+              +barChartItem({title: 'NASA GLOBE Season 3', num: 42,  percent: '42%'})
+              +barChartItem({title: 'A Journey to Data Science 2', num: 32,  percent: '32%'})
+              +barChartItem({title: 'A Journey to Data Science', num: 28,  percent: '28%'})
+              +barChartItem({title: 'Appliend Data Science Workshop', num: 21,  percent: '21%'})
+              +barChartItem({title: 'GUST App Development', num: 16,  percent: '16%'})
+
 
 

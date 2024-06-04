@@ -1,7 +1,6 @@
 import "./scienceCuration.css";
 import { displayPopup, hidePopup } from "../index/index.js";
 
-
 const toScienceCuration = document.querySelector(".toScienceCuration");
 const scienceCurationPage = document.querySelector(".scienceCurationPage");
 const scienceCurationClose = document.querySelector(".scienceCurationClose");
@@ -43,8 +42,6 @@ const allCharts = [];
 
 function initBineficsCharts() {
   const t = setTimeout(() => {
-   
-    
     clearTimeout(t);
   }, 500);
 }
@@ -64,14 +61,27 @@ scienceCurationClose.addEventListener("click", closeMathCurationPage);
 
 //animation elements
 
-const sidebarIcons = document.querySelectorAll(".sidebar-icons-science-curation");
-const chartBarsScienceCuration = document.querySelectorAll(".binefic-item-s-cur");
-
+const sidebarIcons = document.querySelectorAll(
+  ".sidebar-icons-science-curation"
+);
+const mobileBarsSinceCuration = document.querySelectorAll(
+  ".scienceCurationPage .bar-graph"
+);
+console.log('MOBILE: ', mobileBarsSinceCuration)
+const chartBarsScienceCuration = document.querySelectorAll(
+  ".binefic-item-s-cur"
+);
 
 function animationScienceCuration() {
   sidebarIcons.forEach((item, idx) => {
     const t = setTimeout(() => {
       item.classList.remove("moveToRight");
+      clearTimeout(t);
+    }, idx * 100 + 50);
+  });
+  mobileBarsSinceCuration.forEach((item, idx) => {
+    const t = setTimeout(() => {
+      item.classList.remove("scaleX");
       clearTimeout(t);
     }, idx * 100 + 50);
   });
@@ -81,15 +91,16 @@ function animationScienceCuration() {
       clearTimeout(t);
     }, idx * 100);
   });
-
 }
 
 function reverseAnimation() {
   sidebarIcons.forEach((item, idx) => {
     item.classList.add("moveToRight");
   });
+  mobileBarsSinceCuration.forEach((item, idx) => {
+    item.classList.add("scaleX");
+  });
   chartBarsScienceCuration.forEach((item, idx) => {
     item.classList.add("scaleX");
   });
- 
 }

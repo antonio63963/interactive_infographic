@@ -22,6 +22,9 @@ import "../policyGrants/policyGrants.js";
 //Innovation Grants
 import "../innovationGrants/innovationGrants.js";
 
+//KFAS Media
+import "../kfasMedia/kfasMedia.js";
+
 //PilotProjects
 import "../pilotProjects/pilotProjects.js";
 

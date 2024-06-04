@@ -1,0 +1,7 @@
+mixin barChartItem(options)
+  -const {title, num, color, percent} = options || {};
+  .bar-chart-item(class!= attributes.class) 
+    .bar-chart-row 
+      .num= num || ''
+      .title= title
+    .bar-graph(style={background: color || "#f47d39", width: percent}, class="scaleX")
