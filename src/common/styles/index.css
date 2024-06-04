@@ -2,6 +2,7 @@
 @import "./constants.css";
 @import "./animation.css";
 @import "../ui/appHeaderDetails/appHeaderDetails.css";
+@import "../ui/sidebarIconItem/sidebarIconItem.css";
 /* @import "../ui/sidebarVertical/sidebarVertical.css"; */
 @import "../ui/sidebarHorizontal/sidebarHorizontal.css";
 @import "../ui/twoValuesRow/twoValuesRow.css";
@@ -38,6 +39,7 @@ h1 {
   font-family: Arabic;
   font-weight: 600;
   font-size: clamp(20px, 2.4rem, 24px);
+  white-space: wrap;
 }
 h2 {
   font-family: Arabic;
@@ -82,9 +84,8 @@ ul {
   height: 100%;
   padding: 0 20px;
 }
-.sidebar__img {
+.sidebar-vertical-item{
   margin-top: 60px;
-  transition: all 1s ease-in-out;
 }
 
 /* .divider-horizontal {
@@ -113,8 +114,11 @@ ul {
     padding: 0 20px;
   }
   .sidebar-vertical > img {
-    margin: 40px 0;
+    /* margin: 40px 0; */
     max-width: 30%;
+  }
+  .sidebar-vertical-item {
+    margin: 42px 12px;
   }
 }
 
@@ -122,4 +126,8 @@ ul {
   h2 {
     text-align: center;
   }
+  .sidebar-vertical-item {
+    margin: 32px 12px;
+  }
+  
 }

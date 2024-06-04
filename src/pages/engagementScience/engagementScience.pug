@@ -1,0 +1,25 @@
+include ../../common/ui/appPageLayout/appPageLayout.pug
+include ../../common/ui/appHeaderDetails/appHeaderDetails.pug
+include ../../common/ui/twoValuesRow/twoValuesRow.pug
+include ../../common/ui/popupPage/popupPage.pug
+include ../../common/ui/genderBreakdown/genderBreakdown.pug
+include ../../common/ui/sidebarVertical/sidebarVertical.pug
+
+
+  //- +appPageLayout()
+  //-   +appHeaderDetails({title: 'Math and Science Education - Grants'})
+  //-   main.main
+mixin EngagementSciencePage()
+  +popupPage()(class="engagementSciencePage")
+    main.main
+      +appHeaderDetails({title: 'Engagement in Science (Grants)', closeClass: 'engagementScienceClose'})
+      .container-math-grant 
+        +sidebarHorizontal 
+          //- img.sidebar__img.moveToRight(src=require('../../assets/svg/engagementScience/events.svg'))
+          //- img.sidebar__img.moveToRight(src=require('../../assets/svg/engagementScience/benific.svg'))
+          //- img.sidebar__img.moveToRight(src=require('../../assets/svg/engagementScience/amount.svg'))
+        //- .divider-vertica
+
+        .engagementScience-container
+          
+

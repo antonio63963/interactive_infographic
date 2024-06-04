@@ -19,5 +19,20 @@
   justify-content: center;
 }
 .header__close-button:hover {
-  opacity: .5;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+   align-items: start;
+  }
+  .header__title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .header__close-button {
+    width: 63px;
+    height: 63px;
+    min-width: 63px;
+  }
 }

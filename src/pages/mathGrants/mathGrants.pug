@@ -1,5 +1,6 @@
 include ../../common/ui/appPageLayout/appPageLayout.pug
 include ../../common/ui/appHeaderDetails/appHeaderDetails.pug
+include ../../common/ui/sidebarIconItem/sidebarIconItem.pug
 include ../../common/ui/twoValuesRow/twoValuesRow.pug
 include ../../common/ui/popupPage/popupPage.pug
 include ../../common/ui/genderBreakdown/genderBreakdown.pug
@@ -15,9 +16,12 @@ mixin MathGrantPage()
       +appHeaderDetails({title: 'Math and Science Education - Grants', closeClass: 'mathGrantClose'})
       .container-math-grant 
         .sidebar-vertical 
-          img.sidebar__img.moveToRight(src=require('../../assets/svg/mathGrant/events.svg'))
-          img.sidebar__img.moveToRight(src=require('../../assets/svg/mathGrant/benific.svg'))
-          img.sidebar__img.moveToRight(src=require('../../assets/svg/mathGrant/amount.svg'))
+          +sidebarIconItem({num: 6, title: 'Events', color: '#F36D20', icon: 'folderStarYellow'})(class="sidebar-vertical-item moveToRight")
+          +sidebarIconItem({num: 133, title: 'Beneficiaries', color: '#F36D20', icon: 'persons'})(class="sidebar-vertical-item moveToRight")
+          +sidebarIconItem({num: '15.9k', title: 'KD Amount Approved', color: '#F36D20', icon: 'kdYellow'})(class="sidebar-vertical-item moveToRight")
+          //- img.sidebar__img.moveToRight(src=require('../../assets/svg/mathGrant/events.svg'))
+          //- img.sidebar__img.moveToRight(src=require('../../assets/svg/mathGrant/benific.svg'))
+          //- img.sidebar__img.moveToRight(src=require('../../assets/svg/mathGrant/amount.svg'))
         .divider-vertical 
 
         .mathGrant__graph-main 

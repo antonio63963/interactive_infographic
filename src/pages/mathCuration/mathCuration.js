@@ -67,12 +67,13 @@ function closeMathCurationPage() {
   hidePopup(mathCurationPage);
   allCharts.forEach((b) => b.destroy());
 }
+
 toMathCuration.addEventListener("click", showMathCurationPage);
 mathCurationClose.addEventListener("click", closeMathCurationPage);
 
 //animation elements
 
-const sidebarIcons = document.querySelectorAll(".sidebar__img");
+const sidebarIcons = document.querySelectorAll(".mathCurationPage .sidebar-vertical-item");
 const maleInfo = document.querySelectorAll(".male-info");
 
 function animationMathCuration() {

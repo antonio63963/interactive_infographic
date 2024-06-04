@@ -2,13 +2,13 @@
 @import "../../common/styles/animation.css";
 @import "./components/bineficLogoChart/bineficLogoChart.css";
 
-.mathCuration__header {
-  background-color: #d6edff;
+.header.mathCuration__header {
+  background-color: #D6EDFF;
   width: 994px;
   max-width: 100vw;
 
   .header__close-button {
-    background-color: #b4dfff;
+    background-color: #B4DFFF;
   }
 }
 

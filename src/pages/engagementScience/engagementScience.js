@@ -1,12 +1,12 @@
 import "../../common/styles/index.css";
 import "../../common/ui/twoValuesRow/twoValuesRow.css";
-import "./mathGrants.css";
-import "./mediaMathGrants.css";
+import "./engagementSciences.css";
+import "./mediaengagementSciences.css";
 import Chart from "chart.js/auto";
 import { displayPopup, hidePopup } from "../index/index";
 
 const canvas = document.querySelector("#grant-chart");
-const mathGrants = {
+const engagementSciences = {
   values: [65, 25, 25, 7, 7, 7],
   valuesColor: [
     "#F47D39",
@@ -26,8 +26,8 @@ const options = {
       {
         label: "Beneficiaries",
         borderColor: "#ffffff",
-        data: mathGrants.values,
-        backgroundColor: mathGrants.valuesColor,
+        data: engagementSciences.values,
+        backgroundColor: engagementSciences.valuesColor,
         hoverOffset: 6,
       },
     ],
@@ -45,40 +45,40 @@ const options = {
 };
 
 let mathBineficChart;
-function initMathGrantChart() {
+function initengagementScienceChart() {
   const t = setTimeout(() => {
     mathBineficChart = new Chart(canvas, options);
     clearTimeout(t);
   }, 500);
 }
 
-const toMathGrant = document.querySelector(".toMathGrant");
-const mathGrantClose = document.querySelector(".mathGrantClose");
-const mathGrantPage = document.querySelector(".mathGrantPage");
+const toEngagementScience = document.querySelector(".toEngagementScience");
+const engagementScienceClose = document.querySelector(".engagementScienceClose");
+const engagementSciencePage = document.querySelector(".engagementSciencePage");
 
-function showMathGrantPage(e) {
-  displayPopup(mathGrantPage);
-  initMathGrantChart();
-  animationMathGrant();
+function showEngagementSciencePage(e) {
+  displayPopup(engagementSciencePage);
+  initEngagementScienceChart();
+  animationEngagementScience();
 }
-function closeMathGrantPage() {
+function closeEngagementSciencePage() {
   reverseAnimation();
-  hidePopup(mathGrantPage);
+  hidePopup(engagementSciencePage);
   // const t = setTimeout(() => {
   //   clearTimeout(t);
   // }, 500);
   mathBineficChart.destroy();
 }
-toMathGrant.addEventListener("click", showMathGrantPage);
-mathGrantClose.addEventListener("click", closeMathGrantPage);
+toEngagementScience.addEventListener("click", showEngagementSciencePage);
+engagementScienceClose.addEventListener("click", closeEngagementSciencePage);
 
 //animation elements
 
-const sidebarIcons = document.querySelectorAll(".mathGrantPage .moveToRight");
+const sidebarIcons = document.querySelectorAll(".sidebar__img");
 const binefitItems = document.querySelectorAll(".binefic__list-item");
 const mathGender = document.querySelectorAll(".gender-breakdown-values");
 
-function animationMathGrant() {
+function animationengagementScience() {
   sidebarIcons.forEach((item, idx) => {
     const t = setTimeout(() => {
       item.classList.remove("moveToRight");
