@@ -4,6 +4,7 @@ include ../mathCuration/mathCuration.pug
 include ../scienceGrants/scienceGrants.pug
 include ../scienceCuration/scienceCuration.pug
 include ../engagementScience/engagementScience.pug
+include ../researchGrants/researchGrants.pug
 include ../policyGrants/policyGrants.pug
 include ../innovationGrants/innovationGrants.pug
 include ../kfasMedia/kfasMedia.pug
@@ -18,6 +19,7 @@ include ../organizationalProjects/organizationalProjects.pug
   +ScienceGrantPage()
   +ScienceCurationPage()
   +EngagementSciencePage()
+  +ResearchGrantsPage()
   +PolicyGrantPage()
   +InnovationGrantPage()
   +KfasMediaPage()
@@ -41,4 +43,5 @@ include ../organizationalProjects/organizationalProjects.pug
       a.mock.toPolicyGrant(role= "button", href= '#') Policy grants
       a.mock.toKfasMedia(role= "button", href= '#') KFAS Media
       a.mock.toEngagementScience(role= "button", href= '#') Engagement Science
+      a.mock.toResearchGrants(role= "button", href= '#') Research Grants
 

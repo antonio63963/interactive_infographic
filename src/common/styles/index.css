@@ -12,6 +12,7 @@
 @import "../ui/labelWithColor/labelWithColor.css";
 @import "../ui/appTab/appTab.css";
 @import "../ui/barChartItem/barChartItem.css";
+@import "../ui/fillBarItem/fillBarItem.css";
 
 * {
   margin: 0;

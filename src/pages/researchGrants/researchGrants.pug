@@ -1,0 +1,110 @@
+include ../../common/ui/appHeaderDetails/appHeaderDetails.pug
+include ../../common/ui/sidebarIconItem/sidebarIconItem.pug
+include ../../common/ui/popupPage/popupPage.pug
+include ../../common/ui/fillBarItem/fillBarItem.pug
+
+mixin ResearchGrantsPage()
+  +popupPage()(class="researchGrantsPage")
+    main.main
+      +appHeaderDetails({title: 'Research Grants', closeClass: 'researchGrantsClose'})(class="research-grants-header")
+      .container-researchGrants 
+        //- +sidebarHorizontal()(class="sidebar-research-grants")
+        
+
+        //-   +sidebarIconItem({
+        //-     num: 301, 
+        //-     title: 'Applications Received',
+        //-     color: '#569FD6', 
+        //-     icon: 'personInputBlue'
+        //-     })(class="sidebar-horizontal-item moveToRight")
+        //-   +sidebarIconItem({
+        //-     num: 130, 
+        //-     title: 'Applications Approved',
+        //-     color: '#569FD6', 
+        //-     icon: 'personCheckedBlue'
+        //-     })(class="sidebar-horizontal-item moveToRight")
+        //-   +sidebarIconItem({
+        //-     num: '651k', 
+        //-     title: 'KD Amount Approved',
+        //-     color: '#569FD6', 
+        //-     icon: 'kdBlue'
+        //-     })(class="sidebar-horizontal-item moveToRight")
+        //-   +sidebarIconItem({
+        //-     num: '20k', 
+        //-     title: 'Participants',
+        //-     color: '#569FD6', 
+        //-     icon: 'persons'
+        //-     })(class="sidebar-horizontal-item moveToRight")
+
+
+        .research-grants-institution
+          h2.institution-title Applications Breakdown institution
+          .institution-chart 
+            +fillBarItem({
+              num: 60, 
+              text: 'Kuwait University', 
+              fillPercent: '100%'
+              })(class="research-grants-chart-item")
+            +fillBarItem({
+              num: 48, 
+              text: 'Kuwait Institute for Scientific Research', 
+              fillPercent: '80%'
+              })(class="research-grants-chart-item")
+            +fillBarItem({
+              num: 21, 
+              text: 'Australian University of Kuwait', 
+              fillPercent: '35%'
+              })(class="research-grants-chart-item")
+            +fillBarItem({
+              num: 18, 
+              text: 'Ministry of Health', 
+              fillPercent: '30%'
+              })(class="research-grants-chart-item")
+            +fillBarItem({
+              num: 11, 
+              text: 'American International University', 
+              fillPercent: '18%'
+              })(class="research-grants-chart-item")
+            +fillBarItem({
+              num: 6, 
+              text: 'Arab Open University', 
+              fillPercent: '10%'
+              })(class="research-grants-chart-item")
+        
+            +fillBarItem({
+              num: 6, 
+              text: 'American University of Kuwait', 
+              fillPercent: '10%'
+              })(class="research-grants-chart-item")
+            +fillBarItem({
+              num: 6, 
+              text: 'Kuwait College of Science and Tech...', 
+              fillPercent: '10%'
+              })(class="research-grants-chart-item")
+            +fillBarItem({
+              num: 4, 
+              text: 'Public Authority for Applied Educ...', 
+              fillPercent: '7%'
+              })(class="research-grants-chart-item")
+            +fillBarItem({
+              num: 4, 
+              text: 'Gulf University for Science and Technology', 
+              fillPercent: '7%'
+              })(class="research-grants-chart-item")
+            +fillBarItem({
+              num: 2, 
+              text: 'Dasman Diabetes Institute', 
+              fillPercent: '4%'
+              })(class="research-grants-chart-item")
+            +fillBarItem({
+              num: 2, 
+              text: 'Kuwait Hospital', 
+              fillPercent: '4%'
+              })(class="research-grants-chart-item")
+            +fillBarItem({
+              num: 2, 
+              text: 'Kuwait Water Association', 
+              fillPercent: '4%'
+              })(class="research-grants-chart-item")
+
+            

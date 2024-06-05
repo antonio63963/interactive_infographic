@@ -1,7 +1,7 @@
 import "../../common/styles/index.css";
 import "../../common/ui/twoValuesRow/twoValuesRow.css";
 import "./engagementScience.css";
-import Chart from "chart.js/auto";
+
 import { displayPopup, hidePopup, animatedCounter } from "../index/index";
 
 

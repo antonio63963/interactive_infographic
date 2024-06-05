@@ -16,6 +16,9 @@ import "../scienceGrants/scienceGrants.js";
 //Engagement Science
 import "../engagementScience/engagementScience.js";
 
+//Reasearch Grants
+import "../researchGrants/researchGrants.js";
+
 //Science Curation
 import "../scienceCuration/scienceCuration.js";
 

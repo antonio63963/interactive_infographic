@@ -1,0 +1,36 @@
+.fill-bar-item {
+  display: flex;
+  align-items: center;
+
+  .bar {
+    background-color: #E0E0E0;
+    height: 26px;
+    width: 100%;
+    max-width: 100%;
+
+    .bar-fill {
+      width: 0;
+      background-color: #F47D39;
+      height: 100%;
+      transform-origin: left;
+      transition: all 1s ease-in-out;
+    }
+  }
+
+  .description-row {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+
+    .num-description {
+      font-size: 16px;
+      font-weight: 600;
+      margin-right: 20px;
+    }
+    .text-description {
+      font-size: 14px;
+      line-height: 21px;
+      white-space: nowrap;
+    }
+  }
+}
