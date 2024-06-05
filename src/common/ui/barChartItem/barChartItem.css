@@ -15,9 +15,9 @@
     .num {
       font-size: 12px;
       font-weight: 600;
+      margin-right: 36px;
     }
     .title {
-      margin-left: 36px;
       font-size: 12px;
     }
   }
@@ -43,9 +43,10 @@
       .title {
         margin-left: 12px;
         margin-bottom: 6px;
+        margin-right: 12px;
       }
       .num {
-        margin-left: 12px;
+        margin: 0;
       }
     }
   }

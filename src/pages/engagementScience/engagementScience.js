@@ -1,64 +1,18 @@
 import "../../common/styles/index.css";
 import "../../common/ui/twoValuesRow/twoValuesRow.css";
-import "./engagementSciences.css";
-import "./mediaengagementSciences.css";
+import "./engagementScience.css";
 import Chart from "chart.js/auto";
-import { displayPopup, hidePopup } from "../index/index";
+import { displayPopup, hidePopup, animatedCounter } from "../index/index";
 
-const canvas = document.querySelector("#grant-chart");
-const engagementSciences = {
-  values: [65, 25, 25, 7, 7, 7],
-  valuesColor: [
-    "#F47D39",
-    "#FFB455",
-    "#FFB455",
-    "#569FD6",
-    "#569FD6",
-    "#569FD6",
-  ],
-};
-
-const options = {
-  type: "doughnut",
-  data: {
-    // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    datasets: [
-      {
-        label: "Beneficiaries",
-        borderColor: "#ffffff",
-        data: engagementSciences.values,
-        backgroundColor: engagementSciences.valuesColor,
-        hoverOffset: 6,
-      },
-    ],
-
-    scales: {
-      y: {
-        beginAtZero: true,
-      },
-    },
-  },
-  options: {
-    cutout: 80,
-    borderColor: "#ffffff",
-  },
-};
-
-let mathBineficChart;
-function initengagementScienceChart() {
-  const t = setTimeout(() => {
-    mathBineficChart = new Chart(canvas, options);
-    clearTimeout(t);
-  }, 500);
-}
 
 const toEngagementScience = document.querySelector(".toEngagementScience");
+console.log(toEngagementScience)
 const engagementScienceClose = document.querySelector(".engagementScienceClose");
 const engagementSciencePage = document.querySelector(".engagementSciencePage");
 
 function showEngagementSciencePage(e) {
   displayPopup(engagementSciencePage);
-  initEngagementScienceChart();
+
   animationEngagementScience();
 }
 function closeEngagementSciencePage() {
@@ -67,46 +21,51 @@ function closeEngagementSciencePage() {
   // const t = setTimeout(() => {
   //   clearTimeout(t);
   // }, 500);
-  mathBineficChart.destroy();
+  // mathBineficChart.destroy();
 }
 toEngagementScience.addEventListener("click", showEngagementSciencePage);
 engagementScienceClose.addEventListener("click", closeEngagementSciencePage);
 
 //animation elements
 
-const sidebarIcons = document.querySelectorAll(".sidebar__img");
-const binefitItems = document.querySelectorAll(".binefic__list-item");
-const mathGender = document.querySelectorAll(".gender-breakdown-values");
+const sidebarIcons = document.querySelectorAll(".engagementSciencePage .sidebar-horizontal-item");
+const barsBase = document.querySelectorAll(".engagementSciencePage .bar");
+const sidebarValues = document.querySelectorAll(".engagementSciencePage .bar-value");
+const bineficMoblieCharts = document.querySelectorAll(".engagementSciencePage .bar-graph");
+const bineficVluesElements = document.querySelectorAll(".engagementSciencePage .chart-graph .chart-value");
+console.log('bin: ', bineficVluesElements)
+const barsValuesList = [100, 95, 80, 25, 8, 8, 3];
+const bineficValuesList = [56, 17, 12, 3, 5, 7];
 
-function animationengagementScience() {
-  sidebarIcons.forEach((item, idx) => {
+
+function animationEngagementScience() {
+  Array.from(sidebarIcons).reverse().forEach((item, idx) => {
     const t = setTimeout(() => {
       item.classList.remove("moveToRight");
       clearTimeout(t);
     }, idx * 100 + 50);
   });
-  binefitItems.forEach((item, idx) => {
+  barsBase.forEach((item, idx) => {
     const t = setTimeout(() => {
-      item.classList.remove("moveToLeft");
+      item.classList.remove("scaleX");
+      bineficMoblieCharts[idx].classList.remove("scaleX");
+      sidebarValues[idx].style.marginLeft = '12px';
       clearTimeout(t);
     }, idx * 100);
   });
-  mathGender.forEach((item, idx) => {
-    const t = setTimeout(() => {
-      item.classList.remove("moveUp");
-      clearTimeout(t);
-    }, idx * 110);
+  bineficVluesElements.forEach((el, idx) => {
+    animatedCounter({elem: el, numFrom: 0, numTo: bineficValuesList[idx], step: 3, interval: 100});
   });
+  
 }
 
 function reverseAnimation() {
   sidebarIcons.forEach((item, idx) => {
     item.classList.add("moveToRight");
   });
-  binefitItems.forEach((item, idx) => {
-    item.classList.add("moveToLeft");
-  });
-  mathGender.forEach((item, idx) => {
-    item.classList.add("moveUp");
+  barsBase.forEach((item, idx) => {
+    item.classList.add("scaleX");
+    sidebarValues[idx].style.marginLeft = `-${barsValuesList[idx]}%`;
+    bineficMoblieCharts[idx].classList.add("scaleX");
   });
 }

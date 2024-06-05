@@ -13,6 +13,9 @@ import "../mathCuration/mathCuration.js";
 // Science Grants
 import "../scienceGrants/scienceGrants.js";
 
+//Engagement Science
+import "../engagementScience/engagementScience.js";
+
 //Science Curation
 import "../scienceCuration/scienceCuration.js";
 

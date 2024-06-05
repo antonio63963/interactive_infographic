@@ -1,25 +1,137 @@
-include ../../common/ui/appPageLayout/appPageLayout.pug
 include ../../common/ui/appHeaderDetails/appHeaderDetails.pug
-include ../../common/ui/twoValuesRow/twoValuesRow.pug
+include ../../common/ui/sidebarIconItem/sidebarIconItem.pug
 include ../../common/ui/popupPage/popupPage.pug
-include ../../common/ui/genderBreakdown/genderBreakdown.pug
-include ../../common/ui/sidebarVertical/sidebarVertical.pug
+include ../../common/ui/barChartItem/barChartItem.pug
+include ../../common/ui/labelWithColor/labelWithColor.pug
 
 
-  //- +appPageLayout()
-  //-   +appHeaderDetails({title: 'Math and Science Education - Grants'})
-  //-   main.main
 mixin EngagementSciencePage()
   +popupPage()(class="engagementSciencePage")
     main.main
-      +appHeaderDetails({title: 'Engagement in Science (Grants)', closeClass: 'engagementScienceClose'})
-      .container-math-grant 
-        +sidebarHorizontal 
-          //- img.sidebar__img.moveToRight(src=require('../../assets/svg/engagementScience/events.svg'))
-          //- img.sidebar__img.moveToRight(src=require('../../assets/svg/engagementScience/benific.svg'))
-          //- img.sidebar__img.moveToRight(src=require('../../assets/svg/engagementScience/amount.svg'))
-        //- .divider-vertica
+      +appHeaderDetails({title: 'Engagement in Science (Grants)', closeClass: 'engagementScienceClose'})(class="engagement-header")
+      .container-engagementScience 
+        +sidebarHorizontal()(class="sidebar-engagement-science")
+          ul.sidebar-horizontal-item.sidebar-description.moveToRight
+            li.sidebar-description-item Cycles:
+            li.sidebar-description-item October 2022
+            li.sidebar-description-item February 2023
+            li.sidebar-description-item  June 2023
 
-        .engagementScience-container
-          
+          +sidebarIconItem({
+            num: 301, 
+            title: 'Applications Received',
+            color: '#569FD6', 
+            icon: 'personInputBlue'
+            })(class="sidebar-horizontal-item moveToRight")
+          +sidebarIconItem({
+            num: 130, 
+            title: 'Applications Approved',
+            color: '#569FD6', 
+            icon: 'personCheckedBlue'
+            })(class="sidebar-horizontal-item moveToRight")
+          +sidebarIconItem({
+            num: '651k', 
+            title: 'KD Amount Approved',
+            color: '#569FD6', 
+            icon: 'kdBlue'
+            })(class="sidebar-horizontal-item moveToRight")
+          +sidebarIconItem({
+            num: '20k', 
+            title: 'Participants',
+            color: '#569FD6', 
+            icon: 'persons'
+            })(class="sidebar-horizontal-item moveToRight")
+
+
+        .engagement-science-content
+          .col-applications
+            h2.col-title Applications Type
+
+            .bar-chart 
+              .description
+                +barChartItem({
+                  title: 'Workshops',  
+                  percent: '39%', 
+                  color: '#003D63',
+                  num: 39
+                  })(class="description-item")
+                +barChartItem({
+                  title: 'Conference', 
+                  percent: '38%',
+                  num: 38
+                  })(class="description-item")
+                +barChartItem({
+                  title: 'Training',  
+                  percent: '36%', 
+                  color: '#FFB455',
+                  num: 36
+                  })(class="description-item")
+                +barChartItem({
+                  title: 'Competitions',  
+                  percent: '10%', 
+                  color: '#8DC6E2',
+                  num: 10
+                  })(class="description-item")
+                +barChartItem({
+                  title: 'Fairs', 
+                  percent: '3%', 
+                  color: '#3F91BA',
+                  num: 3
+                  })(class="description-item")
+                +barChartItem({
+                  title: 'Seminars', 
+                  percent: '3%', 
+                  color: '#A3A3A3',
+                  num: 3
+                  })(class="description-item")
+                +barChartItem({
+                  title: 'Festivals', 
+                  percent: '1%', 
+                  color: '#D1D1D1',
+                  num: 1
+                  })(class="description-item")
+              .bar-chart-graph 
+                .bar-item
+                  .bar.workshops.scaleX
+                  .bar-value 39
+                .bar-item
+                  .bar.conference.scaleX
+                  .bar-value 38
+                .bar-item
+                  .bar.training.scaleX
+                  .bar-value 36
+                .bar-item
+                  .bar.competitions.scaleX
+                  .bar-value 10
+                .bar-item
+                  .bar.fairs.scaleX
+                  .bar-value 3
+                .bar-item
+                  .bar.seminars.scaleX
+                  .bar-value 3
+                .bar-item
+                  .bar.festivals.scaleX
+                  .bar-value 1
+          .col-binefic 
+            h2 Beneficiaries Distribution by Event Type
+
+            .binefic-chart 
+              .chart-graph 
+                img.img(src=require('../../assets/svg/squareChart.svg'))
+                .chart-value.orange 56%
+                .chart-value.yellow 17%
+                .chart-value.dark 12%
+                .chart-value.grey 3%
+                .chart-value.light-blue 5%
+                .chart-value.blue 7%
+
+              .binefic-chart-description
+                +labelWithColor({color: '#F47D39', text: 'Conferences'})(class="binefic-label")
+                +labelWithColor({color: '#FFB455', text: 'Training'})(class="binefic-label")
+                +labelWithColor({color: '#003D63', text: 'Workshops'})(class="binefic-label")
+                +labelWithColor({color: '#7DC0F1', text: 'Fairs'})(class="binefic-label")
+                +labelWithColor({color: '#A1CAE8', text: 'Competitions'})(class="binefic-label")
+                +labelWithColor({color: '#A3A3A3', text: 'Seminars'})(class="binefic-label")
+
+
 
