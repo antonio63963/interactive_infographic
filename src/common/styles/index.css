@@ -13,6 +13,7 @@
 @import "../ui/appTab/appTab.css";
 @import "../ui/barChartItem/barChartItem.css";
 @import "../ui/fillBarItem/fillBarItem.css";
+@import "../ui/iconHiveItem/iconHiveItem.css";
 
 * {
   margin: 0;

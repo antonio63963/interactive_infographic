@@ -32,7 +32,9 @@ const sidebarIcons = document.querySelectorAll(
 const institutionItemsChart = document.querySelectorAll(
   ".research-grants-chart-item .bar-fill"
 );
-console.log("istitution: ", institutionItemsChart);
+const hiveIcons = document.querySelectorAll(
+  ".research-grants-icon-hive"
+);
 
 function animationResearchGrants() {
   institutionItemsChart.forEach((item, idx) => {
@@ -47,14 +49,13 @@ function animationResearchGrants() {
   //     clearTimeout(t);
   //   }, idx * 100 + 50);
   // });
-  // barsBase.forEach((item, idx) => {
-  //   const t = setTimeout(() => {
-  //     item.classList.remove("scaleX");
-  //     bineficMoblieCharts[idx].classList.remove("scaleX");
-  //     sidebarValues[idx].style.marginLeft = '12px';
-  //     clearTimeout(t);
-  //   }, idx * 100);
-  // });
+  hiveIcons.forEach((item, idx) => {
+    const t = setTimeout(() => {
+      item.classList.remove("toTop");
+      clearTimeout(t);
+
+    }, idx * 100 + 500);
+  });
   // bineficVluesElements.forEach((el, idx) => {
   //   animatedCounter({elem: el, numFrom: 0, numTo: bineficValuesList[idx], step: 3, interval: 100});
   // });
@@ -66,5 +67,8 @@ function reverseAnimation() {
   // });
   institutionItemsChart.forEach((item, idx) => {
     item.style.width = 0;
+  });
+  hiveIcons.forEach((item, idx) => {
+    item.classList.add("toTop");
   });
 }
