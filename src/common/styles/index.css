@@ -15,6 +15,7 @@
 @import "../ui/fillBarItem/fillBarItem.css";
 @import "../ui/iconHiveItem/iconHiveItem.css";
 @import "../ui/lineWithDotInfo/lineWithDotInfo.css";
+@import "../ui/doubleValuesBar/doubleValuesBar.css";
 
 * {
   margin: 0;

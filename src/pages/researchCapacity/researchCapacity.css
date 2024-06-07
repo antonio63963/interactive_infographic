@@ -1,0 +1,82 @@
+@import "../../common/styles/constants.css";
+@import "../../common/styles/animation.css";
+
+header.research-capacity-header {
+  background-color: #ffe4c1;
+
+  .header__close-button {
+    background-color: #ffcf90;
+  }
+}
+
+.container-research-capacity {
+  max-width: 100vw;
+  width: 800px;
+  display: flex;
+  padding-bottom: 57px;
+
+  .research-capacity-content {
+    width: 100%;
+    margin: 40px 20px 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      margin-bottom: 24px;
+    }
+
+    .capacity-chart {
+      display: flex;
+      max-width: 100%;
+
+      .capacity-chart-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 107px;
+
+        .capacity-description-item {
+          font-size: 12px;
+          height: 60px;
+          display: flex;
+          justify-content: end;
+          align-items: center;
+          margin-right: 14px;
+          text-align: end;
+        }
+        .capacity-description-item:last-child {
+          margin-bottom: 0;
+        }
+      }
+      .chart-graph {
+        padding: 6px 0;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid var(--color-black);
+        border-width: 0 0 0 2px;
+        width: 485px;
+        max-width: 485px;
+
+        .chart-item {
+          margin-bottom: 32px;
+        }
+        .chart-item:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+/* @media screen and (max-width: 992px) {
+  .research-capacity-content {
+
+  }
+} */
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 576px) {
+}

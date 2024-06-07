@@ -4,7 +4,7 @@ import "./researchNetworking.css";
 import { displayPopup, hidePopup, animatedCounter } from "../index/index";
 
 const toResearchNetworking = document.querySelector(".toResearchNetworking");
-console.log(toResearchNetworking);
+ 
 const researchNetworkingClose = document.querySelector(
   ".researchNetworkingClose"
 );
@@ -56,7 +56,7 @@ const stackBars = Array.from(
 const numsBars = Array.from(
   document.querySelectorAll(".research-networking-row .num")
 ).reverse();
-console.log("BARS: ", numsBars);
+
 
 function animationResearchNetworking(isMobile) {
   Array.from(sidebarIcons)
@@ -82,7 +82,7 @@ function animationResearchNetworking(isMobile) {
     const percent = bar.dataset.percent;
     const color = bar.dataset.color;
     const font = bar.dataset.font;
-    console.log(percent, color, font);
+
     const t = setTimeout(() => {
      isMobile ? bar.style.width = `${percent}%` : bar.style.height = `${percent}%`;
       bar.style.backgroundColor = color;

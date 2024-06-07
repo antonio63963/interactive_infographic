@@ -4,7 +4,7 @@ import "./researchCuration.css";
 import { displayPopup, hidePopup, animatedCounter } from "../index/index";
 
 const toResearchCuration = document.querySelector(".toResearchCuration");
-console.log(toResearchCuration);
+
 const researchCurationClose = document.querySelector(".researchCurationClose");
 const researchCurationPage = document.querySelector(".researchCurationPage");
 

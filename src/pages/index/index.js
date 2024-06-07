@@ -43,6 +43,9 @@ import "../pilotProjects/pilotProjects.js";
 // AssignedProjects
 import "../assignedProjects/assignedProjects.js";
 
+//Research Capacity
+import "../researchCapacity/researchCapacity.js";
+
 //PrivateSectorProjects
 import "../privateSectorProjects/privateSectorProjects.js";
 

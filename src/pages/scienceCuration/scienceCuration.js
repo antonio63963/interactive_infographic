@@ -70,7 +70,6 @@ const mobileBarsSinceCuration = document.querySelectorAll(
 const moveUpScienceCuration = document.querySelectorAll(
   ".scienceCurationPage .moveUp"
 );
-console.log('MOBILE: ', mobileBarsSinceCuration)
 const chartBarsScienceCuration = document.querySelectorAll(
   ".binefic-item-s-cur"
 );
