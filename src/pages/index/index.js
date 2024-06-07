@@ -28,6 +28,9 @@ import "../policyGrants/policyGrants.js";
 //Research Curation
 import "../researchCuration/researchCuration.js";
 
+//Research Networking
+import "../researchNetworking/researchNetworking.js";
+
 //Innovation Grants
 import "../innovationGrants/innovationGrants.js";
 
@@ -54,7 +57,7 @@ function hidePopup(popup) {
 }
 
 function animatedCounter(options) {
-  const {elem, numFrom, numTo, step, interval} = options;
+  const {elem, numFrom, numTo, step, interval, isPercent} = options;
   let numToShow = numFrom;
 
   const c = setTimeout(() => {
@@ -65,10 +68,10 @@ function animatedCounter(options) {
       if (numToShow < numTo) {
         if (difference >= step) {
           numToShow += step;
-          elem.textContent = numToShow;
+          elem.textContent = isPercent ? `${numToShow}%` : numToShow;
         } else if (difference < step) {
           numToShow += difference;
-          elem.textContent = numToShow;
+          elem.textContent = isPercent ? `${numToShow}%` : numToShow;
         }
       } else {
         clearInterval(t);
