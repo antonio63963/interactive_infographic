@@ -2,13 +2,15 @@
   display: flex;
   align-items: flex-end;
   .twoValues__val1 {
-    font-size: clamp(22px, 3.6rem, 36px);
+    /* font-size: clamp(22px, 3.6rem, 36px); */
+    font-size: 36px;
     font-weight: 700;
   }
   .twoValues__val2 {
-    font-size: clamp(16px, 1.8rem, 18px);
+    /* font-size: clamp(16px, 1.8rem, 18px); */
+    font-size: 18px;
     font-weight: 700;
-    margin-bottom: clamp(0px, 0.6rem, 6px);
+    margin-bottom: 6px;
     margin-left: 10px;
   }
   .twoValues__orange {

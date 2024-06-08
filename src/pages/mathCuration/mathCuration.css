@@ -3,12 +3,12 @@
 @import "./components/bineficLogoChart/bineficLogoChart.css";
 
 .header.mathCuration__header {
-  background-color: #D6EDFF;
+  background-color: #d6edff;
   width: 994px;
   max-width: 100vw;
 
   .header__close-button {
-    background-color: #B4DFFF;
+    background-color: #b4dfff;
   }
 }
 
@@ -81,18 +81,21 @@
     .binefic-title {
       margin-left: 0;
     }
-  }
-  /* .content-row {
-    justify-content: center;
-  } */
-  .gender-row {
-    flex-direction: column;
-    align-items: center;
-    h2 {
-      margin-bottom: 16px;
+    .gender-row {
+      flex-direction: column;
+      justify-content: center;
+      h2 {
+        margin-bottom: 16px;
+      }
     }
   }
+
   .gender-info {
+    flex-direction: column;
     margin-left: 0;
+
+    .gender-info-col {
+      margin-left: 0;
+    }
   }
 }
