@@ -14,6 +14,7 @@ include ../pilotProjects/pilotProjects.pug
 include ../assignedProjects/assignedProjects.pug
 include ../researchCapacity/researchCapacity.pug
 include ../privateSectorProjects/privateSectorProjects.pug
+include ../innovationCurations/innovationCurations.pug
 include ../organizationalProjects/organizationalProjects.pug
 
 +appPageLayout()
@@ -32,6 +33,7 @@ include ../organizationalProjects/organizationalProjects.pug
   +AssignedProjectsPage()
   +ResearchCapacityPage()
   +PrivateSectorProjectsPage()
+  +InnovationCurationsPage()
   +OrganizationalProjectsPage()
 
 
@@ -53,4 +55,5 @@ include ../organizationalProjects/organizationalProjects.pug
       a.mock.toResearchCuration(role= "button", href= '#') Research Curation
       a.mock.toResearchNetworking(role= "button", href= '#') Research Networking
       a.mock.toResearchCapacity(role= "button", href= '#') Research Capacity
+      a.mock.toInnovationCurations(role= "button", href= '#') Innovation Curations
 

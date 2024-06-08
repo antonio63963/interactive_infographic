@@ -49,6 +49,9 @@ import "../researchCapacity/researchCapacity.js";
 //PrivateSectorProjects
 import "../privateSectorProjects/privateSectorProjects.js";
 
+//Innovation Curations
+import "../innovationCurations/innovationCurations.js";
+
 //Organization Projects
 import "../organizationalProjects/organizationalProjects.js";
 
