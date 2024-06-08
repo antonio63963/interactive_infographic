@@ -62,14 +62,32 @@ function hidePopup(popup) {
   popup.classList.add("hidden");
 }
 
+//arr elems with dataset value
+function animBarsStack(elemsArr) {
+  //define entire sum and amoun in a percent
+  const sumOfValues = elemsArr.reduce((acc, item) => {
+    acc += +item.dataset.value;
+    return acc;
+  }, 0);
+  const percent = 100 / sumOfValues;
+  //define width
+  elemsArr.reverse().forEach((bar, idx) => {
+    const value = bar.dataset.value;
+    const t = setTimeout(() => {
+      bar.style.width = `${+value * percent}%`;
+      clearTimeout(t);
+    }, idx * 500 + 50);
+  });
+}
+
 function animatedCounter(options) {
-  const {elem, numFrom, numTo, step, interval, isPercent} = options;
+  const { elem, numFrom, numTo, step, interval, isPercent } = options;
   let numToShow = numFrom;
 
   const c = setTimeout(() => {
-    console.log(`${numTo} timeout start`)
+    console.log(`${numTo} timeout start`);
     const t = setInterval(() => {
-      console.log('Interval')
+      console.log("Interval");
       let difference = numTo - numToShow;
       if (numToShow < numTo) {
         if (difference >= step) {
@@ -84,8 +102,8 @@ function animatedCounter(options) {
       }
     }, interval ?? 100);
     clearTimeout(c);
-    console.log(`${numTo} timeout finish`)
+    console.log(`${numTo} timeout finish`);
   }, 500);
 }
 
-export { displayPopup, hidePopup, animatedCounter };
+export { displayPopup, hidePopup, animatedCounter, animBarsStack };

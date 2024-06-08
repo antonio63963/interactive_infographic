@@ -1,5 +1,5 @@
 import "./innovationCurations.css";
-import { displayPopup, hidePopup, animatedCounter } from "../index/index";
+import { displayPopup, hidePopup, animBarsStack } from "../index/index";
 import { initGenderChart } from "../../common/ui/genderChart/genderChart";
 
 const toInnovationCurations = document.querySelector(".toInnovationCurations");
@@ -55,28 +55,6 @@ function initInnovationGrantChart() {
 
     clearTimeout(t);
   }, 500);
-}
-
-function animBarsStack(elemsArr) {
-  const sumOfValues = elemsArr.reduce((acc, item) => {
-    acc += +item.dataset.value;
-    return acc;
-  }, 0);
-  const percent = 100 / sumOfValues;
-  console.log("sum: ", sumOfValues);
-  console.log("percent: ", percent);
-
-  elemsArr.reverse().forEach((bar, idx) => {
-    const value = bar.dataset.value;
-    const t = setTimeout(() => {
-      // Object.assign(bar.style, {
-      //   width: `${+value * percent}%`,
-      //   backgroundColor: color,
-      // });
-      bar.style.width = `${+value * percent}%`;
-      clearTimeout(t);
-    }, idx * 500 + 50);
-  });
 }
 
 function animationInnovationCurations() {
