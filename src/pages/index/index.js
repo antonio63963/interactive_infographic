@@ -34,6 +34,9 @@ import "../researchNetworking/researchNetworking.js";
 //Innovation Grants
 import "../innovationGrants/innovationGrants.js";
 
+//Prizes Winners
+import "../prizesWinners/prizesWinners.js";
+
 //KFAS Media
 import "../kfasMedia/kfasMedia.js";
 

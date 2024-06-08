@@ -16,6 +16,8 @@
 @import "../ui/iconHiveItem/iconHiveItem.css";
 @import "../ui/lineWithDotInfo/lineWithDotInfo.css";
 @import "../ui/doubleValuesBar/doubleValuesBar.css";
+@import "../ui/prizeLabel/prizeLabel.css";
+@import "../ui/prizeRow/prizeRow.css";
 
 * {
   margin: 0;

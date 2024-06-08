@@ -1,32 +1,48 @@
-
-
 @import "../../common/styles/constants.css";
 @import "../../common/styles/animation.css";
 
 .prizesWinners__header {
-  background-color: #FFE4C1;
-  width: var(--app-width);
-  max-width: 800px;
-  
+  background-color: #ffe4c1;
+  width: 800px;
+  max-width: 100vw;
+
   .header__close-button {
-    background-color: #FFCF90;
+    background-color: #ffcf90;
   }
 }
 
 .container-prizesWinners {
+  padding: 0 clamp(20px, 10rem, 100px);
+  padding-bottom: 72px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 800px;
+  width: 800px;
+  max-width: 100vw;
+
+  .prize-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 24px;
+  }
 }
 
-
-
-
-@media screen and (max-width: 487px) {
+@media screen and (max-width: 576px) {
   .container-prizesWinners {
-    
+    padding: 0 20px;
+    .prize-row.prize-person {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .person {
+        margin-bottom: 5px;
+      }
+
+      .job-title-wrapper {
+        padding-left: 0;
+        width: 100%;
+      }
+    }
   }
-  
-  
 }

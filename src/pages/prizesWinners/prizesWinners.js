@@ -10,7 +10,6 @@ function showPrizeWinnersPage(e) {
 }
 function closePrizeWinnersPage() {
   hidePopup(prizesWinnersPage);
-  allCharts.forEach((b) => b.destroy());
 }
 
 toPrizeWinners.addEventListener("click", showPrizeWinnersPage);

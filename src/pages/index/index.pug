@@ -9,6 +9,7 @@ include ../policyGrants/policyGrants.pug
 include ../researchCuration/researchCuration.pug
 include ../researchNetworking/researchNetworking.pug
 include ../innovationGrants/innovationGrants.pug
+include ../prizesWinners/prizesWinners.pug
 include ../kfasMedia/kfasMedia.pug
 include ../pilotProjects/pilotProjects.pug
 include ../assignedProjects/assignedProjects.pug
@@ -28,6 +29,7 @@ include ../organizationalProjects/organizationalProjects.pug
   +ResearchCurationPage()
   +ResearchNetworkingPage()
   +InnovationGrantPage()
+  +PrizesWinnersPage()
   +KfasMediaPage()
   +PilotProjectsPage()
   +AssignedProjectsPage()
@@ -56,4 +58,5 @@ include ../organizationalProjects/organizationalProjects.pug
       a.mock.toResearchNetworking(role= "button", href= '#') Research Networking
       a.mock.toResearchCapacity(role= "button", href= '#') Research Capacity
       a.mock.toInnovationCurations(role= "button", href= '#') Innovation Curations
+      a.mock.toPrizeWinners(role= "button", href= '#') Prizes Winners
 
