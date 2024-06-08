@@ -222,6 +222,14 @@ header.innovationCurations-header {
     .innovation-curations-content {
       width: 100%;
 
+      .gender-section {
+        width: 100%;
+        
+        .gender-col {
+          align-items: center;
+        }
+      }
+
       .bar-chart {
         .description {
           width: 100%;
