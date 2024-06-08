@@ -89,3 +89,18 @@
     align-items: center;
   }
 }
+@media screen and (max-width: 576px) {
+
+  .innovation-grant-binefics {
+
+    .gender-row {
+      flex-direction: column;
+      align-items: center;
+  
+      .gender-col {
+        margin-left: 0;
+      }
+    }
+  }
+
+}

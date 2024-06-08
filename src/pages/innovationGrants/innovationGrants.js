@@ -2,23 +2,10 @@ import "../../common/styles/index.css";
 import "../../common/ui/twoValuesRow/twoValuesRow.css";
 import "./innovationGrants.css";
 
-import Chart from "chart.js/auto";
 import { displayPopup, hidePopup, animatedCounter } from "../index/index";
 import { initGenderChart } from "../../common/ui/genderChart/genderChart";
 
 const canvas = document.querySelector("#innovation-grants-gender-1");
-const innovationGrants = {
-  values: [65, 25, 25, 7, 7, 7],
-  valuesColor: [
-    "#F47D39",
-    "#FFB455",
-    "#FFB455",
-    "#569FD6",
-    "#569FD6",
-    "#569FD6",
-  ],
-};
-
 
 const innovationGrantCharts= [];
 function initInnovationGrantChart() {
@@ -82,7 +69,4 @@ function reverseAnimation() {
   innovationBars.forEach((item, idx) => {
     item.classList.add("scaleX");
   });
-  // innovationGender.forEach((item, idx) => {
-  //   item.classList.add("moveUp");
-  // });
 }
