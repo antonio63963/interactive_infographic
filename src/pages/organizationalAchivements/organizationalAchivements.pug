@@ -1,0 +1,18 @@
+
+include ../../common/ui/appHeaderDetails/appHeaderDetails.pug
+include ../../common/ui/twoValuesRow/twoValuesRow.pug
+include ../../common/ui/popupPage/popupPage.pug
+include ../../common/ui/sidebarVertical/sidebarVertical.pug
+include ../../common/ui/card/card.pug
+include ../../common/ui/labelWithColor/labelWithColor.pug
+
+
+mixin OrganizationalAchivementsPage()
+  +popupPage()(class="organizationalAchivementsPage")
+    .container-organizationalAchivements
+      +appHeaderDetails({
+        title: 'Organizational Development Achivements', 
+        closeClass: 'organizationalAchivementsClose'
+        })(class="organizationalAchivements__header")
+      .content-organizational-Achivements
+        

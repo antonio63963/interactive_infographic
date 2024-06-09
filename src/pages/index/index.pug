@@ -17,6 +17,7 @@ include ../researchCapacity/researchCapacity.pug
 include ../privateSectorProjects/privateSectorProjects.pug
 include ../innovationCurations/innovationCurations.pug
 include ../organizationalProjects/organizationalProjects.pug
+include ../organizationalAchivements/organizationalAchivements.pug
 
 +appPageLayout()
   +MathGrantPage()
@@ -37,6 +38,7 @@ include ../organizationalProjects/organizationalProjects.pug
   +PrivateSectorProjectsPage()
   +InnovationCurationsPage()
   +OrganizationalProjectsPage()
+  +OrganizationalAchivementsPage()
 
 
   main.main 
@@ -59,4 +61,5 @@ include ../organizationalProjects/organizationalProjects.pug
       a.mock.toResearchCapacity(role= "button", href= '#') Research Capacity
       a.mock.toInnovationCurations(role= "button", href= '#') Innovation Curations
       a.mock.toPrizeWinners(role= "button", href= '#') Prizes Winners
+      a.mock.toOrganizationalAchivements(role= "button", href= '#') Organizational Achivements
 

@@ -58,6 +58,12 @@ import "../innovationCurations/innovationCurations.js";
 //Organization Projects
 import "../organizationalProjects/organizationalProjects.js";
 
+//Organizational Achivements
+import "../organizationalAchivements/organizationalAchivements.js";
+
+
+
+
 function displayPopup(popup) {
   popup.classList.remove("hidden");
 }

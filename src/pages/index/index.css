@@ -15,6 +15,7 @@ a.mock {
   color: white;
   font-size: 22px;
   width: 25%;
+  white-space: wrap;
 }
 
 a.mock.toPilotProjects {
