@@ -1,8 +1,10 @@
 .app-tab {
+  cursor: pointer;
   position: relative;
   --tab-height: 72px;
   height: var(--tab-height);
-  width: 150px;
+  padding: 0 12px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,33 +13,52 @@
 
   .icon-wrapper {
     position: relative;
-    transform: translateX(9px);
+    display: felx;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     z-index: 10;
   }
   .marker {
     --size: 18px;
-    position: relative;
+    position: absolute;
     width: var(--size);
     height: var(--size);
     transform: rotate(45deg);
     background-color: inherit;
+    transition: bottom 0.5s ease-in-out;
   }
 
   svg {
     fill: #c0c0c0;
+    max-width: 100%;
   }
 }
 .app-tab.active {
-  /* background-color: #be4ef9; */
   .marker {
-    bottom: -36px;
-    right: var(--size);
-    /* background-color: #be4ef9; */
+    bottom: -9px;
+    /* right: var(--size); */
   }
   svg {
     fill: #fff;
   }
 }
-.app-tab:hover {
+/* .app-tab:hover {
   opacity: 0.5;
+}
+.app-tab.active:hover {
+  opacity: 1;
+} */
+
+@media screen and (max-width: 576px) {
+  .app-tab {
+    height: 50px;
+  }
+  .app-tab.active {
+    .marker {
+      /* bottom: -25px;
+      right: var(--size); */
+
+    }
+  }
 }
