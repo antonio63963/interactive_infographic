@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   transition: all 0.5s ease-in-out;
 
   .icon-wrapper {
@@ -20,23 +20,22 @@
     width: var(--size);
     height: var(--size);
     transform: rotate(45deg);
-    background-color: #F2F2F2;
-    transition: all .5s ease-in-out;
+    background-color: inherit;
   }
 
   svg {
-   fill: #C0C0C0;
+    fill: #c0c0c0;
   }
 }
 .app-tab.active {
-  background-color: #be4ef9;
+  /* background-color: #be4ef9; */
   .marker {
     bottom: -36px;
     right: var(--size);
-    background-color: #be4ef9;
+    /* background-color: #be4ef9; */
   }
   svg {
-    fill: #fff
+    fill: #fff;
   }
 }
 .app-tab:hover {
