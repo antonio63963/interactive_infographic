@@ -33,6 +33,10 @@
     }
   }
 
+  #inst-clip, #x-clipj, #in-clip {
+    width: 100%;
+  }
+
   .socials-chart {
     margin-top: 56px;
     width: 100%;

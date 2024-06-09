@@ -1,7 +1,9 @@
-import { Chart, plugins } from "chart.js/auto";
+import { Chart, elements, plugins } from "chart.js/auto";
 import { callback } from "chart.js/helpers";
 
-function initSocialChart(canvas, values) {
+function initSocialChart(canvas, settings) {
+  const {values, range, borderColor, step} = settings || {};
+
   const labels = [
     null,
     "Jan",
@@ -22,27 +24,33 @@ function initSocialChart(canvas, values) {
   const options = {
     type: "line",
     data: {
-      // stepped: false,
       showLine: false,
       labels: labels,
       datasets: [
         {
-          data: [null, 18000, 5000, 6500, 0, 6500, 18000, 16000, 20000, 17000, 18500, 4500, 2000],
+          data: [null, ...values],
           fill: false,
-          borderColor: "#ffccaf",
+          borderColor: borderColor || "#F47D39",
         },
       ],
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      elements: {
+        point: {
+          radius: 0,
+          backgroundColor: 'rgba(0,0,0,0)',
+          borderWidth: 0,
+        }
+      },
       scales: {
         y: {
           beginAtZero: true,
-          min: 0,
-          max: 100000,
+          min: range.min || 0,
+          max: range.max || 100000,
           ticks: {
-            stepSize: 20000
+            stepSize: step || 20000,
           },
           grid: {
             drawOnChartArea: false,
