@@ -37,28 +37,17 @@
 .app-tab.active {
   .marker {
     bottom: -9px;
-    /* right: var(--size); */
   }
   svg {
     fill: #fff;
   }
 }
-/* .app-tab:hover {
+.app-tab:not(.active):hover {
   opacity: 0.5;
 }
-.app-tab.active:hover {
-  opacity: 1;
-} */
 
 @media screen and (max-width: 576px) {
   .app-tab {
     height: 50px;
-  }
-  .app-tab.active {
-    .marker {
-      /* bottom: -25px;
-      right: var(--size); */
-
-    }
   }
 }
