@@ -61,6 +61,8 @@ import "../organizationalProjects/organizationalProjects.js";
 //Organizational Achivements
 import "../organizationalAchivements/organizationalAchivements.js";
 
+//Financial Achivements
+import "../financialAchivements/financialAchivements.js"
 
 
 

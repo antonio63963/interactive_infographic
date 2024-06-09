@@ -11,7 +11,6 @@ function showOrganizationalAchivementsPage(e) {
 }
 function closeOrganizationalAchivementsPage() {
   hidePopup(organizationalAchivementsPage);
-  allCharts.forEach((b) => b.destroy());
 }
 toOrganizationalAchivements.addEventListener("click", showOrganizationalAchivementsPage);
 organizationalAchivementsClose.addEventListener("click", closeOrganizationalAchivementsPage);

@@ -1,0 +1,13 @@
+
+include ../../common/ui/appHeaderDetails/appHeaderDetails.pug
+include ../../common/ui/popupPage/popupPage.pug
+
+mixin FinancialAchivementsPage()
+  +popupPage()(class="financialAchivementsPage")
+    .container-financialAchivements
+      +appHeaderDetails({
+        title: 'Financial Achievements', 
+        closeClass: 'financialAchivementsClose'
+        })(class="financialAchivements__header")
+      .content-financial-Achivements
+        

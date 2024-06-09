@@ -18,6 +18,7 @@ include ../privateSectorProjects/privateSectorProjects.pug
 include ../innovationCurations/innovationCurations.pug
 include ../organizationalProjects/organizationalProjects.pug
 include ../organizationalAchivements/organizationalAchivements.pug
+include ../financialAchivements/financialAchivements.pug
 
 +appPageLayout()
   +MathGrantPage()
@@ -39,6 +40,7 @@ include ../organizationalAchivements/organizationalAchivements.pug
   +InnovationCurationsPage()
   +OrganizationalProjectsPage()
   +OrganizationalAchivementsPage()
+  +FinancialAchivementsPage()
 
 
   main.main 
@@ -62,4 +64,5 @@ include ../organizationalAchivements/organizationalAchivements.pug
       a.mock.toInnovationCurations(role= "button", href= '#') Innovation Curations
       a.mock.toPrizeWinners(role= "button", href= '#') Prizes Winners
       a.mock.toOrganizationalAchivements(role= "button", href= '#') Organizational Achivements
+      a.mock.toFinancialAchivements(role= "button", href= '#') Financial Achivements
 
