@@ -2,12 +2,55 @@
 include ../../common/ui/appHeaderDetails/appHeaderDetails.pug
 include ../../common/ui/popupPage/popupPage.pug
 
+mixin boldTextRow(options)
+  -const {leadingNum, leadingText, leadingColor, text} = options || {};
+  .bold-text-row(class!= attributes.class)
+    .col(style={color: leadingColor}) 
+      span.leading-title= leadingNum 
+      if leadingText
+        span.leading-text= leadingText
+    p.text= text  
+
+
+
 mixin FinancialAchivementsPage()
   +popupPage()(class="financialAchivementsPage")
-    .container-financialAchivements
+    .container-financial-achivements
       +appHeaderDetails({
         title: 'Financial Achievements', 
         closeClass: 'financialAchivementsClose'
         })(class="financialAchivements__header")
-      .content-financial-Achivements
+      .content-financial-achivements
+        .row 
+          img.row-img(src=require("../../assets/svg/moneyHand.svg"))
+          .description-block 
+            +boldTextRow({
+              leadingNum: 451, 
+              leadingText: null, 
+              leadingColor: '#F47D39', 
+              text: 'of companies contributed'
+              })
+            +boldTextRow({
+              leadingNum: 29.5, 
+              leadingText: 'million', 
+              leadingColor: '#F47D39', 
+              text: 'KD in contributions collected'
+              })
+        .row 
+          img.row-img(src=require("../../assets/svg/money.svg"))
+          .description-block 
+            +boldTextRow({
+              leadingNum: 16.5, 
+              leadingText: 'million', 
+              leadingColor: '#5DACE7', 
+              text: 'KD in Total KFAS Budget *'
+              })
+            +boldTextRow({
+              leadingNum: 11, 
+              leadingText: 'million', 
+              leadingColor: '#5DACE7', 
+              text: 'KD in Total KFAS Expenses *'
+              })
+        p.additional *KFAS Only including staff cost
+
         

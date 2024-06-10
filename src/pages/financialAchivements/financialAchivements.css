@@ -1,7 +1,7 @@
 @import "../../common/styles/constants.css";
 @import "../../common/styles/animation.css";
 
-.container-financialAchivements {
+.container-financial-achivements {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,11 +11,11 @@
 }
 
 .financialAchivements__header {
-  background-color: #FFE4C1;
-  max-width: 800px;
+  background-color: #ffe4c1;
+  width: 100%;
 
   .header__close-button {
-    background-color: #FFCF90;
+    background-color: #ffcf90;
   }
 }
 
@@ -24,6 +24,92 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
+  padding: 40px 20px;
+
+  .row {
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+
+    .description-block {
+      width: 340px;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding-left: clamp(20px, 3rem, 30px);
+    }
+  }
+  .additional {
+    margin-top: 35px;
+    font-size: 12px;
+    color: #8c8c8c;
+    align-self: flex-start;
+  }
 }
 
+.bold-text-row {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90px;
+    min-width: 90px;
+    margin-right: 12px;
+
+    .leading-title {
+      font-weight: 600;
+      font-size: 34px;
+    }
+    .leading-text {
+      color: inherit;
+      font-size: 16px;
+      line-height: 19.2px;
+      font-weight: 500;
+    }
+  }
+  .text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 508px) {
+  .content-financial-achivements {
+    .row {
+      flex-direction: column;
+      margin-top: 55px;
+
+      .row-img {
+        margin-bottom: 24px;
+      }
+
+      .description-block {
+        padding-left: 0;
+        max-width: calc(100vw - 40px);
+      }
+    }
+    .row:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .content-financial-achivements {
+    .row {
+      .row-img {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .bold-text-row {
+    flex-direction: column;
+    .col {
+      margin-bottom: 12px;
+    }
+  }
+}
