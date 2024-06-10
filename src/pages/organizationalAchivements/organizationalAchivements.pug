@@ -9,5 +9,35 @@ mixin OrganizationalAchivementsPage()
         title: 'Organizational Achievements', 
         closeClass: 'organizationalAchivementsClose'
         })(class="organizationalAchivements__header")
-      .content-organizational-Achivements
+      .content-organizational-achivements
+        .top-row
+          section.job.job-anime 
+            .num-wrapper
+             span.num-job.anime-text(data-value="24") 0
+             img.num-job-img(src=require("../../assets/svg/caseSound.svg"))
+            h2.title-job job announcements
+          section.courses.courses-anime 
+            .title-row 
+              img.courses-img(src=require("../../assets/svg/hatBooks.svg"))
+              h2.courses-title Training courses 
+            .num-row 
+              span.num.anime-text(data-value="68") 0
+              .text physical
+            .num-row 
+              span.num 1
+              .text virtual
+        .bottom-row 
+          section.org-achieve-item 
+            img.icon(src=require("../../assets/svg/peopleSpeak.svg"))
+            .col 
+              .amount.candidates(data-value="702") 0
+              h2.title candidates
+              span.subtitle were interviewed
+          section.org-achieve-item 
+            img.icon(src=require("../../assets/svg/peopleChecked.svg"))
+            .col 
+              .amount.anime-text(data-value="42") 0
+              .row 
+                h2.title Kuwaitis
+                span.subtitle were hired
         

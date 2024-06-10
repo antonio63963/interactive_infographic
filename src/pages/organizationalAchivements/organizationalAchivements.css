@@ -11,19 +11,142 @@
 }
 
 .organizationalAchivements__header {
-  background-color: #FFE4C1;
+  background-color: #ffe4c1;
   max-width: 800px;
 
   .header__close-button {
-    background-color: #FFCF90;
+    background-color: #ffcf90;
   }
 }
 
 .content-organizational-achivements {
-  padding: 40px 20px;
+  padding: 45px 20px 70px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-}
+  width: 590px;
+  max-width: 100vw;
 
+  .top-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .job {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 1s ease-in-out;
+
+      .num-wrapper {
+        position: relative;
+        width: 165px;
+        height: 88px;
+
+        .num-job {
+          color: var(--color-orange);
+          font-size: 96px;
+          line-height: 96px;
+          font-weight: 700;
+        }
+        .num-job-img {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+      }
+      .title-job {
+        width: 159px;
+        margin-left: 20px;
+      }
+    }
+    .courses {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--color-grey-l);
+      border-width: 0 0 0 1px;
+      padding-left: 30px;
+      padding-bottom: 20px;
+      transition: all 1s ease-in-out;
+
+      .title-row {
+        display: flex;
+        align-items: center;
+
+        .courses-title {
+          width: 90px;
+          margin-left: 16px;
+        }
+      }
+
+      .num-row {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+
+        span.num {
+          width: 48px;
+          text-align: center;
+          color: var(--color-blue);
+          font-size: 32px;
+          line-height: 32px;
+          font-weight: 700;
+        }
+        .text {
+          font-size: 14px;
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+
+  .bottom-row {
+    border: 1px solid var(--color-grey-l);
+    border-width: 1px 0 0 0;
+    width: 100%;
+    display: flex;
+    padding-top: 36px;
+    justify-content: space-between;
+
+    .org-achieve-item {
+      display: flex;
+      align-items: start;
+
+      .col {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+
+        .row {
+          display: flex;
+          align-items: flex-end;
+
+          .subtitle {
+            margin-left: 10px;
+          }
+        }
+
+        .amount {
+          color: var(--color-yellow);
+          font-size: 52px;
+          font-weight: 700;
+          line-height: 52px;
+        }
+
+        .subtitle {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .courses-anime {
+    transform: translateX(100px);
+    padding-bottom: 100px !important;
+  }
+
+  .job-anime {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
