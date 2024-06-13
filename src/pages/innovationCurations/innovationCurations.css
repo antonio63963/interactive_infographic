@@ -1,14 +1,6 @@
 @import "../../common/styles/constants.css";
 @import "../../common/styles/animation.css";
 
-header.innovationCurations-header {
-  background-color: #d6edff;
-
-  .header__close-button {
-    background-color: #b4dfff;
-  }
-}
-
 .container-innovationCurations {
   width: var(--app-width);
   max-width: calc(100vw);
@@ -37,7 +29,6 @@ header.innovationCurations-header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* margin-right: clamp(20px, 5.8rem, 78px); */
 
     h2 {
       margin-bottom: 24px;
@@ -53,7 +44,6 @@ header.innovationCurations-header {
         margin-left: 30px;
         display: flex;
         flex-direction: column;
-        /* justify-content: space-evenly; */
       }
       .description-item {
         margin-top: 10px;
@@ -62,7 +52,6 @@ header.innovationCurations-header {
       }
 
       .bar-chart-graph {
-        /* width: 70%; */
         display: flex;
         flex-direction: column;
         flex-grow: 2;
@@ -186,7 +175,6 @@ header.innovationCurations-header {
         .benefic-chart-col {
           display: flex;
           flex-direction: column;
-          /* justify-content: space-between; */
           margin-bottom: 16px;
         }
       }
@@ -213,8 +201,6 @@ header.innovationCurations-header {
       max-width: 20%;
     }
   }
-  .innovation-curations-content {
-  }
 }
 
 @media screen and (max-width: 576px) {
@@ -224,7 +210,7 @@ header.innovationCurations-header {
 
       .gender-section {
         width: 100%;
-        
+
         .gender-col {
           align-items: center;
         }

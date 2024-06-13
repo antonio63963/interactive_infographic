@@ -11,18 +11,21 @@ const innovationCurationsPage = document.querySelector(
   ".innovationCurationsPage"
 );
 
+function onOpacity(e) {
+  if (e.target.classList.contains("click-opacity")) {
+    closeInnovationCurationsPage();
+  }
+}
+
 function showInnovationCurationsPage(e) {
   displayPopup(innovationCurationsPage);
-
   animationInnovationCurations();
+  innovationCurationsPage.addEventListener("click", onOpacity);
 }
 function closeInnovationCurationsPage() {
   reverseAnimation();
   hidePopup(innovationCurationsPage);
-  // const t = setTimeout(() => {
-  //   clearTimeout(t);
-  // }, 500);
-  // mathBineficChart.destroy();
+  innovationCurationsPage.removeEventListener("click", onOpacity);
 }
 toInnovationCurations.addEventListener("click", showInnovationCurationsPage);
 innovationCurationsClose.addEventListener(
