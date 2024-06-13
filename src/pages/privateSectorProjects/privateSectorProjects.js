@@ -29,6 +29,12 @@ const privateSectorProjectsCharts = [
 
 const allCharts = [];
 
+function onOpacity(e) {
+  if (e.target.classList.contains("click-opacity")) {
+    closePrivateSectorProjectsPage();
+  }
+}
+
 function initPrivateSectorProjectsCharts() {
   const t = setTimeout(() => {
     privateSectorProjectsCharts.forEach((b) =>
@@ -41,10 +47,12 @@ function initPrivateSectorProjectsCharts() {
 function showPrivateSectorProjectsPage(e) {
   displayPopup(privateSectorProjectsPage);
   initPrivateSectorProjectsCharts();
+  privateSectorProjectsPage.addEventListener("click", onOpacity);
 }
 function closePrivateSectorProjectsPage() {
   hidePopup(privateSectorProjectsPage);
   allCharts.forEach((b) => b.destroy());
+  privateSectorProjectsPage.removeEventListener("click", onOpacity);
 }
 toPrivateSectorProjects.addEventListener(
   "click",
