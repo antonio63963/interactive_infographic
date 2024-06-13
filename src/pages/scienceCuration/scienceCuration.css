@@ -1,17 +1,9 @@
 @import "../../common/styles/constants.css";
 @import "../../common/styles/animation.css";
 
-.scienceCuration__header {
-  background-color: #ffe4c1;
+.container-science-curation {
   width: 994px;
   max-width: 100vw;
-
-  .header__close-button {
-    background-color: #ffcf90;
-  }
-}
-
-.container-science-curation {
   display: flex;
 }
 .content-science-curration {

@@ -1,20 +1,13 @@
 @import "../../common/styles/constants.css";
 @import "../../common/styles/animation.css";
 
-header.research-curation-header {
-  background-color: #ffe1d0;
-
-  .header__close-button {
-    background-color: #ffccaf;
-  }
-}
-
 .container-researchCuration {
   width: var(--app-width);
   max-width: calc(100vw);
   display: flex;
   justify-content: center;
   padding-bottom: 50px;
+  padding-top: 58px;
 
   .sidebar-engagement-science {
     padding: 42px 0 0 0;

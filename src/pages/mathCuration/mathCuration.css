@@ -2,7 +2,7 @@
 @import "../../common/styles/animation.css";
 @import "./components/bineficLogoChart/bineficLogoChart.css";
 
-.header.mathCuration__header {
+/* .header.mathCuration__header {
   background-color: #d6edff;
   width: 994px;
   max-width: 100vw;
@@ -10,7 +10,7 @@
   .header__close-button {
     background-color: #b4dfff;
   }
-}
+} */
 
 .container-math-curation {
   display: flex;

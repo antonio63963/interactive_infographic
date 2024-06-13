@@ -5,166 +5,171 @@ include ../../common/ui/fillBarItem/fillBarItem.pug
 include ../../common/ui/iconHiveItem/iconHiveItem.pug
 
 mixin ResearchGrantsPage()
-  +popupPage()(class="researchGrantsPage")
-    main.main
-      +appHeaderDetails({title: 'Research Grants', closeClass: 'researchGrantsClose'})(class="research-grants-header")
-      .container-researchGrants 
-        //- +sidebarHorizontal()(class="sidebar-research-grants")
-        
+  +popupPage({
+    title: 'Research Grants', 
+    closeClass: 'researchGrantsClose',
+    headerColor: '#FFE4C1',
+    buttonColor: '#FFCF90'
+    })(class="researchGrantsPage")
+    //- main.main
+    //-   +appHeaderDetails({title: 'Research Grants', closeClass: 'researchGrantsClose'})(class="research-grants-header")
+    .container-researchGrants 
+      //- +sidebarHorizontal()(class="sidebar-research-grants")
+      
 
-        //-   +sidebarIconItem({
-        //-     num: 301, 
-        //-     title: 'Applications Received',
-        //-     color: '#569FD6', 
-        //-     icon: 'personInputBlue'
-        //-     })(class="sidebar-horizontal-item moveToRight")
-        //-   +sidebarIconItem({
-        //-     num: 130, 
-        //-     title: 'Applications Approved',
-        //-     color: '#569FD6', 
-        //-     icon: 'personCheckedBlue'
-        //-     })(class="sidebar-horizontal-item moveToRight")
-        //-   +sidebarIconItem({
-        //-     num: '651k', 
-        //-     title: 'KD Amount Approved',
-        //-     color: '#569FD6', 
-        //-     icon: 'kdBlue'
-        //-     })(class="sidebar-horizontal-item moveToRight")
-        //-   +sidebarIconItem({
-        //-     num: '20k', 
-        //-     title: 'Participants',
-        //-     color: '#569FD6', 
-        //-     icon: 'persons'
-        //-     })(class="sidebar-horizontal-item moveToRight")
+      //-   +sidebarIconItem({
+      //-     num: 301, 
+      //-     title: 'Applications Received',
+      //-     color: '#569FD6', 
+      //-     icon: 'personInputBlue'
+      //-     })(class="sidebar-horizontal-item moveToRight")
+      //-   +sidebarIconItem({
+      //-     num: 130, 
+      //-     title: 'Applications Approved',
+      //-     color: '#569FD6', 
+      //-     icon: 'personCheckedBlue'
+      //-     })(class="sidebar-horizontal-item moveToRight")
+      //-   +sidebarIconItem({
+      //-     num: '651k', 
+      //-     title: 'KD Amount Approved',
+      //-     color: '#569FD6', 
+      //-     icon: 'kdBlue'
+      //-     })(class="sidebar-horizontal-item moveToRight")
+      //-   +sidebarIconItem({
+      //-     num: '20k', 
+      //-     title: 'Participants',
+      //-     color: '#569FD6', 
+      //-     icon: 'persons'
+      //-     })(class="sidebar-horizontal-item moveToRight")
 
 
-        .research-grants-institution
-          h2.institution-title Applications Breakdown institution
-          .institution-chart 
-            +fillBarItem({
-              num: 60, 
-              text: 'Kuwait University', 
-              fillPercent: '100%'
-              })(class="research-grants-chart-item")
-            +fillBarItem({
-              num: 48, 
-              text: 'Kuwait Institute for Scientific Research', 
-              fillPercent: '80%'
-              })(class="research-grants-chart-item")
-            +fillBarItem({
-              num: 21, 
-              text: 'Australian University of Kuwait', 
-              fillPercent: '35%'
-              })(class="research-grants-chart-item")
-            +fillBarItem({
-              num: 18, 
-              text: 'Ministry of Health', 
-              fillPercent: '30%'
-              })(class="research-grants-chart-item")
-            +fillBarItem({
-              num: 11, 
-              text: 'American International University', 
-              fillPercent: '18%'
-              })(class="research-grants-chart-item")
-            +fillBarItem({
-              num: 6, 
-              text: 'Arab Open University', 
-              fillPercent: '10%'
-              })(class="research-grants-chart-item")
-        
-            +fillBarItem({
-              num: 6, 
-              text: 'American University of Kuwait', 
-              fillPercent: '10%'
-              })(class="research-grants-chart-item")
-            +fillBarItem({
-              num: 6, 
-              text: 'Kuwait College of Science and Tech...', 
-              fillPercent: '10%'
-              })(class="research-grants-chart-item")
-            +fillBarItem({
-              num: 4, 
-              text: 'Public Authority for Applied Educ...', 
-              fillPercent: '7%'
-              })(class="research-grants-chart-item")
-            +fillBarItem({
-              num: 4, 
-              text: 'Gulf University for Science and Technology', 
-              fillPercent: '7%'
-              })(class="research-grants-chart-item")
-            +fillBarItem({
-              num: 2, 
-              text: 'Dasman Diabetes Institute', 
-              fillPercent: '4%'
-              })(class="research-grants-chart-item")
-            +fillBarItem({
-              num: 2, 
-              text: 'Kuwait Hospital', 
-              fillPercent: '4%'
-              })(class="research-grants-chart-item")
-            +fillBarItem({
-              num: 2, 
-              text: 'Kuwait Water Association', 
-              fillPercent: '4%'
-              })(class="research-grants-chart-item")
-        h2.domain-title Applications Breakdown domain 
-        .domain-row 
-          .domain-col 
-            .domain-info 
-              .domain-num 117
-              .domain-text Applied Research        
-            .domain-info 
-              .domain-num 55
-              .domain-text Basic Research       
-            .domain-info 
-              .domain-num 27
-              .domain-text Young researchers
-          .domain-icons-hive
-            +iconHiveItem({
-              icon: 'health', 
-              percent: '29%', 
-              text1: 'Health'
-              })(class="research-grants-icon-hive health toTop")
-            +iconHiveItem({
-              icon: 'energy', 
-              percent: '19%', 
-              text1: 'Energy'
-              })(class="research-grants-icon-hive energy toTop")
-            +iconHiveItem({
-              icon: 'leaf', 
-              percent: '17%', 
-              text1: 'Environment'
-              })(class="research-grants-icon-hive environment toTop")
-            +iconHiveItem({
-              icon: 'other', 
-              percent: '14%', 
-              text1: 'Other'
-              })(class="research-grants-icon-hive other toTop")
-            +iconHiveItem({
-              icon: 'digital', 
-              percent: '8%', 
-              text1: 'Digital',
-              text2: 'Transformation',
-              isReverse: true,
-              })(class="research-grants-icon-hive digital toTop")
-            +iconHiveItem({
-              icon: 'food', 
-              percent: '5%', 
-              text1: 'Food',
-              text2: 'Security',
-              isReverse: true,
-              })(class="research-grants-icon-hive food toTop")
-            +iconHiveItem({
-              icon: 'water', 
-              percent: '5%', 
-              text1: 'Water',
-              isReverse: true,
-              })(class="research-grants-icon-hive water toTop")
-            +iconHiveItem({
-              percent: '3%', 
-              text1: 'Education',
-              isReverse: true,
-              })(class="research-grants-icon-hive education toTop")
-                .custom-icon-cirle
-                   
-            
+      .research-grants-institution
+        h2.institution-title Applications Breakdown institution
+        .institution-chart 
+          +fillBarItem({
+            num: 60, 
+            text: 'Kuwait University', 
+            fillPercent: '100%'
+            })(class="research-grants-chart-item")
+          +fillBarItem({
+            num: 48, 
+            text: 'Kuwait Institute for Scientific Research', 
+            fillPercent: '80%'
+            })(class="research-grants-chart-item")
+          +fillBarItem({
+            num: 21, 
+            text: 'Australian University of Kuwait', 
+            fillPercent: '35%'
+            })(class="research-grants-chart-item")
+          +fillBarItem({
+            num: 18, 
+            text: 'Ministry of Health', 
+            fillPercent: '30%'
+            })(class="research-grants-chart-item")
+          +fillBarItem({
+            num: 11, 
+            text: 'American International University', 
+            fillPercent: '18%'
+            })(class="research-grants-chart-item")
+          +fillBarItem({
+            num: 6, 
+            text: 'Arab Open University', 
+            fillPercent: '10%'
+            })(class="research-grants-chart-item")
+      
+          +fillBarItem({
+            num: 6, 
+            text: 'American University of Kuwait', 
+            fillPercent: '10%'
+            })(class="research-grants-chart-item")
+          +fillBarItem({
+            num: 6, 
+            text: 'Kuwait College of Science and Tech...', 
+            fillPercent: '10%'
+            })(class="research-grants-chart-item")
+          +fillBarItem({
+            num: 4, 
+            text: 'Public Authority for Applied Educ...', 
+            fillPercent: '7%'
+            })(class="research-grants-chart-item")
+          +fillBarItem({
+            num: 4, 
+            text: 'Gulf University for Science and Technology', 
+            fillPercent: '7%'
+            })(class="research-grants-chart-item")
+          +fillBarItem({
+            num: 2, 
+            text: 'Dasman Diabetes Institute', 
+            fillPercent: '4%'
+            })(class="research-grants-chart-item")
+          +fillBarItem({
+            num: 2, 
+            text: 'Kuwait Hospital', 
+            fillPercent: '4%'
+            })(class="research-grants-chart-item")
+          +fillBarItem({
+            num: 2, 
+            text: 'Kuwait Water Association', 
+            fillPercent: '4%'
+            })(class="research-grants-chart-item")
+      h2.domain-title Applications Breakdown domain 
+      .domain-row 
+        .domain-col 
+          .domain-info 
+            .domain-num 117
+            .domain-text Applied Research        
+          .domain-info 
+            .domain-num 55
+            .domain-text Basic Research       
+          .domain-info 
+            .domain-num 27
+            .domain-text Young researchers
+        .domain-icons-hive
+          +iconHiveItem({
+            icon: 'health', 
+            percent: '29%', 
+            text1: 'Health'
+            })(class="research-grants-icon-hive health toTop")
+          +iconHiveItem({
+            icon: 'energy', 
+            percent: '19%', 
+            text1: 'Energy'
+            })(class="research-grants-icon-hive energy toTop")
+          +iconHiveItem({
+            icon: 'leaf', 
+            percent: '17%', 
+            text1: 'Environment'
+            })(class="research-grants-icon-hive environment toTop")
+          +iconHiveItem({
+            icon: 'other', 
+            percent: '14%', 
+            text1: 'Other'
+            })(class="research-grants-icon-hive other toTop")
+          +iconHiveItem({
+            icon: 'digital', 
+            percent: '8%', 
+            text1: 'Digital',
+            text2: 'Transformation',
+            isReverse: true,
+            })(class="research-grants-icon-hive digital toTop")
+          +iconHiveItem({
+            icon: 'food', 
+            percent: '5%', 
+            text1: 'Food',
+            text2: 'Security',
+            isReverse: true,
+            })(class="research-grants-icon-hive food toTop")
+          +iconHiveItem({
+            icon: 'water', 
+            percent: '5%', 
+            text1: 'Water',
+            isReverse: true,
+            })(class="research-grants-icon-hive water toTop")
+          +iconHiveItem({
+            percent: '3%', 
+            text1: 'Education',
+            isReverse: true,
+            })(class="research-grants-icon-hive education toTop")
+              .custom-icon-cirle
+                  
+          

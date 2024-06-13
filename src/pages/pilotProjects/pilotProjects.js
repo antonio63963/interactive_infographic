@@ -59,6 +59,12 @@ const pilotProjectsCharts = [
   
 ];
 
+function onOpacity(e) {
+  if (e.target.classList.contains("click-opacity")) {
+    closePilotProjectsPage();
+  }
+}
+
 const allCharts = [];
 
 function initPilotProjectsCharts() {
@@ -73,10 +79,12 @@ function initPilotProjectsCharts() {
 function showPilotProjectsPage(e) {
   displayPopup(pilotProjectsPage);
   initPilotProjectsCharts();
+  pilotProjectsPage.addEventListener("click", onOpacity);
 }
 function closePilotProjectsPage() {
   hidePopup(pilotProjectsPage);
   allCharts.forEach((b) => b.destroy());
+  pilotProjectsPage.removeEventListener("click", onOpacity);
 }
 toPilotProjects.addEventListener("click", showPilotProjectsPage);
 pilotProjectsClose.addEventListener("click", closePilotProjectsPage);

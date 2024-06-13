@@ -6,6 +6,7 @@ import { initGenderChart } from "../../common/ui/genderChart/genderChart.js";
 const toMathCuration = document.querySelector(".toMathCuration");
 const mathCurationPage = document.querySelector(".mathCurationPage");
 const mathCurationClose = document.querySelector(".mathCurationClose");
+const mathCurationOpacity = mathCurationPage.querySelector('.click-opacity');
 
 const bineficChartsData = [
   {
@@ -57,15 +58,23 @@ function initBineficsCharts() {
   }, 500);
 }
 
+function onOpacity(e) {
+  if(e.target.classList.contains('click-opacity')) {
+    closeMathCurationPage();
+  }
+};
+
 function showMathCurationPage(e) {
   displayPopup(mathCurationPage);
   initBineficsCharts();
   animationMathCuration();
+  mathCurationOpacity.addEventListener("click", onOpacity);
 }
 function closeMathCurationPage() {
   reverseAnimation();
   hidePopup(mathCurationPage);
   allCharts.forEach((b) => b.destroy());
+  mathCurationOpacity.removeEventListener("click", onOpacity);
 }
 
 toMathCuration.addEventListener("click", showMathCurationPage);

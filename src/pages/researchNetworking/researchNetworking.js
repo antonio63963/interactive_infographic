@@ -4,43 +4,47 @@ import "./researchNetworking.css";
 import { displayPopup, hidePopup, animatedCounter } from "../index/index";
 
 const toResearchNetworking = document.querySelector(".toResearchNetworking");
- 
+
 const researchNetworkingClose = document.querySelector(
   ".researchNetworkingClose"
 );
 const researchNetworkingPage = document.querySelector(
   ".researchNetworkingPage"
 );
+
+function onOpacity(e) {
+  if (e.target.classList.contains("click-opacity")) {
+    closeResearchNetworkingPage();
+  }
+}
+
 let isMobile = false;
 
 function onWindowWidth(e) {
-  if(window.innerWidth <= 576) {
-    if(!isMobile) {
+  if (window.innerWidth <= 576) {
+    if (!isMobile) {
       isMobile = true;
       animationResearchNetworking(isMobile);
     }
-  }else {
-    if(isMobile) {
+  } else {
+    if (isMobile) {
       isMobile = false;
       animationResearchNetworking(isMobile);
     }
   }
-
 }
 
 function showResearchNetworkingPage(e) {
   displayPopup(researchNetworkingPage);
-  window.addEventListener('resize', onWindowWidth);
+  window.addEventListener("resize", onWindowWidth);
 
   animationResearchNetworking(window.innerWidth <= 576);
+  researchNetworkingPage.addEventListener("click", onOpacity);
 }
 function closeResearchNetworkingPage() {
   reverseAnimation();
   hidePopup(researchNetworkingPage);
-  // const t = setTimeout(() => {
-  //   clearTimeout(t);
-  // }, 500);
-  // mathBineficChart.destroy();
+  researchNetworkingPage.removeEventListener("click", onOpacity);
 }
 toResearchNetworking.addEventListener("click", showResearchNetworkingPage);
 researchNetworkingClose.addEventListener("click", closeResearchNetworkingPage);
@@ -57,7 +61,6 @@ const numsBars = Array.from(
   document.querySelectorAll(".research-networking-row .num")
 ).reverse();
 
-
 function animationResearchNetworking(isMobile) {
   Array.from(sidebarIcons)
     .reverse()
@@ -69,9 +72,9 @@ function animationResearchNetworking(isMobile) {
     });
 
   stackBars.forEach((b, idx) => {
-    isMobile ?
-      Object.assign(b.style, {height: '100%', width: 0})
-    : Object.assign(b.style, {height: 0, width: '100%'})
+    isMobile
+      ? Object.assign(b.style, { height: "100%", width: 0 })
+      : Object.assign(b.style, { height: 0, width: "100%" });
     Object.assign(numsBars[idx].style, {
       "font-size": b.dataset.font,
       color: b.dataset.color,
@@ -84,7 +87,9 @@ function animationResearchNetworking(isMobile) {
     const font = bar.dataset.font;
 
     const t = setTimeout(() => {
-     isMobile ? bar.style.width = `${percent}%` : bar.style.height = `${percent}%`;
+      isMobile
+        ? (bar.style.width = `${percent}%`)
+        : (bar.style.height = `${percent}%`);
       bar.style.backgroundColor = color;
       const elemNum = numsBars[idx];
 

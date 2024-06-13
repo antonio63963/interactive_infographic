@@ -4,17 +4,28 @@ import { displayPopup, hidePopup } from "../index/index.js";
 const toScienceGrant = document.querySelector(".toScienceGrant");
 const scienceGrantPage = document.querySelector(".scienceGrantPage");
 const scienceGrantClose = document.querySelector(".scienceGrantClose");
+const scienceGrantOpacity = scienceGrantPage.querySelector('.click-opacity');
 
 function showMathGrantPage(e) {
   displayPopup(scienceGrantPage);
   animationMathGrant();
+  scienceGrantOpacity.addEventListener("click", onOpacity);
 }
 function closeMathGrantPage() {
   reverseAnimation();
   hidePopup(scienceGrantPage);
+  scienceGrantOpacity.removeEventListener("click", onOpacity);
 }
+
+function onOpacity(e) {
+  if(e.target.classList.contains('click-opacity')) {
+    closeMathGrantPage();
+  }
+};
+
 toScienceGrant.addEventListener("click", showMathGrantPage);
 scienceGrantClose.addEventListener("click", closeMathGrantPage);
+
 
 //animation elements
 

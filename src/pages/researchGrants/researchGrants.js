@@ -2,24 +2,27 @@ import "../../common/styles/index.css";
 import "../../common/ui/twoValuesRow/twoValuesRow.css";
 import "./researchGrants.css";
 
-import { displayPopup, hidePopup, animatedCounter } from "../index/index";
+import { displayPopup, hidePopup } from "../index/index";
 
 const toResearchGrants = document.querySelector(".toResearchGrants");
 const researchGrantsClose = document.querySelector(".researchGrantsClose");
 const researchGrantsPage = document.querySelector(".researchGrantsPage");
 
+function onOpacity(e) {
+  if (e.target.classList.contains("click-opacity")) {
+    closeResearchGrantsPage();
+  }
+}
+
 function showResearchGrantsPage(e) {
   displayPopup(researchGrantsPage);
-
+  researchGrantsPage.addEventListener('click', onOpacity);
   animationResearchGrants();
 }
 function closeResearchGrantsPage() {
   reverseAnimation();
   hidePopup(researchGrantsPage);
-  // const t = setTimeout(() => {
-  //   clearTimeout(t);
-  // }, 500);
-  // mathBineficChart.destroy();
+  researchGrantsPage.removeEventListener('click', onOpacity);
 }
 toResearchGrants.addEventListener("click", showResearchGrantsPage);
 researchGrantsClose.addEventListener("click", closeResearchGrantsPage);

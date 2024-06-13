@@ -1,13 +1,13 @@
 @import "../../common/styles/constants.css";
 @import "../../common/styles/animation.css";
 
-header.engagement-header {
+/* header.engagement-header {
   background-color: #FFE4C1;
 
   .header__close-button {
     background-color: #FFCF90;
   }
-}
+} */
 
 .container-engagementScience {
   width: var(--app-width);

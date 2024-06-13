@@ -6,79 +6,84 @@ include ../../common/ui/lineWithDotInfo/lineWithDotInfo.pug
 
 
 mixin ResearchCurationPage()
-  +popupPage()(class="researchCurationPage")
-    main.main
-      +appHeaderDetails({title: 'Research - Capacity Building Curations', closeClass: 'researchCurationClose'})(class="research-curation-header")
-      .container-researchCuration 
-        //- .sidebar-vertical(class="sidebar-research-curation")
-        //-   +sidebarIconItem({
-        //-     num: 12, 
-        //-     title: 'Events',
-        //-     color: '#EA5C3C', 
-        //-     icon: 'folderStarOrange'
-        //-     })(class="sidebar-horizontal-item moveToRight")
-        //-   +sidebarIconItem({
-        //-     num: 757, 
-        //-     title: 'Beneficiaries',
-        //-     color: '#EA5C3C', 
-        //-     icon: 'persons'
-        //-     })(class="sidebar-horizontal-item moveToRight")
-        //-   +sidebarIconItem({
-        //-     num: '64k', 
-        //-     title: 'KD Amount Approved',
-        //-     color: '#EA5C3C', 
-        //-     icon: 'kdOrange'
-        //-     })(class="sidebar-horizontal-item moveToRight")
-        //- .divider-vertical
+  +popupPage({
+    title: 'Research - Capacity Building Curations', 
+    closeClass: 'researchCurationClose',
+    headerColor: '#D6EDFF',
+    buttonColor: '#B4DFFF'
+    })(class="researchCurationPage")
+    //- main.main
+    //-   +appHeaderDetails({title: 'Research - Capacity Building Curations', closeClass: 'researchCurationClose'})(class="research-curation-header")
+    .container-researchCuration 
+      //- .sidebar-vertical(class="sidebar-research-curation")
+      //-   +sidebarIconItem({
+      //-     num: 12, 
+      //-     title: 'Events',
+      //-     color: '#EA5C3C', 
+      //-     icon: 'folderStarOrange'
+      //-     })(class="sidebar-horizontal-item moveToRight")
+      //-   +sidebarIconItem({
+      //-     num: 757, 
+      //-     title: 'Beneficiaries',
+      //-     color: '#EA5C3C', 
+      //-     icon: 'persons'
+      //-     })(class="sidebar-horizontal-item moveToRight")
+      //-   +sidebarIconItem({
+      //-     num: '64k', 
+      //-     title: 'KD Amount Approved',
+      //-     color: '#EA5C3C', 
+      //-     icon: 'kdOrange'
+      //-     })(class="sidebar-horizontal-item moveToRight")
+      //- .divider-vertical
 
-        .research-curation-content
+      .research-curation-content
+        
+        .col-binefic 
+          h2 Beneficiaries
+
+          .binefic-chart 
+            .chart-graph 
+              img.img(src=require('../../assets/svg/beneficResearchCuration.svg'))
+              .chart-value.orange 56%
+              .chart-value.yellow 34%
+              .chart-value.dark 8%
+              .chart-value.light-blue 2%
+              
+              //- description
+              +lineWithDotInfo({
+                text: 'Public Talk: Big Data & AI in Scientific Research'
+                })(class="chart-info public sliceDown")
+              +lineWithDotInfo({
+                text: 'Scopus Research Profiles'
+                })(class="chart-info scopus sliceDown")
+              +lineWithDotInfo({
+                text: 'Renewables Academy Online',
+                isReverse: true
+                })(class="chart-info online sliceDown")
+              +lineWithDotInfo({
+                text: 'Communicating your Science to the Public', 
+                isReverse: true
+                })(class="chart-info communicating sliceDown")
           
-          .col-binefic 
-            h2 Beneficiaries
 
-            .binefic-chart 
-              .chart-graph 
-                img.img(src=require('../../assets/svg/beneficResearchCuration.svg'))
-                .chart-value.orange 56%
-                .chart-value.yellow 34%
-                .chart-value.dark 8%
-                .chart-value.light-blue 2%
-                
-                //- description
-                +lineWithDotInfo({
-                  text: 'Public Talk: Big Data & AI in Scientific Research'
-                  })(class="chart-info public sliceDown")
-                +lineWithDotInfo({
-                  text: 'Scopus Research Profiles'
-                  })(class="chart-info scopus sliceDown")
-                +lineWithDotInfo({
-                  text: 'Renewables Academy Online',
-                  isReverse: true
-                  })(class="chart-info online sliceDown")
-                +lineWithDotInfo({
-                  text: 'Communicating your Science to the Public', 
-                  isReverse: true
-                  })(class="chart-info communicating sliceDown")
-           
-
-              .binefic-chart-description-mobile                
-                +labelWithColor({
-                  color: '#F47D39', 
-                  text: 'Communicating your Science to the Public'
-                  })(class="binefic-label")
-                +labelWithColor({
-                  color: '#FFB455', 
-                  text: 'Scopus Research Profiles'
-                  })(class="binefic-label")
-                +labelWithColor({
-                  color: '#003D63', 
-                  text: 'Public Talk: Big Data & AI in Scientific Research'
-                  })(class="binefic-label")
-                +labelWithColor({
-                  color: '#3F91BA', 
-                  text: 'Renewables Academy Online'
-                  })(class="binefic-label")
-                
+            .binefic-chart-description-mobile                
+              +labelWithColor({
+                color: '#F47D39', 
+                text: 'Communicating your Science to the Public'
+                })(class="binefic-label")
+              +labelWithColor({
+                color: '#FFB455', 
+                text: 'Scopus Research Profiles'
+                })(class="binefic-label")
+              +labelWithColor({
+                color: '#003D63', 
+                text: 'Public Talk: Big Data & AI in Scientific Research'
+                })(class="binefic-label")
+              +labelWithColor({
+                color: '#3F91BA', 
+                text: 'Renewables Academy Online'
+                })(class="binefic-label")
+              
 
 
 

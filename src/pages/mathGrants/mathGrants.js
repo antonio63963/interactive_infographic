@@ -55,19 +55,25 @@ function initMathGrantChart() {
 const toMathGrant = document.querySelector(".toMathGrant");
 const mathGrantClose = document.querySelector(".mathGrantClose");
 const mathGrantPage = document.querySelector(".mathGrantPage");
+const mathGrantOpacity = mathGrantPage.querySelector(".click-opacity");
+
+function onOpacity(e) {
+  if (e.target.classList.contains("click-opacity")) {
+    closeMathGrantPage();
+  }
+}
 
 function showMathGrantPage(e) {
   displayPopup(mathGrantPage);
   initMathGrantChart();
   animationMathGrant();
+  mathGrantOpacity.addEventListener("click", onOpacity);
 }
 function closeMathGrantPage() {
   reverseAnimation();
   hidePopup(mathGrantPage);
-  // const t = setTimeout(() => {
-  //   clearTimeout(t);
-  // }, 500);
   mathBineficChart.destroy();
+  mathGrantOpacity.removeEventListener("click", onOpacity);
 }
 toMathGrant.addEventListener("click", showMathGrantPage);
 mathGrantClose.addEventListener("click", closeMathGrantPage);

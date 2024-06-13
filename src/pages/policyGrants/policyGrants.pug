@@ -3,26 +3,31 @@ include ../../common/ui/popupPage/popupPage.pug
 include ../../common/ui/sidebarHorizontal/sidebarHorizontal.pug
 
 mixin PolicyGrantPage()
-  +popupPage()(class="policyGrantPage")
-    main.main
-      +appHeaderDetails({title: 'Policy Research Grants', closeClass: 'policyGrantClose'})(class="policyGrant__header")
-      .container-policy-grants  
-        +sidebarHorizontal()(class="policyGrant__sidebar")  
-          img.sidebar__img.policy-grant-icon.moveToRight(src=require('../../assets/svg/policyGrants/proposals.svg'))
-          img.sidebar__img.policy-grant-icon.moveToRight(src=require('../../assets/svg/policyGrants/proposals_approved.svg'))
-          img.sidebar__img.policy-grant-icon.moveToRight(src=require('../../assets/svg/policyGrants/amount.svg'))
-        .content-policy-grant 
-          img.policy-grant-icon.moveToRight(src=require('../../assets/svg/policyGrants/domain.svg'))
-          .policy-grant-col 
-            h2.col-title Applications Breakdown domain
-            ul.domains-list
-              li.domain-item.moveUp
-                .dot 
-                p.domain-item-text Kuwait Energy Outlook - Building an Online Energy Planning Dashboard
-              li.domain-item.moveUp
-                .dot 
-                p.domain-item-text Preparing engineers for the sustainable future: embedding the new Kuwait 2035 vision into engineering
-              li.domain-item.moveUp
-                .dot 
-                p.domain-item-text Development of a National Prescribing Competency Framework for Kuwait
+  +popupPage({
+    title: 'Policy Research Grants', 
+    closeClass: 'policyGrantClose',
+    headerColor: '',
+    buttonColor: ''
+    })(class="policyGrantPage")
+    //- main.main
+    //-   +appHeaderDetails({title: 'Policy Research Grants', closeClass: 'policyGrantClose'})(class="policyGrant__header")
+    .container-policy-grants  
+      +sidebarHorizontal()(class="policyGrant__sidebar")  
+        img.sidebar__img.policy-grant-icon.moveToRight(src=require('../../assets/svg/policyGrants/proposals.svg'))
+        img.sidebar__img.policy-grant-icon.moveToRight(src=require('../../assets/svg/policyGrants/proposals_approved.svg'))
+        img.sidebar__img.policy-grant-icon.moveToRight(src=require('../../assets/svg/policyGrants/amount.svg'))
+      .content-policy-grant 
+        img.policy-grant-icon.moveToRight(src=require('../../assets/svg/policyGrants/domain.svg'))
+        .policy-grant-col 
+          h2.col-title Applications Breakdown domain
+          ul.domains-list
+            li.domain-item.moveUp
+              .dot 
+              p.domain-item-text Kuwait Energy Outlook - Building an Online Energy Planning Dashboard
+            li.domain-item.moveUp
+              .dot 
+              p.domain-item-text Preparing engineers for the sustainable future: embedding the new Kuwait 2035 vision into engineering
+            li.domain-item.moveUp
+              .dot 
+              p.domain-item-text Development of a National Prescribing Competency Framework for Kuwait
                 

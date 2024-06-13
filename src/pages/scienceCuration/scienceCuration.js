@@ -4,39 +4,7 @@ import { displayPopup, hidePopup } from "../index/index.js";
 const toScienceCuration = document.querySelector(".toScienceCuration");
 const scienceCurationPage = document.querySelector(".scienceCurationPage");
 const scienceCurationClose = document.querySelector(".scienceCurationClose");
-
-const bineficChartsData = [
-  {
-    title: "KFAS",
-    canvas: document.querySelector("#binefic_1"),
-    values: [205, 290],
-    valuesColors: ["#F47D39", "#E0E0E0"],
-  },
-  {
-    title: "google",
-    canvas: document.querySelector("#binefic_2"),
-    values: [118, 340],
-    valuesColors: ["#F47D39", "#E0E0E0"],
-  },
-  {
-    title: "hackaton",
-    canvas: document.querySelector("#binefic_3"),
-    values: [88, 340],
-    valuesColors: ["#FFB455", "#E0E0E0"],
-  },
-  {
-    title: "camp",
-    canvas: document.querySelector("#binefic_4"),
-    values: [80, 340],
-    valuesColors: ["#FFB455", "#E0E0E0"],
-  },
-  {
-    title: "STEM",
-    canvas: document.querySelector("#binefic_5"),
-    values: [14, 340],
-    valuesColors: ["#569FD6", "#E0E0E0"],
-  },
-];
+const scienceCurationOpacity = scienceCurationPage.querySelector('.click-opacity');
 
 const allCharts = [];
 
@@ -46,15 +14,22 @@ function initBineficsCharts() {
   }, 500);
 }
 
+function onOpacity(e) {
+  if (e.target.classList.contains("click-opacity")) {
+    closeMathCurationPage();
+  }
+}
+
 function showMathCurationPage(e) {
   displayPopup(scienceCurationPage);
-  // initBineficsCharts();
   animationScienceCuration();
+  scienceCurationOpacity.addEventListener("click", onOpacity);
 }
 function closeMathCurationPage() {
   reverseAnimation();
   hidePopup(scienceCurationPage);
   allCharts.forEach((b) => b.destroy());
+  scienceCurationOpacity.removeEventListener("click", onOpacity);
 }
 toScienceCuration.addEventListener("click", showMathCurationPage);
 scienceCurationClose.addEventListener("click", closeMathCurationPage);

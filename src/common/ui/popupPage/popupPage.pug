@@ -4,6 +4,7 @@ mixin popupPage(options)
   -const {title, closeClass, headerColor, buttonColor} = options || {};
 
   .popup-bg.hidden(class!= attributes.class)
-    .popup 
-      +appHeaderDetails({title, closeClass, headerColor, buttonColor})
-      block
+    .click-opacity
+      .popup 
+        +appHeaderDetails({title, closeClass, headerColor, buttonColor})
+        block

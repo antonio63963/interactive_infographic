@@ -5,16 +5,24 @@ const toPolicyGrant = document.querySelector(".toPolicyGrant");
 const policyGrantPage = document.querySelector(".policyGrantPage");
 const policyGrantClose = document.querySelector(".policyGrantClose");
 
-function showMathGrantPage(e) {
+function onOpacity(e) {
+  if (e.target.classList.contains("click-opacity")) {
+    closePolicyResearchPage();
+  }
+}
+
+function showPolicyResearchPage(e) {
   displayPopup(policyGrantPage);
   animationMathGrant();
+  policyGrantPage.addEventListener("click", onOpacity);
 }
-function closeMathGrantPage() {
+function closePolicyResearchPage() {
   reverseAnimation();
   hidePopup(policyGrantPage);
+  policyGrantPage.removeEventListener("click", onOpacity);
 }
-toPolicyGrant.addEventListener("click", showMathGrantPage);
-policyGrantClose.addEventListener("click", closeMathGrantPage);
+toPolicyGrant.addEventListener("click", showPolicyResearchPage);
+policyGrantClose.addEventListener("click", closePolicyResearchPage);
 
 //animation elements
 
