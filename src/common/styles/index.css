@@ -18,6 +18,8 @@
 @import "../ui/doubleValuesBar/doubleValuesBar.css";
 @import "../ui/prizeLabel/prizeLabel.css";
 @import "../ui/prizeRow/prizeRow.css";
+@import "../ui/mainScreenCard/mainScreenCard.css";
+@import "../ui/smallPrizeRow/smallPrizeRow.css";
 
 * {
   margin: 0;

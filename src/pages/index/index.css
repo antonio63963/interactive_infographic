@@ -25,11 +25,190 @@ a.mock.toAssignedProjects {
   background-color: #ffccaf;
 }
 a.mock.toPrivateSectorProjects {
-  background-color: #FFCF90;
+  background-color: #ffcf90;
 }
 a.mock.toOrganizationalProjects {
-  background-color: #B4DFFF;
+  background-color: #b4dfff;
 }
 a.mock.toKfasMedia {
-  background-color: #FFCCAF;
+  background-color: #ffccaf;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1400px;
+  max-width: 100vw;
+
+  h2 {
+    text-align: start;
+  }
+
+  img {
+    object-fit: contain;
+    max-width: 100%;
+  }
+
+  .main-row {
+    width: 1056px;
+    max-width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main-card {
+    height: 380px;
+    width: 246px;
+  }
+  .main-card-big {
+    height: 380px;
+    width: 510px;
+  }
+
+  .research-networking-card {
+    align-self: center;
+    width: 470px;
+    display: flex;
+    flex-direction: column;
+
+    .card-chart {
+      width: 100%;
+      height: 70px;
+      display: flex;
+      margin-bottom: 20px;
+
+      .card-chart-item {
+        height: 100%;
+        margin-right: 5px;
+      }
+      .card-chart-item:last-child {
+        margin-right: 0;
+      }
+    }
+    .card-desc {
+      display: flex;
+      justify-content: space-between;
+
+      img {
+        object-fit: contain;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .pilot-projects-card,
+  .assigned-projects-card {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* PRIZE */
+  .prize-winners-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .orange-prize {
+      margin-bottom: 10px;
+    }
+    .persons-row {
+      margin-top: 16px;
+      display: flex;
+      width: 390px;
+      justify-content: space-between;
+
+      .persons-list-item {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 170%;
+      }
+    }
+  }
+
+  /* Media KFAS*/
+  #card-media-tab {
+    background-color: #be4ef9;
+    margin-bottom: 10px;
+  }
+
+  /* Organizational Projects */
+  .organizational-projects-card-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .last-child {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 1068px) {
+  .main-container {
+    .main-row {
+      width: 792px;
+    }
+    .main-card-big {
+      width: 100%;
+    }
+    .toPrizeWinners {
+      width: 510px;
+    }
+  }
+}
+@media screen and (max-width: 792px) {
+  .main-container {
+    .main-row {
+      width: 528px;
+    }
+  }
+}
+@media screen and (max-width: 528px) {
+  .main-container {
+    .main-row {
+      flex-direction: column;
+      align-items: center;
+
+      .main-row {
+        width: 100%;
+      }
+
+      .main-card-big {
+        height: 100%;
+        width: 246px;
+      }
+      .research-networking-card {
+        width: 100%;
+
+        .card-desc {
+          margin-top: 20px;
+          flex-direction: column;
+        }
+      }
+
+      .pilot-projects-card,
+      .assigned-projects-card {
+        flex-direction: column;
+      }
+
+      .organizational-projects-card-row {
+        width: 100%;
+        flex-direction: column;
+      }
+    }
+
+    .prize-winners-card {
+      .persons-row {
+        width: 170px;
+        /* width: 100%; */
+        flex-direction: column;
+
+        .persons-list-item {
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 170%;
+        }
+      }
+    }
+  }
 }

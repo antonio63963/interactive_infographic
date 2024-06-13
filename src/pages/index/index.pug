@@ -20,6 +20,10 @@ include ../organizationalProjects/organizationalProjects.pug
 include ../organizationalAchivements/organizationalAchivements.pug
 include ../financialAchivements/financialAchivements.pug
 
+include ../../common/ui/mainScreenCard/mainScreenCard.pug
+include ../../common/ui/smallPrizeRow/smallPrizeRow.pug
+include ../../common/ui/appTab/appTab.pug
+
 +appPageLayout()
   +MathGrantPage()
   +MathCurationPage()
@@ -43,26 +47,150 @@ include ../financialAchivements/financialAchivements.pug
   +FinancialAchivementsPage()
 
 
-  main.main 
+  .main-container
+    .main-row
+      +mainScreenCard({
+        title: 'Math and Science Education - Grants', 
+        color: '#FFE4C1'
+        })(class="main-card toMathGrant")
+        img(src=require('../../assets/svg/mainScreen/mathGrants.svg'))
+      +mainScreenCard({
+        title: 'Math and Science Education - Curation', 
+        color: '#D6EDFF'
+        })(class="main-card toMathCuration")
+        img(src=require('../../assets/svg/mainScreen/mathCuration.svg'))
+      +mainScreenCard({
+        title: 'Science Dissemination - Grants', 
+        color: '#FFE4C1'
+        })(class="main-card toScienceGrant")
+        img(src=require('../../assets/svg/mainScreen/scienceGrants.svg'))
+      +mainScreenCard({
+        title: 'Science Dissemination - Curation', 
+        color: '#D6EDFF'
+        })(class="main-card toScienceCuration")
+        img(src=require('../../assets/svg/mainScreen/scienceCuration.svg'))
+      +mainScreenCard({
+        title: 'Engagement in Science (Grants)', 
+        color: '#FFE4C1'
+        })(class="main-card toEngagementScience")
+        img(src=require('../../assets/svg/mainScreen/engagementGrants.svg'))
+      +mainScreenCard({
+        title: 'Research Grants', 
+        color: '#FFE4C1'
+        })(class="main-card toResearchGrants")
+        img(src=require('../../assets/svg/mainScreen/researchGrants.svg'))
+      +mainScreenCard({
+        title: 'Policy Research Grants', 
+        color: '#FFE4C1'
+        })(class="main-card toPolicyGrant")
+        img(src=require('../../assets/svg/mainScreen/policyGrants.svg'))
+      +mainScreenCard({
+        title: 'Research - Capacity Building Curations', 
+        color: '#D6EDFF'
+        })(class="main-card toResearchCuration")
+        img(src=require('../../assets/svg/mainScreen/capacityCuration.svg'))
+      +mainScreenCard({
+        title: 'Research Promotion, Networking & Outreach', 
+        color: '#D6EDFF'
+        })(class="main-card-big toResearchNetworking")
+        .research-networking-card
+          .card-chart
+            each val, index in [{color: '#F36D20', percent: '37%'}, {color: '#F36D20', percent: '24%'}, {color: '#FFAA4D', percent: '16%'}, {color: '#FFAA4D', percent: '11%'}, {color: '#FFAA4D', percent: '10%'}, {color: '#569FD6', percent: '2%'},]
+              .card-chart-item(style={'width': val.percent, 'background-color': val.color})
+          .card-desc
+            img(src=require('../../assets/svg/mainScreen/researchNetworking1.svg'))
+            img(src=require('../../assets/svg/mainScreen/researchNetworking2.svg'))
+      +mainScreenCard({
+        title: 'Pilot Projects', 
+        color: '#FFE1D0'
+        })(class="main-card-big toPilotProjects")
+        .pilot-projects-card 
+          img(src=require('../../assets/svg/mainScreen/pilotProjects1.svg'))
+          img(src=require('../../assets/svg/mainScreen/pilotProjects2.svg'))
+      +mainScreenCard({
+        title: 'Assigned Projects',
+        color: '#FFE1D0'
+        })(class="toAssignedProjects main-card-big")
+        .assigned-projects-card
+          img(src=require('../../assets/svg/mainScreen/assignedProjects1.svg'))
+          img(src=require('../../assets/svg/mainScreen/assignedProjects2.svg'))
+      +mainScreenCard({
+        title: 'Research- Capacity Building Grants', 
+        color: '#FFE4C1'
+        })(class="main-card toResearchCapacity")
+        img(src=require('../../assets/svg/mainScreen/researchCapacity.svg'))
+      +mainScreenCard({
+        title: 'Private Sector Projects', 
+        color: '#FFE1D0'
+        })(class="main-card toPrivateSectorProjects")
+        img(src=require('../../assets/svg/mainScreen/privateProjects.svg'))
+      +mainScreenCard({
+        title: 'Innovation and Enter-prise - Professional Certificate Grants', 
+        color: '#FFE4C1'
+        })(class="main-card toInnovationGrant")
+        img(src=require('../../assets/svg/mainScreen/innovationGrants.svg'))
+      +mainScreenCard({
+        title: 'Innovation and Enterprise - Curations', 
+        color: '#D6EDFF'
+        })(class="main-card toInnovationCurations")
+        img(src=require('../../assets/svg/mainScreen/innovationCurations.svg'))
+      +mainScreenCard({
+        title: 'Prizes Winners (2022 Prizes)', 
+        color: '#D6EDFF'
+        })(class="main-card-big toPrizeWinners")
+        .prize-winners-card 
+          +smallPrizeRow({
+            title: 'Jaber Al-Ahmed Prize 2022 winners',
+            color: 'blue'
+          })
+          .persons-row 
+            ul.persons-lis
+              li.persons-list-item Dr. Dari AI Huwail
+              li.persons-list-item Dr. Yousef AI OsairiDr.
+              li.persons-list-item Mohammad Jamal
+            ul.persons-lis
+              li.persons-list-item Dr. Abdullah AI ShebliDr.
+              li.persons-list-item Abdullah Sultan
+           
+          +smallPrizeRow({
+            title: 'Al-Sumait Prize 2022 winners',
+            color: 'orange'
+          })(class= "orange-prize")
+          +smallPrizeRow({
+            title: 'Kuwait Prize 2022 winners',
+            color: 'yellow'
+          })
+      +mainScreenCard({
+        title: 'KFAS Social Media', 
+        color: '#FFE4C1'
+        })(class="main-card-big toKfasMedia")  
+        +appTab({actveColor: '#BE4EF9', id:"card-media-tab"})(class="active")
+          img(src=require("../../assets/svg/mainScreen/insta.svg"))
+        img(src=require("../../assets/svg/mainScreen/kfasMediaChart.svg"))
+      +mainScreenCard({
+        title: 'Organizational Development Projects', 
+        color: '#FFE1D0'
+        })(class="main-card-big toOrganizationalProjects")  
+        .organizational-projects-card-row
+          img(src=require("../../assets/svg/mainScreen/organizationalProjects1.svg"))
+          img.last-child(src=require("../../assets/svg/mainScreen/organizationalProjects2.svg"))
+        
+
+
+
+          
+
     .buttons-row 
-      a.mock.toMathGrant(role= "button", href= '#') Math Grants
-      a.mock.toMathCuration(role= "button", href= '#') Math Curation
-      a.mock.toScienceGrant(role= "button", href= '#') Science Grants
-      a.mock.toScienceCuration(role= "button", href= '#') Science Curation
-      a.mock.toPilotProjects(role= "button", href= '#') Pilot Projects
-      a.mock.toAssignedProjects(role= "button", href= '#') Assigned Projects
       a.mock.toPrivateSectorProjects(role= "button", href= '#') Private Sector Projects
-      a.mock.toOrganizationalProjects(role= "button", href= '#') Organizational Projects
-      a.mock.toInnovationGrant(role= "button", href= '#') Innovation grants
-      a.mock.toPolicyGrant(role= "button", href= '#') Policy grants
-      a.mock.toKfasMedia(role= "button", href= '#') KFAS Media
-      a.mock.toEngagementScience(role= "button", href= '#') Engagement Science
-      a.mock.toResearchGrants(role= "button", href= '#') Research Grants
-      a.mock.toResearchCuration(role= "button", href= '#') Research Curation
-      a.mock.toResearchNetworking(role= "button", href= '#') Research Networking
-      a.mock.toResearchCapacity(role= "button", href= '#') Research Capacity
-      a.mock.toInnovationCurations(role= "button", href= '#') Innovation Curations
-      a.mock.toPrizeWinners(role= "button", href= '#') Prizes Winners
+      //- a.mock.toOrganizationalProjects(role= "button", href= '#') Organizational Projects
+      //- a.mock.toInnovationGrant(role= "button", href= '#') Innovation grants
+
+      //- a.mock.toKfasMedia(role= "button", href= '#') KFAS Media
+
+      //- a.mock.toResearchCuration(role= "button", href= '#') Research Curation
+
+      //- a.mock.toInnovationCurations(role= "button", href= '#') Innovation Curations
+      //- a.mock.toPrizeWinners(role= "button", href= '#') Prizes Winners
       a.mock.toOrganizationalAchivements(role= "button", href= '#') Organizational Achivements
       a.mock.toFinancialAchivements(role= "button", href= '#') Financial Achivements
 
