@@ -64,8 +64,6 @@ import "../organizationalAchivements/organizationalAchivements.js";
 //Financial Achivements
 import "../financialAchivements/financialAchivements.js"
 
-
-
 function displayPopup(popup) {
   popup.classList.remove("hidden");
 }

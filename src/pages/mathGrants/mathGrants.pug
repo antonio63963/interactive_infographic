@@ -7,50 +7,51 @@ include ../../common/ui/genderBreakdown/genderBreakdown.pug
 include ../../common/ui/sidebarVertical/sidebarVertical.pug
 
 
-  //- +appPageLayout()
-  //-   +appHeaderDetails({title: 'Math and Science Education - Grants'})
-  //-   main.main
 mixin MathGrantPage()
-  +popupPage()(class="mathGrantPage")
-    main.main
-      +appHeaderDetails({title: 'Math and Science Education - Grants', closeClass: 'mathGrantClose'})
-      .container-math-grant 
-        .sidebar-vertical 
-          +sidebarIconItem({num: 6, title: 'Events', color: '#F36D20', icon: 'folderStarYellow'})(class="sidebar-vertical-item moveToRight")
-          +sidebarIconItem({num: 133, title: 'Beneficiaries', color: '#F36D20', icon: 'persons'})(class="sidebar-vertical-item moveToRight")
-          +sidebarIconItem({num: '15.9k', title: 'KD Amount Approved', color: '#F36D20', icon: 'kdYellow'})(class="sidebar-vertical-item moveToRight")
-          //- img.sidebar__img.moveToRight(src=require('../../assets/svg/mathGrant/events.svg'))
-          //- img.sidebar__img.moveToRight(src=require('../../assets/svg/mathGrant/benific.svg'))
-          //- img.sidebar__img.moveToRight(src=require('../../assets/svg/mathGrant/amount.svg'))
-        .divider-vertical 
+  +popupPage({
+    title: 'Math and Science Education - Grants', 
+    closeClass: 'mathGrantClose',
+    headerColor: '#FFE4C1',
+    buttonColor: '#FFCF90'
+    })(class="mathGrantPage")
 
-        .mathGrant__graph-main 
-          .binefic-row 
-            .binefic__chart-wrapper
-              h2.binefic__chart-title Beneficiaries
-              .binefic__chart
-                canvas#grant-chart
-            ul.binefic__list
-              li.binefic__list-item.moveToLeft
-                span.binefic__item-value.large-num 62
-                p.binefic__item-text US Academy virtual program (Boston University)
-              li.binefic__list-item.moveToLeft
-                span.binefic__item-value.big-num 25
-                p.binefic__item-text US Academy virtual program (Embry Riddle Aeronautical University)
-              li.binefic__list-item.moveToLeft
-                span.binefic__item-value.big-num 25
-                p.binefic__item-text US Academy virtual program (University of Wisconsin)
-              li.binefic__list-item.moveToLeft
-                span.binefic__item-value.middle-num 7
-                p(dir="rtl" lang="ar").binefic__item-text Python (1st group) - الجمعیة الكویتیھ لتقنیة المعلومات
+    .container-math-grant 
+      .sidebar-vertical 
+        +sidebarIconItem({num: 6, title: 'Events', color: '#F36D20', icon: 'folderStarYellow'})(class="sidebar-vertical-item moveToRight")
+        +sidebarIconItem({num: 133, title: 'Beneficiaries', color: '#F36D20', icon: 'persons'})(class="sidebar-vertical-item moveToRight")
+        +sidebarIconItem({num: '15.9k', title: 'KD Amount Approved', color: '#F36D20', icon: 'kdYellow'})(class="sidebar-vertical-item moveToRight")
+        //- img.sidebar__img.moveToRight(src=require('../../assets/svg/mathGrant/events.svg'))
+        //- img.sidebar__img.moveToRight(src=require('../../assets/svg/mathGrant/benific.svg'))
+        //- img.sidebar__img.moveToRight(src=require('../../assets/svg/mathGrant/amount.svg'))
+      .divider-vertical 
 
-              li.binefic__list-item.moveToLeft
-                span.binefic__item-value.middle-num 7
-                p.binefic__item-text Python (2nd group) - الجمعیة الكویتیھ لتقنیة المعلومات
+      .mathGrant__graph-main 
+        .binefic-row 
+          .binefic__chart-wrapper
+            h2.binefic__chart-title Beneficiaries
+            .binefic__chart
+              canvas#grant-chart
+          ul.binefic__list
+            li.binefic__list-item.moveToLeft
+              span.binefic__item-value.large-num 62
+              p.binefic__item-text US Academy virtual program (Boston University)
+            li.binefic__list-item.moveToLeft
+              span.binefic__item-value.big-num 25
+              p.binefic__item-text US Academy virtual program (Embry Riddle Aeronautical University)
+            li.binefic__list-item.moveToLeft
+              span.binefic__item-value.big-num 25
+              p.binefic__item-text US Academy virtual program (University of Wisconsin)
+            li.binefic__list-item.moveToLeft
+              span.binefic__item-value.middle-num 7
+              p(dir="rtl" lang="ar").binefic__item-text Python (1st group) - الجمعیة الكویتیھ لتقنیة المعلومات
 
-              li.binefic__list-item.moveToLeft
-                span.binefic__item-value.middle-num 7
-                p.binefic__item-text مبادرة نحمیھا
-          +genderBreakdown({maleVal1: 56, maleVal2: 40, femaleVal1: 44, femaleVal2: 31})
+            li.binefic__list-item.moveToLeft
+              span.binefic__item-value.middle-num 7
+              p.binefic__item-text Python (2nd group) - الجمعیة الكویتیھ لتقنیة المعلومات
+
+            li.binefic__list-item.moveToLeft
+              span.binefic__item-value.middle-num 7
+              p.binefic__item-text مبادرة نحمیھا
+        +genderBreakdown({maleVal1: 56, maleVal2: 40, femaleVal1: 44, femaleVal2: 31})
 
 
