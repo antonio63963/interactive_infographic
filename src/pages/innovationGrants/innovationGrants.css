@@ -1,14 +1,6 @@
 @import "../../common/styles/constants.css";
 @import "../../common/styles/animation.css";
 
-.header {
-  background-color: var(--color-yellow-xl);
-
-  .header__close-button {
-    background-color: var(--color-yellow-l);
-  }
-}
-
 .container-innovation-grant {
   display: flex;
 }
@@ -36,7 +28,10 @@
       align-items: center;
       span {
         position: absolute;
-        top: 0;bottom: 0;left: 0;right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -53,7 +48,7 @@
     }
     .chart-second-bar {
       background-color: var(--color-blue);
-      transition: all .5s linear 1s;
+      transition: all 0.5s linear 1s;
       width: 35%;
     }
   }
@@ -90,17 +85,14 @@
   }
 }
 @media screen and (max-width: 576px) {
-
   .innovation-grant-binefics {
-
     .gender-row {
       flex-direction: column;
       align-items: center;
-  
+
       .gender-col {
         margin-left: 0;
       }
     }
   }
-
 }

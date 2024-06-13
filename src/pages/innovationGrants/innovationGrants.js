@@ -19,15 +19,23 @@ const toInnovationGrant = document.querySelector(".toInnovationGrant");
 const innovationGrantClose = document.querySelector(".innovationGrantClose");
 const innovationGrantPage = document.querySelector(".innovationGrantPage");
 
+function onOpacity(e) {
+  if (e.target.classList.contains("click-opacity")) {
+    closeInnovationGrantPage();
+  }
+}
+
 function showInnovationGrantPage(e) {
   displayPopup(innovationGrantPage);
   initInnovationGrantChart();
   animationInnovationGrant();
+  innovationGrantPage.addEventListener("click", onOpacity);
 }
 function closeInnovationGrantPage() {
   reverseAnimation();
   hidePopup(innovationGrantPage);
   innovationGrantCharts.forEach(ch => ch.destroy())
+  innovationGrantPage.removeEventListener("click", onOpacity);
 }
 toInnovationGrant.addEventListener("click", showInnovationGrantPage);
 innovationGrantClose.addEventListener("click", closeInnovationGrantPage);
