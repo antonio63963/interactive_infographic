@@ -42,6 +42,12 @@ const organizationalProjectsCharts = [
 
 const allCharts = [];
 
+function onOpacity(e) {
+  if (e.target.classList.contains("click-opacity")) {
+    closeOrganizationalProjectsPage();
+  }
+}
+
 function initOrganizationalProjectsCharts() {
   const t = setTimeout(() => {
     organizationalProjectsCharts.forEach((b) =>
@@ -54,10 +60,12 @@ function initOrganizationalProjectsCharts() {
 function showOrganizationalProjectsPage(e) {
   displayPopup(organizationalProjectsPage);
   initOrganizationalProjectsCharts();
+  organizationalProjectsPage.addEventListener("click", onOpacity);
 }
 function closeOrganizationalProjectsPage() {
   hidePopup(organizationalProjectsPage);
   allCharts.forEach((b) => b.destroy());
+  organizationalProjectsPage.removeEventListener("click", onOpacity);
 }
 toOrganizationalProjects.addEventListener("click", showOrganizationalProjectsPage);
 organizationalProjectsClose.addEventListener("click", closeOrganizationalProjectsPage);

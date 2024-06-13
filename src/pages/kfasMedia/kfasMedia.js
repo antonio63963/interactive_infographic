@@ -48,14 +48,21 @@ const socialsChartData = {
   },
 }
 
+function onOpacity(e) {
+  if (e.target.classList.contains("click-opacity")) {
+    closeMathGrantPage();
+  }
+}
 
 function showKfasMediaPage(e) {
   displayPopup(kfasMediaPage);
   initTabs();
+  kfasMediaPage.addEventListener("click", onOpacity);
 }
 function closeMathGrantPage() {
   hidePopup(kfasMediaPage);
   closeTabs();
+  kfasMediaPage.removeEventListener("click", onOpacity);
 }
 toKfasMedia.addEventListener("click", showKfasMediaPage);
 kfasMediaClose.addEventListener("click", closeMathGrantPage);
