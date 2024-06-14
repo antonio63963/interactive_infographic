@@ -1,5 +1,6 @@
 include ../../common/ui/appHeaderDetails/appHeaderDetails.pug
 include ../../common/ui/sidebarIconItem/sidebarIconItem.pug
+include ../../common/ui/sidebarIconItem/sidebarIconItem.pug
 include ../../common/ui/popupPage/popupPage.pug
 include ../../common/ui/labelWithColor/labelWithColor.pug
 include ../../common/ui/lineWithDotInfo/lineWithDotInfo.pug
@@ -13,26 +14,21 @@ mixin ResearchNetworkingPage()
     buttonColor: '#B4DFFF'
     })(class="researchNetworkingPage")
     .container-research-networking 
-      //- .sidebar-vertical(class="sidebar-research-Networking")
-      //-   +sidebarIconItem({
-      //-     num: 12, 
-      //-     title: 'Events',
-      //-     color: '#EA5C3C', 
-      //-     icon: 'folderStarOrange'
-      //-     })(class="sidebar-horizontal-item moveToRight")
-      //-   +sidebarIconItem({
-      //-     num: 757, 
-      //-     title: 'Beneficiaries',
-      //-     color: '#EA5C3C', 
-      //-     icon: 'persons'
-      //-     })(class="sidebar-horizontal-item moveToRight")
-      //-   +sidebarIconItem({
-      //-     num: '64k', 
-      //-     title: 'KD Amount Approved',
-      //-     color: '#EA5C3C', 
-      //-     icon: 'kdOrange'
-      //-     })(class="sidebar-horizontal-item moveToRight")
-      //- .divider-vertical
+      .sidebar-vertical(class="sidebar-research-networking sidebar-three-items")
+        +sidebarIconItem({
+          num: 7, 
+          title: 'Events',
+          color: '#569FD6', 
+          icon: 'folderStarBlue'
+          })(class="sidebar-vertical-item moveToRight")
+        +sidebarIconItem({
+          num: 838, 
+          title: 'Beneficiaries',
+          color: '#569FD6', 
+          icon: 'persons'
+          })(class="sidebar-vertical-item moveToRight")
+
+      .divider-vertical
 
       .research-Networking-content
           h2 Beneficiaries

@@ -7,11 +7,15 @@
   display: flex;
   padding-bottom: 57px;
 
+  .sidebar-vertical-item {
+    width: 125px;
+  }
+
   .research-Networking-content {
     margin-top: 51px;
     display: flex;
     flex-direction: column;
-    padding: 0 20px;
+    padding: clamp(20px, 6rem, 60px);
 
     h2 {
       margin-bottom: 24px;
@@ -47,21 +51,6 @@
     .webinar {
       background-color: var(--color-orange);
     }
-    /* .results {
-      height: 10%;
-    }
-    .seminar {
-      height: 11%;
-    }
-    .conference {
-      height: 16%;
-    }
-    .kuwait {
-      height: 24%;
-    }
-    .webinar {
-      height: 37%;
-    } */
 
     /* description */
     .benefic-chart-description {
@@ -81,13 +70,11 @@
           align-items: center;
           width: 90px;
           min-width: 90px;
-          /* text-align: center; */
           font-weight: 700;
           margin-right: 10px;
         }
         .text {
           font-size: 14px;
-          /* max-width: 80%; */
           max-width: 360px;
         }
       }
@@ -95,11 +82,11 @@
   }
 }
 
-/* @media screen and (max-width: 992px) {
-  .research-networking-content {
-
+@media screen and (max-width: 992px) {
+  .container-research-networking {
+    flex-direction: column;
   }
-} */
+}
 
 @media screen and (max-width: 768px) {
   .container-researchnetworking {

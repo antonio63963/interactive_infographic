@@ -52,7 +52,7 @@ researchNetworkingClose.addEventListener("click", closeResearchNetworkingPage);
 //animation elements
 
 const sidebarIcons = document.querySelectorAll(
-  ".researchNetworkingPage .sidebar-horizontal-item"
+  ".researchNetworkingPage .sidebar-vertical-item"
 );
 const stackBars = Array.from(
   document.querySelectorAll(".research-networking-row .stack-chart-item")
