@@ -12,32 +12,30 @@ mixin ResearchCurationPage()
     headerColor: '#D6EDFF',
     buttonColor: '#B4DFFF'
     })(class="researchCurationPage")
-    //- main.main
-    //-   +appHeaderDetails({title: 'Research - Capacity Building Curations', closeClass: 'researchCurationClose'})(class="research-curation-header")
-    .container-researchCuration 
-      //- .sidebar-vertical(class="sidebar-research-curation")
-      //-   +sidebarIconItem({
-      //-     num: 12, 
-      //-     title: 'Events',
-      //-     color: '#EA5C3C', 
-      //-     icon: 'folderStarOrange'
-      //-     })(class="sidebar-horizontal-item moveToRight")
-      //-   +sidebarIconItem({
-      //-     num: 757, 
-      //-     title: 'Beneficiaries',
-      //-     color: '#EA5C3C', 
-      //-     icon: 'persons'
-      //-     })(class="sidebar-horizontal-item moveToRight")
-      //-   +sidebarIconItem({
-      //-     num: '64k', 
-      //-     title: 'KD Amount Approved',
-      //-     color: '#EA5C3C', 
-      //-     icon: 'kdOrange'
-      //-     })(class="sidebar-horizontal-item moveToRight")
-      //- .divider-vertical
 
-      .research-curation-content
-        
+    .container-researchCuration 
+      .sidebar-vertical(class="sidebar-research-curation sidebar-three-items")
+        +sidebarIconItem({
+          num: 12, 
+          title: 'Events',
+          color: '#569FD6', 
+          icon: 'folderStarBlue'
+          })(class="sidebar-vertical-item moveToRight")
+        +sidebarIconItem({
+          num: 757, 
+          title: 'Beneficiaries',
+          color: '#569FD6', 
+          icon: 'persons'
+          })(class="sidebar-vertical-item moveToRight")
+        +sidebarIconItem({
+          num: '64k', 
+          title: 'KD Amount Approved',
+          color: '#569FD6', 
+          icon: 'kdBlue'
+          })(class="sidebar-vertical-item moveToRight")
+      .divider-vertical
+
+      .research-curation-content   
         .col-binefic 
           h2 Beneficiaries
 

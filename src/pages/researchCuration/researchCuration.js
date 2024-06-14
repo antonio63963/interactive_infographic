@@ -31,7 +31,7 @@ researchCurationClose.addEventListener("click", closeResearchCurationPage);
 //animation elements
 
 const sidebarIcons = document.querySelectorAll(
-  ".researchCurationPage .sidebar-horizontal-item"
+  ".researchCurationPage .sidebar-vertical-item"
 );
 const chartInfo = document.querySelectorAll(
   ".researchCurationPage .chart-info"
