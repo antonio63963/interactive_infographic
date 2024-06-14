@@ -24,7 +24,7 @@ include ../../common/ui/mainScreenCard/mainScreenCard.pug
 include ../../common/ui/smallPrizeRow/smallPrizeRow.pug
 include ../../common/ui/appTab/appTab.pug
 include ../../common/ui/bigNumWithTitle/bigNumWithTitle.pug
-//- include ../../common/ui/boldTextRow/boldTextRow.pug
+
 
 +appPageLayout()
   +MathGrantPage()
@@ -50,6 +50,10 @@ include ../../common/ui/bigNumWithTitle/bigNumWithTitle.pug
 
 
   .main-container
+    header.index-header
+      .index-header-content 
+        img.index-logo(src=require("../../assets/svg/logo.svg"))
+        h1.index-header-title KFAS 2023 Achievements Highlights
     .main-row
       +mainScreenCard({
         title: 'Math and Science Education - Grants', 
