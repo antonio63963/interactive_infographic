@@ -1,14 +1,6 @@
 @import "../../common/styles/constants.css";
 @import "../../common/styles/animation.css";
 
-/* header.engagement-header {
-  background-color: #FFE4C1;
-
-  .header__close-button {
-    background-color: #FFCF90;
-  }
-} */
-
 .container-engagementScience {
   width: var(--app-width);
   max-width: calc(100vw);
@@ -16,6 +8,15 @@
   flex-direction: column;
   padding: 0 clamp(20px, 10rem, 50px);
   padding-bottom: 67px;
+
+  .sidebar-horizontal-icons-row {
+    display: flex;
+    flex-wrap: wrap;
+
+    .sidebar-horizontal-item {
+      width: 25%;
+    }
+  }
 
   .sidebar-engagement-science {
     padding: 42px 0 0 0;
@@ -30,7 +31,7 @@
   }
   .sidebar-description-item:first-child {
     font-weight: 700;
-    color: var(--color-blue);
+    color: var(--color-orange);
   }
 
   .col-binefic {
@@ -217,7 +218,7 @@
   .engagement-science-content {
     flex-direction: column;
     align-items: center;
-    
+
     .col-applications {
       width: 80%;
       margin-right: 0;
@@ -235,9 +236,9 @@
     ul {
       font-size: 14px;
     }
-    .sidebar-horizontal-item {
+    /* .sidebar-horizontal-item {
       max-width: 20%;
-    }
+    } */
   }
   .engagement-science-content {
     .num {
@@ -252,7 +253,6 @@
     .bar-chart {
       .description {
         width: 100%;
-        
       }
       .description-item {
         margin-right: 0;
@@ -260,7 +260,6 @@
       .bar-chart-graph {
         display: none;
       }
-
     }
   }
 
@@ -279,6 +278,28 @@
 
       .binefic-label {
         margin-left: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container-engagementScience {
+    .sidebar-horizontal {
+      flex-direction: column;
+    }
+    .sidebar-horizontal-icons-row {
+      width: 280px;
+      align-self: center;
+
+      .sidebar-horizontal-item {
+        width: 50%;
+        min-width: 50%;
+        margin-top: 16px;
+
+        .title {
+          width: 105px;
+        }
       }
     }
   }

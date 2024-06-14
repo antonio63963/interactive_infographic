@@ -21,31 +21,31 @@ mixin EngagementSciencePage()
           li.sidebar-description-item October 2022
           li.sidebar-description-item February 2023
           li.sidebar-description-item  June 2023
-
-        +sidebarIconItem({
-          num: 301, 
-          title: 'Applications Received',
-          color: '#569FD6', 
-          icon: 'personInputBlue'
-          })(class="sidebar-horizontal-item moveToRight")
-        +sidebarIconItem({
-          num: 130, 
-          title: 'Applications Approved',
-          color: '#569FD6', 
-          icon: 'personCheckedBlue'
-          })(class="sidebar-horizontal-item moveToRight")
-        +sidebarIconItem({
-          num: '651k', 
-          title: 'KD Amount Approved',
-          color: '#569FD6', 
-          icon: 'kdBlue'
-          })(class="sidebar-horizontal-item moveToRight")
-        +sidebarIconItem({
-          num: '20k', 
-          title: 'Participants',
-          color: '#569FD6', 
-          icon: 'persons'
-          })(class="sidebar-horizontal-item moveToRight")
+        .sidebar-horizontal-icons-row
+          +sidebarIconItem({
+            num: 301, 
+            title: 'Applications Received',
+            color: '#F47D39', 
+            icon: 'personInputOrange'
+            })(class="sidebar-horizontal-item moveToRight")
+          +sidebarIconItem({
+            num: 130, 
+            title: 'Applications Approved',
+            color: '#F47D39', 
+            icon: 'personCheckedOrange'
+            })(class="sidebar-horizontal-item moveToRight")
+          +sidebarIconItem({
+            num: '651k', 
+            title: 'KD Amount Approved',
+            color: '#F47D39', 
+            icon: 'kdOrange'
+            })(class="sidebar-horizontal-item moveToRight")
+          +sidebarIconItem({
+            num: '20k', 
+            title: 'Participants',
+            color: '#F47D39', 
+            icon: 'persons'
+            })(class="sidebar-horizontal-item moveToRight")
 
 
       .engagement-science-content

@@ -1,6 +1,7 @@
 @import '../../../common/styles/constants.css';
 
 .sidebar-horizontal {
+  /* width: 100%; */
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -8,7 +9,7 @@
   padding: 0 20px;
   
   .sidebar__img {
-    max-width: 30%;
+    width: 30%;
   }
 }
 .sidebar__img {

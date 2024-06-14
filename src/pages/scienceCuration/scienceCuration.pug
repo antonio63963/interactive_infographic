@@ -15,10 +15,29 @@ mixin ScienceCurationPage()
     buttonColor: '#B4DFFF'
     })(class="scienceCurationPage")
     .container-science-curation
-      .sidebar-vertical
-        img.sidebar__img.sidebar-icons-science-curation.moveToRight(src=require('../../assets/svg/scienceCuration/events.svg'))
-        img.sidebar__img.sidebar-icons-science-curation.moveToRight(src=require('../../assets/svg/scienceCuration/binefic.svg'))
-        img.sidebar__img.sidebar-icons-science-curation.moveToRight(src=require('../../assets/svg/scienceCuration/amount.svg'))
+      .sidebar-vertical.sidebar-three-items
+        +sidebarIconItem({
+          num: 14, 
+          title: 'Events', 
+          color: '#569FD6', 
+          icon: 'folderStarBlue'
+          })(class="sidebar-vertical-item moveToRight")
+        +sidebarIconItem({
+          num: 937, 
+          title: 'Beneficiaries', 
+          color: '#569FD6', 
+          icon: 'persons'
+          })(class="sidebar-vertical-item moveToRight")
+        +sidebarIconItem({
+          num: '137k', 
+          title: 'KD Amount Approved', 
+          color: '#569FD6', 
+          icon: 'kdBlue'
+          })(class="sidebar-vertical-item moveToRight")
+      //- .sidebar-vertical
+      //-   img.sidebar__img.sidebar-icons-science-curation.moveToRight(src=require('../../assets/svg/scienceCuration/events.svg'))
+      //-   img.sidebar__img.sidebar-icons-science-curation.moveToRight(src=require('../../assets/svg/scienceCuration/binefic.svg'))
+      //-   img.sidebar__img.sidebar-icons-science-curation.moveToRight(src=require('../../assets/svg/scienceCuration/amount.svg'))
       .divider-vertical
       .content-science-curration  
         h2.science-curation-binefic-titile Beneficiaries

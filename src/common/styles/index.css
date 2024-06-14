@@ -110,6 +110,7 @@ ul {
   margin-bottom: 60px;
 }
 
+
 @media screen and (max-width: 992px) {
   .sidebar-three-items.sidebar-icon-item {
     width: 30%;
@@ -125,6 +126,12 @@ ul {
     justify-content: space-around;
     padding: 0 20px;
   }
+  .sidebar-vertical.sidebar-three-items {
+    .sidebar-vertical-item {
+      width: 40%;
+    }
+  }
+
   .sidebar-vertical > img {
     /* margin: 40px 0; */
     max-width: 30%;

@@ -36,8 +36,8 @@ scienceCurationClose.addEventListener("click", closeMathCurationPage);
 
 //animation elements
 
-const sidebarIcons = document.querySelectorAll(
-  ".sidebar-icons-science-curation"
+const sidebarIcons = scienceCurationPage.querySelectorAll(
+  ".sidebar-vertical-item"
 );
 const mobileBarsSinceCuration = document.querySelectorAll(
   ".scienceCurationPage .bar-graph"
