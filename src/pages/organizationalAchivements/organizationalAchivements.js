@@ -15,9 +15,15 @@ const organizationalAchivementsClose = document.querySelector(
 const job = organizationalAchivementsPage.querySelector(".job");
 const courses = organizationalAchivementsPage.querySelector(".courses");
 const jobNum = organizationalAchivementsPage.querySelector(".candidates");
-console.log("JobNum: ", jobNum)
+console.log("JobNum: ", jobNum);
 const amountsOrgAchieve =
   organizationalAchivementsPage.querySelectorAll(".anime-text");
+
+function onOpacity(e) {
+  if (e.target.classList.contains("click-opacity")) {
+    closeOrganizationalAchivementsPage();
+  }
+}
 
 function showOrganizationalAchivementsPage(e) {
   displayPopup(organizationalAchivementsPage);
@@ -44,6 +50,7 @@ function showOrganizationalAchivementsPage(e) {
         isPercent: false,
       })
     );
+    organizationalAchivementsPage.addEventListener("click", onOpacity);
     clearTimeout(t);
   }, 100);
 }
@@ -52,6 +59,7 @@ function closeOrganizationalAchivementsPage() {
   hidePopup(organizationalAchivementsPage);
   job.classList.add("job-anime");
   courses.classList.add("courses-anime");
+  organizationalAchivementsPage.removeEventListener("click", onOpacity);
 }
 toOrganizationalAchivements.addEventListener(
   "click",

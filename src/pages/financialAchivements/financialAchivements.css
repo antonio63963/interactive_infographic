@@ -10,15 +10,6 @@
   width: 800px;
 }
 
-.financialAchivements__header {
-  background-color: #ffe4c1;
-  width: 100%;
-
-  .header__close-button {
-    background-color: #ffcf90;
-  }
-}
-
 .content-financial-achivements {
   padding: 40px 20px;
   display: flex;

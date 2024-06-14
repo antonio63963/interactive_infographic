@@ -14,12 +14,13 @@ mixin boldTextRow(options)
 
 
 mixin FinancialAchivementsPage()
-  +popupPage()(class="financialAchivementsPage")
-    .container-financial-achivements
-      +appHeaderDetails({
+  +popupPage({
         title: 'Financial Achievements', 
-        closeClass: 'financialAchivementsClose'
-        })(class="financialAchivements__header")
+        closeClass: 'financialAchivementsClose',
+        headerColor: '#ffe4c1',
+        buttonColor: '#ffcf90'
+        })(class="financialAchivementsPage")
+    .container-financial-achivements
       .content-financial-achivements
         .row 
           img.row-img(src=require("../../assets/svg/moneyHand.svg"))

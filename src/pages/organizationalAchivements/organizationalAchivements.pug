@@ -3,12 +3,13 @@ include ../../common/ui/appHeaderDetails/appHeaderDetails.pug
 include ../../common/ui/popupPage/popupPage.pug
 
 mixin OrganizationalAchivementsPage()
-  +popupPage()(class="organizationalAchivementsPage")
-    .container-organizationalAchivements
-      +appHeaderDetails({
+  +popupPage({
         title: 'Organizational Achievements', 
-        closeClass: 'organizationalAchivementsClose'
-        })(class="organizationalAchivements__header")
+        closeClass: 'organizationalAchivementsClose',
+        headerColor: '#D6EDFF',
+        buttonColor: '#B4DFFF'
+        })(class="organizationalAchivementsPage")
+    .container-organizationalAchivements
       .content-organizational-achivements
         .top-row
           section.job.job-anime 

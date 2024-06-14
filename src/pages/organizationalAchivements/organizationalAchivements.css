@@ -10,15 +10,6 @@
   width: 800px;
 }
 
-.organizationalAchivements__header {
-  background-color: #ffe4c1;
-  max-width: 800px;
-
-  .header__close-button {
-    background-color: #ffcf90;
-  }
-}
-
 .content-organizational-achivements {
   padding: 45px 20px 70px 20px;
   display: flex;

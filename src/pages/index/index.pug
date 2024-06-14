@@ -183,6 +183,14 @@ include ../../common/ui/appTab/appTab.pug
         .organizational-projects-card-row
           img(src=require("../../assets/svg/mainScreen/organizationalProjects1.svg"))
           img.last-child(src=require("../../assets/svg/mainScreen/organizationalProjects2.svg"))
+      +mainScreenCard({
+        title: 'Organizational Achievements', 
+        color: '#D6EDFF'
+        })(class="main-card toOrganizationalAchivements")
+      +mainScreenCard({
+        title: 'Financial Achievements', 
+        color: '#FFE4C1'
+        })(class="main-card toFinancialAchivements")    
         
 
 
@@ -200,6 +208,6 @@ include ../../common/ui/appTab/appTab.pug
 
       //- a.mock.toInnovationCurations(role= "button", href= '#') Innovation Curations
       //- a.mock.toPrizeWinners(role= "button", href= '#') Prizes Winners
-      a.mock.toOrganizationalAchivements(role= "button", href= '#') Organizational Achivements
+      //- a.mock.toOrganizationalAchivements(role= "button", href= '#') Organizational Achivements
       a.mock.toFinancialAchivements(role= "button", href= '#') Financial Achivements
 
