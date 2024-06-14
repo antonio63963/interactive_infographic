@@ -42,7 +42,7 @@ innovationGrantClose.addEventListener("click", closeInnovationGrantPage);
 
 //animation elements
 
-const sidebarIcons = document.querySelectorAll(".img-innovation-grant");
+const sidebarIcons = innovationGrantPage.querySelectorAll(".sidebar-vertical-item");
 const innovationBars = document.querySelectorAll(".innovationGrantPage .bar");
 const firstNumber = document.querySelector(
   ".innovationGrantPage .binefics-through"

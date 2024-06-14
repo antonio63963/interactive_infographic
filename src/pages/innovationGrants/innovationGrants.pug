@@ -1,5 +1,6 @@
 include ../../common/ui/popupPage/popupPage.pug
 include ../../common/ui/appHeaderDetails/appHeaderDetails.pug
+include ../../common/ui/sidebarIconItem/sidebarIconItem.pug
 include ../../common/ui/labelWithColor/labelWithColor.pug
 include ../../common/ui/genderChart/genderChart.pug
 include ../../common/ui/twoValuesRow/twoValuesRow.pug
@@ -14,11 +15,25 @@ mixin InnovationGrantPage()
      })(class="innovationGrantPage")
      
     .container-innovation-grant 
-      .sidebar-vertical 
-        img.sidebar__img.img-innovation-grant.moveToRight(src=require('../../assets/svg/innovationGrants/app.svg'))
-        img.sidebar__img.img-innovation-grant.moveToRight(src=require('../../assets/svg/innovationGrants/grants.svg'))
-        img.sidebar__img.img-innovation-grant.moveToRight(src=require('../../assets/svg/innovationGrants/amount.svg'))
+      .sidebar-vertical.sidebar-three-items 
+        +sidebarIconItem({
+          num: 85, title: 'Applications Requested', 
+          color: '#F36D20', 
+          icon: 'folderStarYellow'
+          })(class="sidebar-vertical-item moveToRight")
+        +sidebarIconItem({
+          num: 31, 
+          title: 'Grnats Provided', 
+          color: '#F36D20', icon: 'persons'
+          })(class="sidebar-vertical-item moveToRight")
+        +sidebarIconItem({
+          num: '21.4k', 
+          title: 'KD Amount', 
+          color: '#F36D20', 
+          icon: 'kdYellow'
+          })(class="sidebar-vertical-item moveToRight")
       .divider-vertical 
+
       .innovation-grant-binefics 
         h2.binefics-title Beneficiaries
         .binefics-chart
