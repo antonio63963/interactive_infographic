@@ -1,16 +1,10 @@
 @import "../../common/styles/constants.css";
 @import "../../common/styles/animation.css";
 
-/* .header {
-  background-color: var(--color-yellow-xl);
-
-  .header__close-button {
-    background-color: var(--color-yellow-l);
-  }
-} */
-
 .container-math-grant {
   display: flex;
+
+  
 }
 
 .mathGrant__graph-main {
