@@ -69,26 +69,35 @@ include ../../common/ui/appTab/appTab.pug
         color: '#D6EDFF'
         })(class="main-card toScienceCuration")
         img(src=require('../../assets/svg/mainScreen/scienceCuration.svg'))
+        //- ENGAGEMENT
       +mainScreenCard({
         title: 'Engagement in Science (Grants)', 
         color: '#FFE4C1'
-        })(class="main-card toEngagementScience")
-        img(src=require('../../assets/svg/mainScreen/engagementGrants.svg'))
+        })(class="main-card-big toEngagementScience")
+        .egagement-grants-card 
+          img(src=require('../../assets/svg/mainScreen/engagementGrants1.svg'))
+          img.img-last(src=require('../../assets/svg/mainScreen/engagementGrants2.svg'))
+        //- RESEARCH GRANTS
       +mainScreenCard({
         title: 'Research Grants', 
         color: '#FFE4C1'
-        })(class="main-card toResearchGrants")
-        img(src=require('../../assets/svg/mainScreen/researchGrants.svg'))
+        })(class="main-card-big toResearchGrants")
+        .research-grants-row
+          img(src=require('../../assets/svg/mainScreen/researchGrants.svg'))
+          img.img-last(src=require('../../assets/svg/mainScreen/researchGrants2.svg'))
       +mainScreenCard({
         title: 'Policy Research Grants', 
         color: '#FFE4C1'
         })(class="main-card toPolicyGrant")
         img(src=require('../../assets/svg/mainScreen/policyGrants.svg'))
+      //- RESEARCH CAPACITY
       +mainScreenCard({
         title: 'Research - Capacity Building Curations', 
         color: '#D6EDFF'
         })(class="main-card toResearchCuration")
-        img(src=require('../../assets/svg/mainScreen/capacityCuration.svg'))
+        .research-capacity-row
+          img.first-img(src=require('../../assets/svg/mainScreen/capacityCuration1.svg'))
+          img.last-img(src=require('../../assets/svg/mainScreen/capacityCuration2.svg'))
       +mainScreenCard({
         title: 'Research Promotion, Networking & Outreach', 
         color: '#D6EDFF'
@@ -164,9 +173,9 @@ include ../../common/ui/appTab/appTab.pug
         title: 'KFAS Social Media', 
         color: '#FFE4C1'
         })(class="main-card-big toKfasMedia")  
-        +appTab({actveColor: '#BE4EF9', id:"card-media-tab"})(class="active")
+        +appTab({actveColor: '#BE4EF9', id:"card-media-tab"})(class="active kfas-card-tab")
           img(src=require("../../assets/svg/mainScreen/insta.svg"))
-        img(src=require("../../assets/svg/mainScreen/kfasMediaChart.svg"))
+        img.chart(src=require("../../assets/svg/mainScreen/kfasMediaChart.svg"))
       +mainScreenCard({
         title: 'Organizational Development Projects', 
         color: '#FFE1D0'

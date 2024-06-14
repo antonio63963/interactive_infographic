@@ -65,6 +65,34 @@ a.mock.toKfasMedia {
     width: 510px;
   }
 
+  .egagement-grants-card {
+    display: flex;
+    align-items: flex-start;
+
+    .img-last {
+      margin-left: 35px;
+    }
+  }
+  .research-grants-row {
+    display: flex;
+    align-items: flex-start;
+
+    .img-last {
+      margin-left: 35px;
+      object-fit: contain;
+      max-width: 164px;
+    }
+  }
+  .research-capacity-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .first-img {
+      width: 90px;
+      margin-bottom: 10px;
+    }
+  }
   .research-networking-card {
     align-self: center;
     width: 470px;
@@ -100,6 +128,20 @@ a.mock.toKfasMedia {
   .assigned-projects-card {
     display: flex;
     justify-content: center;
+  }
+
+  /* KFAS MEDIA */
+  .toKfasMedia {
+    align-items: center;
+    .kfas-card-tab {
+      width: 100%;
+    }
+    .chart {
+      margin-top: 10px;
+      width: 100%;
+      max-width: 470px;
+      object-fit: contain;
+    }
   }
 
   /* PRIZE */
@@ -151,6 +193,25 @@ a.mock.toKfasMedia {
     .main-card-big {
       width: 100%;
     }
+
+    .research-grants-row {
+      justify-content: center;
+    }
+    .toEngagementScience {
+      width: 510px;
+    }
+    .toResearchCuration {
+      width: 510px;
+    }
+    .research-capacity-row {
+      flex-direction: row;
+      .first-img {
+        width: 180px;
+      }
+      .last-img {
+        margin-left: 35px;
+      }
+    }
     .toPrizeWinners {
       width: 510px;
     }
@@ -160,6 +221,19 @@ a.mock.toKfasMedia {
   .main-container {
     .main-row {
       width: 528px;
+    }
+
+    .toResearchCuration {
+      width: 246px;
+      .research-capacity-row {
+        flex-direction: column;
+        .first-img {
+          width: 90px;
+        }
+        .last-img {
+          margin-left: 0px;
+        }
+      }
     }
   }
 }
@@ -177,6 +251,24 @@ a.mock.toKfasMedia {
         height: 100%;
         width: 246px;
       }
+
+      .egagement-grants-card {
+        flex-direction: column;
+
+        .img-last {
+          margin-top: 24px;
+          margin-left: 0;
+        }
+      }
+      .research-grants-row {
+        flex-direction: column;
+
+        .img-last {
+          margin-top: 24px;
+          margin-left: 0;
+        }
+      }
+
       .research-networking-card {
         width: 100%;
 
