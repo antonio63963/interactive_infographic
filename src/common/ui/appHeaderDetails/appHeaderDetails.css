@@ -30,6 +30,7 @@
 @media screen and (max-width: 576px) {
   .header {
     align-items: start;
+    min-height: 116px;
   }
   .header__title {
     margin-top: 20px;

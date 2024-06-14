@@ -11,36 +11,55 @@ mixin ResearchGrantsPage()
     headerColor: '#FFE4C1',
     buttonColor: '#FFCF90'
     })(class="researchGrantsPage")
-    //- main.main
-    //-   +appHeaderDetails({title: 'Research Grants', closeClass: 'researchGrantsClose'})(class="research-grants-header")
-    .container-researchGrants 
-      //- +sidebarHorizontal()(class="sidebar-research-grants")
-      
 
-      //-   +sidebarIconItem({
-      //-     num: 301, 
-      //-     title: 'Applications Received',
-      //-     color: '#569FD6', 
-      //-     icon: 'personInputBlue'
-      //-     })(class="sidebar-horizontal-item moveToRight")
-      //-   +sidebarIconItem({
-      //-     num: 130, 
-      //-     title: 'Applications Approved',
-      //-     color: '#569FD6', 
-      //-     icon: 'personCheckedBlue'
-      //-     })(class="sidebar-horizontal-item moveToRight")
-      //-   +sidebarIconItem({
-      //-     num: '651k', 
-      //-     title: 'KD Amount Approved',
-      //-     color: '#569FD6', 
-      //-     icon: 'kdBlue'
-      //-     })(class="sidebar-horizontal-item moveToRight")
-      //-   +sidebarIconItem({
-      //-     num: '20k', 
-      //-     title: 'Participants',
-      //-     color: '#569FD6', 
-      //-     icon: 'persons'
-      //-     })(class="sidebar-horizontal-item moveToRight")
+    .container-researchGrants 
+      +sidebarHorizontal()(class="sidebar-research-grants")
+        ul 
+          li
+            span.year 2023 - 
+            span.text  Cycle 1
+          li
+            span.year 2023 - 
+            span.text Cycle 2 
+        .icons-row
+          +sidebarIconItem({
+            num: 201, 
+            title: 'Proposals Received',
+            color: '#F47D39', 
+            icon: 'personInputOrange'
+            })(class="sidebar-horizontal-item moveToRight")
+          +sidebarIconItem({
+            num: '51*', 
+            title: 'Proposals Approved',
+            subtitle: '*Includes proposals from previous cycles',
+            color: '#F47D39', 
+            icon: 'personCheckedOrange'
+            })(class="sidebar-horizontal-item moveToRight")
+            //- span.subtitle-sidebar-item 
+          +sidebarIconItem({
+            num: '1.17M', 
+            title: 'KD Amount Approved',
+            color: '#F47D39', 
+            icon: 'kdOrange'
+            })(class="sidebar-horizontal-item moveToRight")
+          +sidebarIconItem({
+            num: '94', 
+            title: 'Reports Submitted',
+            color: '#F47D39', 
+            icon: 'barsCheckedOrange'
+            })(class="sidebar-horizontal-item moveToRight")
+          +sidebarIconItem({
+            num: '95', 
+            title: 'Publications',
+            color: '#F47D39', 
+            icon: 'soundOrange'
+            })(class="sidebar-horizontal-item moveToRight")
+          +sidebarIconItem({
+            num: '57', 
+            title: 'Q1 Publications',
+            color: '#F47D39', 
+            icon: 'qOrange'
+            })(class="sidebar-horizontal-item moveToRight")
 
 
       .research-grants-institution

@@ -46,12 +46,12 @@ function animationResearchGrants() {
       item.style.width = width;
     }, idx * 100 + 50);
   });
-  // Array.from(sidebarIcons).reverse().forEach((item, idx) => {
-  //   const t = setTimeout(() => {
-  //     item.classList.remove("moveToRight");
-  //     clearTimeout(t);
-  //   }, idx * 100 + 50);
-  // });
+  Array.from(sidebarIcons).reverse().forEach((item, idx) => {
+    const t = setTimeout(() => {
+      item.classList.remove("moveToRight");
+      clearTimeout(t);
+    }, idx * 100 + 50);
+  });
   hiveIcons.forEach((item, idx) => {
     const t = setTimeout(() => {
       item.classList.remove("toTop");
@@ -65,9 +65,9 @@ function animationResearchGrants() {
 }
 
 function reverseAnimation() {
-  // sidebarIcons.forEach((item, idx) => {
-  //   item.classList.add("moveToRight");
-  // });
+  sidebarIcons.forEach((item, idx) => {
+    item.classList.add("moveToRight");
+  });
   institutionItemsChart.forEach((item, idx) => {
     item.style.width = 0;
   });

@@ -1,7 +1,6 @@
 @import "../../common/styles/constants.css";
 @import "../../common/styles/animation.css";
 
-
 .container-researchGrants {
   width: var(--app-width);
   max-width: calc(100vw);
@@ -13,7 +12,29 @@
 
   /* sidebar */
   .sidebar-research-grants {
-    padding: 42px 0 0 0;
+    ul {
+      width: 180px;
+      margin-right: 15px;
+    
+      .year, .text {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 27px;
+      }
+      .text {
+        color: var(--color-orange);
+      }
+    }
+    .icons-row {
+      display: flex;
+      flex-wrap: wrap;
+
+      .sidebar-horizontal-item {
+        width: 33%;
+        min-width: 33%;
+        margin-bottom: 48px;
+      }
+    }
   }
 
   .sidebar-horizontal-item {
@@ -140,7 +161,7 @@
     .research-grants-institution {
       flex-direction: column;
       align-items: center;
-  
+
       .institution-chart {
         margin-left: 0;
       }
@@ -157,6 +178,15 @@
         flex-direction: row;
         justify-content: center;
       }
+    }
+  }
+}
+@media screen and (max-width: 792px) {
+  .sidebar-research-grants {
+    flex-direction: column;
+
+    ul {
+      margin-bottom: 32px;
     }
   }
 }
@@ -225,6 +255,14 @@
 }
 @media screen and (max-width: 576px) {
   .container-researchGrants {
+    .sidebar-research-grants {
+      .icons-row {
+        .sidebar-horizontal-item {
+          width: 50%;
+          min-width: 50%;
+        }
+      }
+    }
     .research-grants-institution {
       .institution-chart {
         .research-grants-chart-item {
