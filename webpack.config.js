@@ -3,7 +3,6 @@ const fs = require("fs");
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const FileManagerPlugin = require("filemanager-webpack-plugin");
 
 const devMode = process.env.NODE_ENV === "development";
 
@@ -12,14 +11,6 @@ const entriesFiles = fileNames.reduce((acc, file) => {
   acc[file] = `./pages/${file}/${file}.js`;
   return acc;
 }, {});
-const htmlPages = fileNames.map(
-  (file) =>
-    new HtmlWebpackPlugin({
-      filename: devMode ? `pages/${file}.html` : `${file}.html`,
-      template: `./pages/${file}/${file}.pug`,
-      chunks: [file],
-    })
-);
 
 module.exports = {
   context: path.resolve(__dirname, "src"),
@@ -31,32 +22,19 @@ module.exports = {
     filename: devMode ? "[name].js" : "js/[name].[hash].js",
   },
   plugins: [
-    // new CopyWebpackPlugin({
-    //   patterns: [
-    //     {form: 'static', to: "static/[path][name].[contenthash][ext]"}
-    //   ]
-    // }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: devMode
         ? "[name].[contenthash].css "
         : "styles/[name].[contenthash].css",
     }),
-    // new FileManagerPlugin({
-    //   events: {
-    //     onEnd: {
-    //       copy: [
-    //         {
-    //           source: path.join("static"),
-    //           destination: "dist",
-    //         },
-    //       ],
-    //     },
-    //   },
-    // }),
-    ...htmlPages,
+    new HtmlWebpackPlugin({
+      filename: devMode ? `pages/index.html` : `index.html`,
+      template: `./pages/index/index.pug`,
+      chunks: fileNames,
+    })
   ],
-  // devtool: 'inline-source-map',
+
   devServer: {
     watchFiles: ["pages/index/index.html", "pages/auth/auth.html"],
     historyApiFallback: true,
