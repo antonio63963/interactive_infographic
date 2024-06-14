@@ -23,6 +23,8 @@ include ../financialAchivements/financialAchivements.pug
 include ../../common/ui/mainScreenCard/mainScreenCard.pug
 include ../../common/ui/smallPrizeRow/smallPrizeRow.pug
 include ../../common/ui/appTab/appTab.pug
+include ../../common/ui/bigNumWithTitle/bigNumWithTitle.pug
+//- include ../../common/ui/boldTextRow/boldTextRow.pug
 
 +appPageLayout()
   +MathGrantPage()
@@ -160,7 +162,7 @@ include ../../common/ui/appTab/appTab.pug
             ul.persons-lis
               li.persons-list-item Dr. Abdullah AI ShebliDr.
               li.persons-list-item Abdullah Sultan
-           
+
           +smallPrizeRow({
             title: 'Al-Sumait Prize 2022 winners',
             color: 'orange'
@@ -187,27 +189,35 @@ include ../../common/ui/appTab/appTab.pug
         title: 'Organizational Achievements', 
         color: '#D6EDFF'
         })(class="main-card toOrganizationalAchivements")
+        .organizational-achivements-col 
+          +bigNumWithTitle({
+            title: 'candidates',
+            subtitle: 'were interviewed',
+            num: 702
+            })
+            img.icon(src=require("../../assets/svg/mainScreen/peopleSpeak.svg"))
+          +bigNumWithTitle({
+            title: 'Kuwaitis',
+            subtitle: 'were hired',
+            num: 42
+            })
+            img.icon(src=require("../../assets/svg/mainScreen/peopleChecked.svg"))
+
       +mainScreenCard({
         title: 'Financial Achievements', 
         color: '#FFE4C1'
-        })(class="main-card toFinancialAchivements")    
-        
-
-
-
-          
-
-    .buttons-row 
-      a.mock.toPrivateSectorProjects(role= "button", href= '#') Private Sector Projects
-      //- a.mock.toOrganizationalProjects(role= "button", href= '#') Organizational Projects
-      //- a.mock.toInnovationGrant(role= "button", href= '#') Innovation grants
-
-      //- a.mock.toKfasMedia(role= "button", href= '#') KFAS Media
-
-      //- a.mock.toResearchCuration(role= "button", href= '#') Research Curation
-
-      //- a.mock.toInnovationCurations(role= "button", href= '#') Innovation Curations
-      //- a.mock.toPrizeWinners(role= "button", href= '#') Prizes Winners
-      //- a.mock.toOrganizationalAchivements(role= "button", href= '#') Organizational Achivements
-      a.mock.toFinancialAchivements(role= "button", href= '#') Financial Achivements
-
+        })(class="main-card toFinancialAchivements")  
+        .financial-achievements-col 
+          +boldTextRow({
+            leadingNum: 451, 
+            leadingText: null, 
+            leadingColor: '#F47D39', 
+            text: 'of companies contributed'
+            })(class="fin-ach-item") 
+          +boldTextRow({
+            leadingNum: 29.5, 
+            leadingText: 'million', 
+            leadingColor: '#F47D39', 
+            text: 'KD in contributions collected'
+            })(class="fin-ach-item") 
+          img.last-child(src=require("../../assets/svg/mainScreen/handMoney.svg"))
