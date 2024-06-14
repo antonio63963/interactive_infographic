@@ -93,7 +93,7 @@ ul {
   height: 100%;
   padding: 0 20px;
 }
-.sidebar-vertical-item{
+.sidebar-vertical-item {
   margin-top: 60px;
 }
 
@@ -111,6 +111,9 @@ ul {
 }
 
 @media screen and (max-width: 992px) {
+  .sidebar-three-items.sidebar-icon-item {
+    width: 30%;
+  }
   .divider-vertical {
     height: 1px;
     width: 90%;
@@ -138,5 +141,12 @@ ul {
   .sidebar-vertical-item {
     margin: 32px 12px;
   }
-  
+}
+
+@media screen and (max-width: 460px) {
+  .sidebar-three-items.sidebar-vertical,
+  .sidebar-three-items.sidebar-horizontal {
+    flex-direction: column;
+    align-items: center;
+  }
 }

@@ -12,13 +12,27 @@ mixin ScienceGrantPage()
     headerColor: '#ffe1d0',
     buttonColor: '#ffccaf'
     })(class="scienceGrantPage")
-    //- main.main
-    //-   +appHeaderDetails({title: 'Science Dissemination - Grants', closeClass: 'scienceGrantClose'})(class="scienceGrant__header")
+
     .container-science-grants  
-      +sidebarHorizontal()(class="scienceGrant__sidebar")  
-        img.sidebar__img.moveToRight(src=require('../../assets/svg/scienceGrant/app.svg'))
-        img.sidebar__img.moveToRight(src=require('../../assets/svg/scienceGrant/app_approved.svg'))
-        img.sidebar__img.moveToRight(src=require('../../assets/svg/scienceGrant/amount.svg'))
+      +sidebarHorizontal()(class="scienceGrant__sidebar sidebar-three-items")  
+        +sidebarIconItem({
+          num: 36, 
+          title: 'Applications Received', 
+          color: '#F47D39', 
+          icon: 'personInputOrange'
+          })(class="sidebar__img moveToRight")
+        +sidebarIconItem({
+          num: 18, 
+          title: 'Applications Approved', 
+          color: '#F47D39', 
+          icon: 'personCheckedOrange'
+          })(class="sidebar__img moveToRight")
+        +sidebarIconItem({
+          num: '170k', 
+          title: 'KD Amount Approved', 
+          color: '#F47D39', 
+          icon: 'kdOrange'
+          })(class="sidebar__img moveToRight")
 
       .chart-grants 
         .grant-ngo.scaleX.grant-item
