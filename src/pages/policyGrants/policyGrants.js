@@ -26,7 +26,7 @@ policyGrantClose.addEventListener("click", closePolicyResearchPage);
 
 //animation elements
 
-const sidebarIcons = document.querySelectorAll(".policy-grant-icon");
+const sidebarIcons = policyGrantPage.querySelectorAll(".policy-grant-icon");
 const domainItems = document.querySelectorAll(".policyGrantPage .domain-item");
 
 

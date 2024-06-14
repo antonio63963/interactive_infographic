@@ -1,21 +1,12 @@
 @import "../../common/styles/constants.css";
 @import "../../common/styles/animation.css";
 
-.policyGrant__header {
-  background-color: #d6edff;
+.container-policy-grants {
   width: 800px;
   max-width: 100vw;
-
-  .header__close-button {
-    background-color: #b4dfff;
-  }
-}
-
-.container-policy-grants {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 800px;
 }
 
 .policyGrant__sidebar {
@@ -25,6 +16,7 @@
 /* Content */
 .content-policy-grant {
   padding: 0 clamp(20px, 10rem, 60px);
+  width: 100%;
   display: flex;
   margin: 6px 0 62px 0;
 
@@ -50,7 +42,7 @@
         width: 10px;
         min-width: 10px;
         height: 10px;
-        background-color: var(--color-orange-l);
+        background-color: var(--color-blue);
         border-radius: 100%;
       }
       .domain-item-text {
