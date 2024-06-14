@@ -5,27 +5,26 @@
   width: var(--app-width);
   max-width: calc(100vw);
   display: flex;
-  flex-direction: column;
-  padding: 0 clamp(20px, 10rem, 50px);
+  padding: 0 clamp(20px, 4.5rem, 45px);
   padding-bottom: 67px;
 
-  .sidebar-innovationCurations-science {
-    padding: 42px 0 0 0;
+  .sidebar-innovation-curation {
+    padding-right: 38px;
+    padding-left: 0;
+    align-items: center;
+
+    .sidebar-vertical-item {
+      width: 170px;
+    }
   }
-  ul {
-    font-size: 16px;
-    line-height: 25.6px;
-    transition: all 1s ease-in-out;
-  }
-  .sidebar-horizontal-item {
-    width: 145px;
-  }
-  .sidebar-description-item:first-child {
-    font-weight: 700;
-    color: var(--color-blue);
+
+  .divider-vertical {
+    height: 700px;
+    margin-bottom: 0;
   }
 
   .innovation-curations-content {
+    padding-left: 60px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -183,6 +182,14 @@
 }
 
 @media screen and (max-width: 992px) {
+  .container-innovationCurations {
+    flex-direction: column;
+
+    .divider-vertical {
+      height: 0;
+      margin-bottom: 0;
+    }
+  }
   .innovation-curations-content {
     .innovation-curations-content {
       width: 80%;

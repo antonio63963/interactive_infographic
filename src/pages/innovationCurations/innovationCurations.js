@@ -36,7 +36,7 @@ innovationCurationsClose.addEventListener(
 //animation elements
 
 const sidebarIcons = document.querySelectorAll(
-  ".innovationCurationsPage .sidebar-horizontal-item"
+  ".innovationCurationsPage .sidebar-vertical-item"
 );
 const barsBase = document.querySelectorAll(".innovationCurationsPage .bar");
 const bineficMoblieCharts = document.querySelectorAll(
@@ -91,5 +91,5 @@ function reverseAnimation() {
     item.classList.add("scaleX");
     bineficMoblieCharts[idx].classList.add("scaleX");
   });
-  beneficsBySector.forEach(item => item.style.width = 0);
+  beneficsBySector.forEach((item) => (item.style.width = 0));
 }

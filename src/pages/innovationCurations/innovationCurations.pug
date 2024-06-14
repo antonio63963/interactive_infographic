@@ -16,6 +16,32 @@ mixin InnovationCurationsPage()
     })(class="innovationCurationsPage")
 
     .container-innovationCurations 
+      .sidebar-vertical(class="sidebar-innovation-curation sidebar-three-items")
+        +sidebarIconItem({
+          num: 70, 
+          title: 'Trainings',
+          color: '#569FD6', 
+          icon: 'education'
+          })(class="sidebar-vertical-item moveToRight")
+        +sidebarIconItem({
+          num: 6, 
+          title: 'Outreach Events',
+          color: '#569FD6', 
+          icon: 'folderStarBlue'
+          })(class="sidebar-vertical-item moveToRight")
+        +sidebarIconItem({
+          num: 1116, 
+          title: 'Beneficiaries',
+          color: '#569FD6', 
+          icon: 'persons'
+          })(class="sidebar-vertical-item moveToRight")
+        +sidebarIconItem({
+          num: '844K', 
+          title: 'KD Amount Approved',
+          color: '#569FD6', 
+          icon: 'kdBlue'
+          })(class="sidebar-vertical-item moveToRight")
+      .divider-vertical    
 
       .innovation-curations-content         
         h2.col-title Beneficiaries
@@ -115,11 +141,3 @@ mixin InnovationCurationsPage()
                   text: 'NGO'
                   })
                   img(src=require('../../assets/svg/globus.svg')) 
-
-
-
-
-
-
-
-

@@ -87,7 +87,7 @@ ul {
 }
 
 .sidebar-vertical {
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -97,11 +97,6 @@ ul {
   margin-top: 60px;
 }
 
-/* .divider-horizontal {
-  height: 1px;
-  width: 100%;
-  margin: 40px clamp(20px, 5rem, 50px);
-} */
 .divider-vertical {
   height: 100%;
   border: 1px solid var(--color-grey-l);
