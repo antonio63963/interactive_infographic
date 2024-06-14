@@ -185,16 +185,24 @@
   .container-innovationCurations {
     flex-direction: column;
 
+    .sidebar-innovation-curation {
+      padding-right: 0;
+    }
+
     .divider-vertical {
       height: 0;
-      margin-bottom: 0;
+      margin: 0;
+      width: 100%;
     }
-  }
-  .innovation-curations-content {
     .innovation-curations-content {
       width: 80%;
       margin-right: 0;
+      padding-left: 0;
       margin-bottom: 50px;
+
+      .benefic-section {
+        margin-left: 60px;
+      }
     }
   }
 }
