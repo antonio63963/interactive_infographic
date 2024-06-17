@@ -72,6 +72,7 @@ function animationEngagementScience() {
       numTo: bineficValuesList[idx],
       step: 3,
       interval: 100,
+      isPercent: true,
     });
   });
 }
