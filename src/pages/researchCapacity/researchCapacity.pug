@@ -15,29 +15,12 @@ mixin ResearchCapacityPage()
     })(class="researchCapacityPage")
 
     .container-research-capacity 
-      //- .sidebar-vertical(class="sidebar-research-capacity")
-      //-   +sidebarIconItem({
-      //-     num: 12, 
-      //-     title: 'Events',
-      //-     color: '#EA5C3C', 
-      //-     icon: 'folderStarOrange'
-      //-     })(class="sidebar-horizontal-item moveToRight")
-      //-   +sidebarIconItem({
-      //-     num: 757, 
-      //-     title: 'Beneficiaries',
-      //-     color: '#EA5C3C', 
-      //-     icon: 'persons'
-      //-     })(class="sidebar-horizontal-item moveToRight")
-      //-   +sidebarIconItem({
-      //-     num: '64k', 
-      //-     title: 'KD Amount Approved',
-      //-     color: '#EA5C3C', 
-      //-     icon: 'kdOrange'
-      //-     })(class="sidebar-horizontal-item moveToRight")
-      //- .divider-vertical
 
       .research-capacity-content
         h2 Capacity Building Program Applications
+        .legend-row 
+          +labelWithColor({color: '#F47D39', text: 'Received'})
+          +labelWithColor({color: '#7DC0F1', text: 'Approved'})
         .capacity-chart 
           .capacity-chart-description 
             span.capacity-description-item Scientific Missions

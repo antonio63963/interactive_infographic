@@ -17,7 +17,12 @@
     h2 {
       margin-bottom: 24px;
     }
-
+    .legend-row {
+      display: flex;
+      width: 250px;
+      justify-content: space-between;
+      margin: 20px;
+    }
     .capacity-chart {
       display: flex;
       max-width: 100%;
