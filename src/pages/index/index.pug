@@ -91,11 +91,6 @@ include ../../common/ui/bigNumWithTitle/bigNumWithTitle.pug
         .research-grants-row
           img(src=require('../../assets/svg/mainScreen/researchGrants.svg'))
           img.img-last(src=require('../../assets/svg/mainScreen/researchGrants2.svg'))
-      +mainScreenCard({
-        title: 'Policy Research Grants', 
-        color: '#FFE4C1'
-        })(class="main-card toPolicyGrant")
-        img(src=require('../../assets/svg/mainScreen/policyGrants.svg'))
       //- RESEARCH CAPACITY
       +mainScreenCard({
         title: 'Research - Capacity Building Curations', 
@@ -104,6 +99,12 @@ include ../../common/ui/bigNumWithTitle/bigNumWithTitle.pug
         .research-capacity-row
           img.first-img(src=require('../../assets/svg/mainScreen/capacityCuration1.svg'))
           img.last-img(src=require('../../assets/svg/mainScreen/capacityCuration2.svg'))
+      +mainScreenCard({
+        title: 'Policy Research Grants', 
+        color: '#FFE4C1'
+        })(class="main-card toPolicyGrant")
+        img(src=require('../../assets/svg/mainScreen/policyGrants.svg'))
+      
       +mainScreenCard({
         title: 'Research Promotion, Networking & Outreach', 
         color: '#D6EDFF'
