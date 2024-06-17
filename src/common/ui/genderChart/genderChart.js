@@ -3,7 +3,6 @@ import './genderChart.css';
 import { Chart } from "chart.js/auto";
 
 function initGenderChart(canvas, values, valuesColors) {
-  console.log(canvas, values, valuesColors);
   const options = {
     type: "doughnut",
     data: {

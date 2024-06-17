@@ -89,9 +89,7 @@ function desactivateTab(unselectedTab) {
 }
 
 function onTab(e) {
-  console.log(e.target.closest(".app-tab"), "TAB");
   const tab = e.target.closest(".app-tab");
-  console.log("ID: ", tab.attributes.id.value);
   const tabId = tab.attributes.id.value;
   tabs.forEach((t) => (t.id == tabId ? activateTab(t) : desactivateTab(t)));
 
@@ -101,8 +99,7 @@ function onTab(e) {
 
 function initTabs() {
   const activeTab = Array.from(tabs).find(t => t.classList.contains('active'));
-  console.log(activeTab, tabs)
-console.log(activeTab.attributes)
+
   activateTab(activeTab);
   tabs.forEach((t) => t.addEventListener("click", onTab));
   const t = setTimeout(() => {

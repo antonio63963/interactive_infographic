@@ -23,11 +23,12 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin({
-      filename: devMode
-        ? "[name].[contenthash].css "
-        : "styles/[name].[contenthash].css",
-    }),
+    // new MiniCssExtractPlugin({
+    //   filename: devMode
+    //     ? "[name].[contenthash].css "
+    //     : "styles/[name].[contenthash].css",
+    // }),
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       filename: devMode ? `pages/index.html` : `index.html`,
       template: `./pages/index/index.pug`,

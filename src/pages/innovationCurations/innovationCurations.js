@@ -3,7 +3,6 @@ import { displayPopup, hidePopup, animBarsStack } from "../index/index";
 import { initGenderChart } from "../../common/ui/genderChart/genderChart";
 
 const toInnovationCurations = document.querySelector(".toInnovationCurations");
-console.log(toInnovationCurations);
 const innovationCurationsClose = document.querySelector(
   ".innovationCurationsClose"
 );

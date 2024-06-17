@@ -15,7 +15,7 @@ const organizationalAchivementsClose = document.querySelector(
 const job = organizationalAchivementsPage.querySelector(".job");
 const courses = organizationalAchivementsPage.querySelector(".courses");
 const jobNum = organizationalAchivementsPage.querySelector(".candidates");
-console.log("JobNum: ", jobNum);
+
 const amountsOrgAchieve =
   organizationalAchivementsPage.querySelectorAll(".anime-text");
 

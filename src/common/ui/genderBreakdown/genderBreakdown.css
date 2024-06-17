@@ -12,9 +12,14 @@
     .gender-breakdown-svg-wrapper {
       max-width: 70%;
       flex-shrink: 2;
-      .gender-breakdown-svg {
+
+      .gender-breakdown-svg,
+      .gender-breakdown-vertical-svg {
         object-fit: contain;
         max-width: 100%;
+      }
+      .gender-breakdown-vertical-svg {
+        display: none;
       }
     }
     .gender-breakdown-row__col {
@@ -31,7 +36,20 @@
 }
 
 @media screen and (max-width: 576px) {
-  .gender-breakdown-row {
-    justify-content: center;
+  .gender-breakdown {
+    .gender-breakdown-row {
+      flex-direction: column;
+      align-items: center;
+
+      .gender-breakdown-svg-wrapper {
+        margin-bottom: 20px;
+        .gender-breakdown-svg {
+          display: none;
+        }
+        img.gender-breakdown-vertical-svg {
+          display: inline-block;
+        }
+      }
+    }
   }
 }

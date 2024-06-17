@@ -1,11 +1,9 @@
-import "../../common/styles/index.css";
 import "../../common/ui/twoValuesRow/twoValuesRow.css";
 import "./engagementScience.css";
 
 import { displayPopup, hidePopup, animatedCounter } from "../index/index";
 
 const toEngagementScience = document.querySelector(".toEngagementScience");
-console.log(toEngagementScience);
 const engagementScienceClose = document.querySelector(
   ".engagementScienceClose"
 );
@@ -47,7 +45,6 @@ const bineficMoblieCharts = document.querySelectorAll(
 const bineficVluesElements = document.querySelectorAll(
   ".engagementSciencePage .chart-graph .chart-value"
 );
-console.log("bin: ", bineficVluesElements);
 const barsValuesList = [100, 95, 80, 25, 8, 8, 3];
 const bineficValuesList = [56, 17, 12, 3, 5, 7];
 

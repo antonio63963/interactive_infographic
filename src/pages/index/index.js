@@ -94,9 +94,7 @@ function animatedCounter(options) {
   let numToShow = numFrom;
 
   const c = setTimeout(() => {
-    console.log(`${numTo} timeout start`);
     const t = setInterval(() => {
-      console.log("Interval");
       let difference = numTo - numToShow;
       if (numToShow < numTo) {
         if (difference >= step) {
@@ -111,7 +109,6 @@ function animatedCounter(options) {
       }
     }, interval ?? 100);
     clearTimeout(c);
-    console.log(`${numTo} timeout finish`);
   }, 500);
 }
 

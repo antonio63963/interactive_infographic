@@ -5,7 +5,7 @@ import { displayPopup, hidePopup, animatedCounter } from "../index/index";
 
 const toResearchCapacity = document.querySelector(".toResearchCapacity");
 const researchCapacityClose = document.querySelector(".researchCapacityClose");
-console.log(researchCapacityClose);
+
 const researchCapacityPage = document.querySelector(".researchCapacityPage");
 
 function onOpacity(e) {
