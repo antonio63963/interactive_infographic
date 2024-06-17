@@ -110,7 +110,7 @@
     }
     .description-item {
       margin-top: 10px;
-      margin-bottom: 19px;
+      margin-bottom: 16px;
       margin-right: 30px;
     }
 
@@ -209,10 +209,11 @@
     display: flex;
   }
   .binefic-chart-description {
+    margin-top: 24px;
     display: flex;
     flex-wrap: wrap;
     width: 277px;
-    height: 220px;
+    height: 120px;
 
     .binefic-label {
       margin-left: 22px;
