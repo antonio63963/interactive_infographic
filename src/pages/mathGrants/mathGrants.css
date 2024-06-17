@@ -3,14 +3,14 @@
 
 .container-math-grant {
   display: flex;
-
+  padding: 38px 0 60px 0;
   
 }
 
 .mathGrant__graph-main {
   display: flex;
   flex-direction: column;
-  padding-top: 57px;
+  padding-top: 20px;
   margin-left: clamp(20px, 6.1rem, 61px);
 
   .binefic-row {
