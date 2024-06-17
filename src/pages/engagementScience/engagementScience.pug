@@ -12,8 +12,7 @@ mixin EngagementSciencePage()
     headerColor: '#FFE4C1',
     buttonColor: '#FFCF90'
     })(class="engagementSciencePage")
-    //- main.main
-    //-   +appHeaderDetails({title: 'Engagement in Science (Grants)', closeClass: 'engagementScienceClose'})(class="engagement-header")
+
     .container-engagementScience 
       +sidebarHorizontal()(class="sidebar-engagement-science")
         ul.sidebar-horizontal-item.sidebar-description.moveToRight
@@ -47,7 +46,6 @@ mixin EngagementSciencePage()
             icon: 'persons'
             })(class="sidebar-horizontal-item moveToRight")
 
-
       .engagement-science-content
         .col-applications
           h2.col-title Applications Type
@@ -56,42 +54,42 @@ mixin EngagementSciencePage()
             .description
               +barChartItem({
                 title: 'Workshops',  
-                percent: '39%', 
+                percent: '100%', 
                 color: '#003D63',
                 num: 39
                 })(class="description-item")
               +barChartItem({
                 title: 'Conference', 
-                percent: '38%',
+                percent: '97%',
                 num: 38
                 })(class="description-item")
               +barChartItem({
                 title: 'Training',  
-                percent: '36%', 
+                percent: '92%', 
                 color: '#FFB455',
                 num: 36
                 })(class="description-item")
               +barChartItem({
                 title: 'Competitions',  
-                percent: '10%', 
+                percent: '25%', 
                 color: '#8DC6E2',
                 num: 10
                 })(class="description-item")
               +barChartItem({
                 title: 'Fairs', 
-                percent: '3%', 
+                percent: '8%', 
                 color: '#3F91BA',
                 num: 3
                 })(class="description-item")
               +barChartItem({
                 title: 'Seminars', 
-                percent: '3%', 
+                percent: '8%', 
                 color: '#A3A3A3',
                 num: 3
                 })(class="description-item")
               +barChartItem({
                 title: 'Festivals', 
-                percent: '1%', 
+                percent: '3%', 
                 color: '#D1D1D1',
                 num: 1
                 })(class="description-item")
