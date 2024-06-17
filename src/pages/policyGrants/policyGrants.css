@@ -11,6 +11,11 @@
 
 .policyGrant__sidebar {
   align-items: start;
+
+  .policy-grant-icon {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
 }
 
 /* Content */
