@@ -78,8 +78,12 @@
 
 @media screen and (max-width: 576px) {
   .content-math-curation {
+    align-items: center;
     .binefic-title {
       margin-left: 0;
+    }
+    .content-row {
+      width: 420px;
     }
     .gender-row {
       flex-direction: column;
