@@ -3,9 +3,18 @@
 
 .container-innovation-grant {
   display: flex;
+  padding: 34px 0 32px 0;
+
+  .divider-vertical {
+    height: 458px;
+  }
+  .sidebar-vertical-item {
+    margin-top: 10px;
+    margin-bottom: 24px;
+  }
 }
 .innovation-grant-binefics {
-  margin: 46px clamp(20px, 10rem, 76px);
+  margin: 12px clamp(20px, 10rem, 76px);
   display: flex;
   flex-direction: column;
 
