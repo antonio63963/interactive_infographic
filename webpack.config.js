@@ -1,45 +1,36 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const fs = require("fs");
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const devMode = process.env.NODE_ENV === "development";
 
-const fileNames = fs.readdirSync("./src/pages");
-const entriesFiles = fileNames.reduce((acc, file) => {
-  acc[file] = `./pages/${file}/${file}.js`;
-  return acc;
-}, {});
-
 module.exports = {
   context: path.resolve(__dirname, "src"),
-  entry: {
-    ...entriesFiles,
-  },
+  entry: './pages/index/index.js',
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: devMode ? "[name].js" : "js/[name].[hash].js",
   },
   plugins: [
     new CleanWebpackPlugin(),
-    // new MiniCssExtractPlugin({
-    //   filename: devMode
-    //     ? "[name].[contenthash].css "
-    //     : "styles/[name].[contenthash].css",
-    // }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: devMode
+        ? "[name].[contenthash].css "
+        : "styles/[name].[contenthash].css",
+      chunkFilename: devMode
+      ? "[name].[contenthash].css "
+      : "styles/[name].[contenthash].css",
+    }),
     new HtmlWebpackPlugin({
       filename: devMode ? `pages/index.html` : `index.html`,
       template: `./pages/index/index.pug`,
-      chunks: fileNames,
-    })
+    }),
   ],
 
   devServer: {
     watchFiles: ["pages/index/index.html", "pages/auth/auth.html"],
     historyApiFallback: true,
-    // port: 9000,
   },
   module: {
     rules: [

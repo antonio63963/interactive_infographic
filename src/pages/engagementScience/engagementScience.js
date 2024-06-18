@@ -1,5 +1,5 @@
 import "../../common/ui/twoValuesRow/twoValuesRow.css";
-import "./engagementScience.css";
+// import "./engagementScience.css";
 
 import { displayPopup, hidePopup, animatedCounter } from "../index/index";
 

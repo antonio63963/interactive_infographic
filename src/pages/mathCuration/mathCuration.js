@@ -1,4 +1,3 @@
-import "./mathCuration.css";
 import { displayPopup, hidePopup } from "../index/index.js";
 import { initBineficLogoChart } from "./components/bineficLogoChart/bineficLogoChart.js";
 import { initGenderChart } from "../../common/ui/genderChart/genderChart.js";

@@ -1,4 +1,3 @@
-import "./kfasMedia.css";
 import { displayPopup, hidePopup } from "../index/index.js";
 import { initSocialChart } from "../../common/ui/socialChart/socialChart.js";
 

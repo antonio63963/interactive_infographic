@@ -1,4 +1,3 @@
-import "./organizationalAchivements.css";
 import { displayPopup, hidePopup, animatedCounter } from "../index/index.js";
 
 const toOrganizationalAchivements = document.querySelector(

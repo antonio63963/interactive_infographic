@@ -1,4 +1,3 @@
-import './organizationalProjects.css';
 import { displayPopup, hidePopup } from "../index/index.js";
 import { initCardChart } from '../../common/ui/card/card.js';
 

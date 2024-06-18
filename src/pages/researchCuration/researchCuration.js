@@ -1,5 +1,4 @@
 import "../../common/ui/twoValuesRow/twoValuesRow.css";
-import "./researchCuration.css";
 
 import { displayPopup, hidePopup } from "../index/index";
 

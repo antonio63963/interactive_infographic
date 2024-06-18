@@ -1,5 +1,4 @@
 import "../../common/ui/twoValuesRow/twoValuesRow.css";
-import "./innovationGrants.css";
 
 import { displayPopup, hidePopup, animatedCounter } from "../index/index";
 import { initGenderChart } from "../../common/ui/genderChart/genderChart";

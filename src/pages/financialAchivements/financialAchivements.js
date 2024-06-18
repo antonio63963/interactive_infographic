@@ -1,4 +1,3 @@
-import './financialAchivements.css';
 import { displayPopup, hidePopup } from "../index/index.js";
 
 const toFinancialAchivements = document.querySelector(".toFinancialAchivements");
@@ -12,6 +11,7 @@ function onOpacity(e) {
 }
 
 function showFinancialAchivementsPage(e) {
+  console.log("WOWO")
   displayPopup(financialAchivementsPage);
   financialAchivementsPage.addEventListener("click", onOpacity);
 }

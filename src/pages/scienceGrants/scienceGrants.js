@@ -1,4 +1,3 @@
-import "./scienceGrants.css";
 import { displayPopup, hidePopup } from "../index/index.js";
 
 const toScienceGrant = document.querySelector(".toScienceGrant");

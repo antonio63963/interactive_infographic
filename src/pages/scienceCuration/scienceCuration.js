@@ -1,4 +1,3 @@
-import "./scienceCuration.css";
 import { displayPopup, hidePopup } from "../index/index.js";
 
 const toScienceCuration = document.querySelector(".toScienceCuration");

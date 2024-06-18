@@ -21,6 +21,28 @@
 @import "../ui/smallPrizeRow/smallPrizeRow.css";
 @import "../ui/bigNumWithTitle/bigNumWithTitle.css";
 
+@import "../../pages/assignedProjects/assignedProjects.css";
+@import "../../pages/engagementScience/engagementScience.css";
+@import "../../pages/financialAchivements/financialAchivements.css";
+@import "../../pages/innovationCurations/innovationCurations.css";
+@import "../../pages/innovationGrants/innovationGrants.css";
+@import "../../pages/kfasMedia/kfasMedia.css";
+@import "../../pages/mathCuration/mathCuration.css";
+@import "../../pages/mathGrants/mathGrants.css";
+@import "../../pages/organizationalAchivements/organizationalAchivements.css";
+@import "../../pages/organizationalProjects/organizationalProjects.css";
+@import "../../pages/pilotProjects/pilotProjects.css";
+@import "../../pages/policyGrants/policyGrants.css";
+@import "../../pages/privateSectorProjects/privateSectorProjects.css";
+@import "../../pages/prizesWinners/prizesWinners.css";
+@import "../../pages/researchCapacity/researchCapacity.css";
+@import "../../pages/researchCuration/researchCuration.css";
+@import "../../pages/researchGrants/researchGrants.css";
+@import "../../pages/researchNetworking/researchNetworking.css";
+@import "../../pages/scienceCuration/scienceCuration.css";
+@import "../../pages/scienceGrants/scienceGrants.css";
+
+
 * {
   margin: 0;
   padding: 0;

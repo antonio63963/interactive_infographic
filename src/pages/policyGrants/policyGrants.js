@@ -1,4 +1,3 @@
-import "./policyGrants.css";
 import { displayPopup, hidePopup } from "../index/index.js";
 
 const toPolicyGrant = document.querySelector(".toPolicyGrant");

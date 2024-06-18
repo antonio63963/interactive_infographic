@@ -1,5 +1,4 @@
 import "../../common/ui/twoValuesRow/twoValuesRow.css";
-import "./researchNetworking.css";
 
 import { displayPopup, hidePopup, animatedCounter } from "../index/index";
 

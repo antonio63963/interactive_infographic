@@ -1,4 +1,3 @@
-import "./prizesWinners.css";
 import { displayPopup, hidePopup } from "../index/index.js";
 
 const toPrizeWinners = document.querySelector(".toPrizeWinners");
