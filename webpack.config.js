@@ -25,6 +25,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: devMode ? `pages/index.html` : `index.html`,
       template: `./pages/index/index.pug`,
+      favicon: './assets/favicon_16.png'
     }),
   ],
 

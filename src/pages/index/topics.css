@@ -1,5 +1,5 @@
 .topics-row {
-  --gap: clamp(10px, 2rem, 20px);
+  --gap: clamp(5px, 2rem, 20px);
   display: flex;
   max-width: 100%;
   width: var(--app-width);

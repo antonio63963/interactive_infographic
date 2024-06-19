@@ -91,6 +91,10 @@
   .container-innovation-grant {
     flex-direction: column;
     align-items: center;
+
+    .divider-vertical {
+      height: 0;
+    }
   }
 }
 @media screen and (max-width: 576px) {

@@ -34,7 +34,9 @@
   }
   .header__title {
     margin-top: 20px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    margin-top: 0;
+    align-self: center;
   }
   .header__close-button {
     width: 63px;

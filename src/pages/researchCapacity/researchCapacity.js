@@ -26,6 +26,8 @@ function closeResearchCapacityPage() {
 toResearchCapacity.addEventListener("click", showResearchCapacityPage);
 researchCapacityClose.addEventListener("click", closeResearchCapacityPage);
 
+const doubleBarValues = [[100, 34], [40, 6], [7, 5], [4, 3]]
+
 //animation elements
 
 const sidebarIcons = document.querySelectorAll(
@@ -39,7 +41,7 @@ const theBigestFirstNum = Array.from(capacityChartItems)
   .sort((a, b) => a > b)[0];
 
 const percent = 100 / theBigestFirstNum;
-
+console.log("Percent: ", percent)
 function animationResearchCapacity() {
   Array.from(sidebarIcons)
     .reverse()
@@ -51,18 +53,23 @@ function animationResearchCapacity() {
     });
 
   capacityChartItems.forEach((item, idx) => {
-    const val1 = item.dataset.val1;
-    const val2 = item.dataset.val2;
+    const val1 = +item.getAttribute('data-val1');
+    const val2 = +item.getAttribute('data-val2');
+    // const val1 = item.dataset.val1;
+    // const val2 = item.dataset.val2;
+
+    const values = doubleBarValues[idx];
 
     const firstBar = item.querySelector(".first-bar");
     const secondBar = item.querySelector(".second-bar");
 
     const firstResult = firstBar.querySelector(".first-result");
     const secondResult = firstBar.querySelector(".second-result");
-
+    console.log('val1 : ', val1,": ", val1*percent)
+    console.log('val2 : ', val2,": ", val2*percent)
     const t = setTimeout(() => {
-      firstBar.style.width = `${val1 * percent}%`;
-      secondBar.style.width = `${val2 * percent}%`;
+      firstBar.style.width = `${values[0]}%`;
+      secondBar.style.width = `${values[1]}%`;
 
       animatedCounter({
         elem: firstResult,
