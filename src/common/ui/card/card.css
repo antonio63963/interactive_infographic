@@ -28,6 +28,7 @@
       justify-content: center;
 
       .card-column {
+        height: 78px;
         margin-top: 10px;
         display: flex;
         flex-direction: column;
