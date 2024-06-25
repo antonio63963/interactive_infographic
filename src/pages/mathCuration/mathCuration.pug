@@ -42,14 +42,14 @@ mixin MathCurationPage()
       .content-math-curation 
         h2.binefic-title Beneficiaries
         .content-row 
-          +bineficLogoChart({title: 'KFAS', title2: 'STEAM Day', amount: 205, amountStyle: 'orangeStyle', canvasId: 'binefic_1'})
+          +bineficLogoChart({title: 'KFAS', title2: 'STEAM Day', amount: 440, amountStyle: 'orangeStyle', canvasId: 'binefic_1'})
             img.bineficImg(src=require('../../assets/svg/mathCuration/kfas.svg'))
-          +bineficLogoChart({title: 'Google Certified', title2: 'Educator Training', amount: 118, amountStyle: 'orangeStyle', canvasId: 'binefic_2'})
+          +bineficLogoChart({title: 'Google Certified', title2: 'Educator Training', amount: 248, amountStyle: 'orangeStyle', canvasId: 'binefic_2'})
             img.bineficImg(src=require('../../assets/svg/mathCuration/google.svg'))
+          +bineficLogoChart({title: 'Maharaat', title2: 'Camp', amount: 147, amountStyle: 'orangeStyle', canvasId: 'binefic_4'})
+            img.bineficImg-camp(src=require('../../assets/svg/mathCuration/camp.svg'))
           +bineficLogoChart({title: 'Metaverse', title2: 'Hackathon', amount: 88, amountStyle: 'light-orange-style', canvasId: 'binefic_3'})
             img.bineficImg(src=require('../../assets/svg/mathCuration/hackathon.svg'))
-          +bineficLogoChart({title: 'Maharaat', title2: 'Camp', amount: 80, amountStyle: 'light-orange-style', canvasId: 'binefic_4'})
-            img.bineficImg-camp(src=require('../../assets/svg/mathCuration/camp.svg'))
           +bineficLogoChart({title: 'Korean', title2: 'STEM Trip', amount: 14, amountStyle: 'blue-style ', canvasId: 'binefic_5'})
             img.bineficImg(src=require('../../assets/svg/mathCuration/stem.svg'))
         .content-row.gender-row 
@@ -57,6 +57,6 @@ mixin MathCurationPage()
           .gender-info 
             +genderChart({man: 63, woman: 37, canvasId: 'gender_1'})
             .gender-info-col 
-              +twoValuesRow({val1: 60, val2: 542, isOrange: false})(class="male-info moveUp")
-              +twoValuesRow({val1: 40, val2: 364, isOrange: true})(class="male-info moveUp")
+              +twoValuesRow({val1: 60, isOrange: false})(class="male-info moveUp")
+              +twoValuesRow({val1: 40, isOrange: true})(class="male-info moveUp")
 
