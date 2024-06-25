@@ -16,8 +16,8 @@ const organizationalProjectsCharts = [
   {
     title: "dinner",
     canvas: document.querySelector('#organizational-project-2'),
-    values: [65, 35],
-    valuesColors: ["#FFB455", "#E0E0E0"],
+    values: [100, 0],
+    valuesColors: ["#f47d39", "#E0E0E0"],
   },
   {
     title: "automatic",
