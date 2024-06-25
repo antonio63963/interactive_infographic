@@ -51,7 +51,7 @@ function initInnovationGrantChart() {
     innovationGrantCharts = initGenderChart(
       canvas,
       [63, 37],
-      ["#F47D39", "#569FD6"]
+      ["#569FD6", "#F47D39"]
     );
 
     clearTimeout(t);

@@ -8,7 +8,7 @@ const canvas = document.querySelector("#innovation-grants-gender-1");
 const innovationGrantCharts= [];
 function initInnovationGrantChart() {
   const t = setTimeout(() => {
-    innovationGrantCharts.push(initGenderChart(canvas, [63, 37], ["#F47D39", "#569FD6"]));
+    innovationGrantCharts.push(initGenderChart(canvas, [63, 37], ["#569FD6", "#F47D39"]));
     clearTimeout(t);
   }, 500);
 }

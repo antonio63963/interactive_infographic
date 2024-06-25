@@ -46,8 +46,9 @@
       }
       .description-item {
         margin-top: 10px;
-        margin-bottom: 19px;
+        margin-bottom: 0;
         margin-right: 30px;
+        height: 32px;
       }
 
       .bar-chart-graph {
