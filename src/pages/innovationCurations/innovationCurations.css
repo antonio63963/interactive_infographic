@@ -142,6 +142,7 @@
       .twoValuesRow {
         width: 140px;
         justify-content: center;
+        margin: 10px 0;
       }
     }
 
