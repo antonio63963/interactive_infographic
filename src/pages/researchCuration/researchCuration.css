@@ -15,91 +15,98 @@
   .divider-vertical {
     height: 420px;
   }
-
-  .col-binefic {
-    width: 100%;
-    h2 {
-      margin-bottom: 24px;
-      text-align: center;
-    }
-    .chart-graph {
-      width: 280px;
-      height: 277px;
-      position: relative;
-
-      .chart-value {
-        position: absolute;
-        color: var(--color-white);
-        font-size: 36px;
-        font-weight: 600;
-      }
-      .orange {
-        top: 20%;
-        left: 40%;
-      }
-      .yellow {
-        top: 75%;
-        right: 40%;
-        font-size: 24px;
-      }
-      .dark {
-        bottom: 0%;
-        left: 37%;
-        font-size: 16px;
-      }
-      .light-blue {
-        bottom: 0%;
-        right: 5%;
-        font-size: 16px;
-        line-height: 16px;
-      }
-      /* dots descriptions */
-
-      .scopus {
-        left: -190px;
-        top: 60%;
-      }
-      .public {
-        left: -190px;
-        top: 82%;
-      }
-      .communicating {
-        right: -193px;
-        top: 15%;
-      }
-      .online {
-        right: -193px;
-        top: 82%;
-      }
-    }
-    .labelWithColor {
-      margin-bottom: 10px;
-    }
-    .labelWithColor.binefic-label {
-      align-items: start;
-    }
-    .labelWithColor .labelWithColor-text {
-      margin: 0;
-    }
-    .labelWithColor-square {
-      min-width: 15px;
-      margin-right: 10px;
-    }
-  }
 }
 
 .research-curation-content {
   display: flex;
   width: 100%;
   justify-content: center;
-  margin-top: 40px;
+  padding: 0 clamp(20px, 4.6rem, 46px);
+  padding-top: 13px;
 
-  .binefic-chart {
+  .chart {
     display: flex;
-    justify-content: center;
+    width: 100%;
   }
-  .binefic-chart-description-mobile {
-    display: none;
+
+  .research-curation-binefic-graph {
+    width: 40%;
+    height: 388px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    border: 2px solid var(--color-black);
+    border-width: 0 2px 0 0;
+    padding: 8px 0;
+
+    .item-s-cur {
+      height: 20px;
+      background: #ffb455;
+      transition: all 1s ease-in-out;
+      /* margin: 8px 0; */
+      transform-origin: right;
+    }
+
+    .communicating {
+      width: 100%;
+    }
+    .scopus {
+      width: 81%;
+    }
+    .public {
+      width: 43%;
+    }
+    .gpt {
+      width: 43%;
+    }
+    .ai {
+      width: 28%;
+    }
+    .unep {
+      width: 25%;
+    }
+    .medical {
+      width: 20%;
+    }
+    .april {
+      width: 13%;
+    }
+    .doctors {
+      width: 13%;
+    }
+    .octobor {
+      width: 13%;
+    }
+    .cv {
+      width: 8%;
+    }
+  }
+
+  .research-curation-binefic-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+
+    padding-top: 12px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+
+    .short-title {
+      width: 313px;
+    }
+
+    .bar-chart-row {
+      display: flex;
+
+      .num {
+        margin-right: 20px;
+      }
+    }
+    .bar-chart-item {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -127,9 +134,7 @@
     }
   }
   .research-curation-content {
-    .chart-info {
-      display: none;
-    }
+    
 
     .binefic-chart-description-mobile {
       margin-top: 24px;
@@ -145,20 +150,26 @@
       }
     }
   }
-
-
 }
 
 @media screen and (max-width: 576px) {
-  .col-binefic {
-    padding: 57px 20px 0 20px;
-    .binefic-chart {
-      flex-direction: column;
-      align-items: center;
+  .container-researchCuration {
+    height: 100%;
+  }
+  .research-curation-content {
+    padding-top: 40px;
+
+    .research-curation-binefic-graph {
+      display: none;
     }
-    .binefic-chart-description-mobile {
-      margin-left: 0px;
-      
+    .research-curation-binefic-info {
+      width: 100%;
+      padding: 0;
+      height: auto;
+
+      .bar-chart-item {
+        margin-bottom: 20px;
+      }
     }
   }
 }

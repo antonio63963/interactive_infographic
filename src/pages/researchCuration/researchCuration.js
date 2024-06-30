@@ -32,8 +32,11 @@ researchCurationClose.addEventListener("click", closeResearchCurationPage);
 const sidebarIcons = document.querySelectorAll(
   ".researchCurationPage .sidebar-vertical-item"
 );
-const chartInfo = document.querySelectorAll(
-  ".researchCurationPage .chart-info"
+const researchCurationBars = document.querySelectorAll(
+  ".research-curation-content .item-s-cur"
+);
+const researchCurationMobileBars = document.querySelectorAll(
+  ".research-curation-content .bar-graph"
 );
 
 function animationResearchCuration() {
@@ -45,9 +48,16 @@ function animationResearchCuration() {
         clearTimeout(t);
       }, idx * 100 + 50);
     });
-  chartInfo.forEach((info, idx) => {
+  researchCurationBars.forEach((info, idx) => {
     const t = setTimeout(() => {
-      info.classList.remove("sliceDown");
+      info.classList.remove("scaleX");
+
+      clearTimeout(t);
+    }, idx * 500 + 50);
+  });
+  researchCurationMobileBars.forEach((info, idx) => {
+    const t = setTimeout(() => {
+      info.classList.remove("scaleX");
 
       clearTimeout(t);
     }, idx * 500 + 50);
@@ -58,7 +68,10 @@ function reverseAnimation() {
   sidebarIcons.forEach((item) => {
     item.classList.add("moveToRight");
   });
-  chartInfo.forEach((item) => {
-    item.classList.add("sliceDown");
+  researchCurationBars.forEach((item) => {
+    item.classList.add("scaleX");
+  });
+  researchCurationMobileBars.forEach((item) => {
+    item.classList.add("scaleX");
   });
 }
