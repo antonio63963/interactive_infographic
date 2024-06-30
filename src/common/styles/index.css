@@ -20,6 +20,8 @@
 @import "../ui/mainScreenCard/mainScreenCard.css";
 @import "../ui/smallPrizeRow/smallPrizeRow.css";
 @import "../ui/bigNumWithTitle/bigNumWithTitle.css";
+@import "../ui/organizationalRow/organizationalRow.css";
+@import "../ui/organizationalColumn/organizationalColumn.css";
 
 @import "../../pages/assignedProjects/assignedProjects.css";
 @import "../../pages/engagementScience/engagementScience.css";

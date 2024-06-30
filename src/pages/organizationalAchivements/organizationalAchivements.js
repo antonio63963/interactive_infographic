@@ -12,11 +12,13 @@ const organizationalAchivementsClose = document.querySelector(
 
 //anime
 const job = organizationalAchivementsPage.querySelector(".job");
-const courses = organizationalAchivementsPage.querySelector(".courses");
-const jobNum = organizationalAchivementsPage.querySelector(".candidates");
+const courses = organizationalAchivementsPage.querySelector(".left-col");
 
 const amountsOrgAchieve =
-  organizationalAchivementsPage.querySelectorAll(".anime-text");
+  Array.from(organizationalAchivementsPage.querySelectorAll(".anime-text"));
+
+  amountsOrgAchieve.forEach(i => console.log("ORGANIZATIONAL: ", i.dataset.isPercent))
+  
 
 function onOpacity(e) {
   if (e.target.classList.contains("click-opacity")) {
@@ -28,25 +30,16 @@ function showOrganizationalAchivementsPage(e) {
   displayPopup(organizationalAchivementsPage);
   const t = setTimeout(() => {
     job.classList.remove("job-anime");
-    courses.classList.remove("courses-anime");
-
-    animatedCounter({
-      elem: jobNum,
-      numFrom: 0,
-      numTo: +jobNum.dataset.value,
-      step: 50,
-      interval: 100,
-      isPercent: false,
-    });
+    courses.classList.remove("trainings-anime");
 
     amountsOrgAchieve.forEach((item) =>
       animatedCounter({
         elem: item,
         numFrom: 0,
         numTo: +item.dataset.value,
-        step: 4,
+        step: +item.dataset.step || 4,
         interval: 100,
-        isPercent: false,
+        isPercent: +item.dataset.percent === 1,
       })
     );
     organizationalAchivementsPage.addEventListener("click", onOpacity);
@@ -57,7 +50,7 @@ function showOrganizationalAchivementsPage(e) {
 function closeOrganizationalAchivementsPage() {
   hidePopup(organizationalAchivementsPage);
   job.classList.add("job-anime");
-  courses.classList.add("courses-anime");
+  courses.classList.add("trainings-anime");
   organizationalAchivementsPage.removeEventListener("click", onOpacity);
 }
 toOrganizationalAchivements.addEventListener(
