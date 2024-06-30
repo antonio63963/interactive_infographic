@@ -39,7 +39,6 @@
       width: 100%;
 
       .description {
-        width: 260px;
         margin-left: 30px;
         display: flex;
         flex-direction: column;
@@ -137,8 +136,12 @@
       flex-direction: column;
       margin-top: 10px;
 
-      .inno-curations-value {
+      /* .inno-curations-value {
         margin-top: 12px;
+      } */
+      .twoValuesRow {
+        width: 140px;
+        justify-content: center;
       }
     }
 
@@ -176,6 +179,9 @@
           display: flex;
           flex-direction: column;
           margin-bottom: 16px;
+          .chart-info {
+            margin-bottom: 10px;
+          }
         }
       }
     }
@@ -196,25 +202,26 @@
       width: 100%;
     }
     .innovation-curations-content {
-      width: 80%;
+      width: 100%;
       margin-right: 0;
       padding-left: 0;
       margin-bottom: 50px;
 
-      .benefic-section {
-        margin-left: 60px;
-      }
+     
     }
   }
 }
 
 @media screen and (max-width: 768px) {
-  .container-innovationCurationsScience {
-    ul {
-      font-size: 14px;
-    }
-    .sidebar-horizontal-item {
-      max-width: 20%;
+  .container-innovationCurations {
+    
+
+    .chart-info {
+      & .chart-info-value {
+        .chart-info-text {
+          font-size: 14px;
+        }
+      }
     }
   }
 }

@@ -96,19 +96,23 @@ mixin InnovationCurationsPage()
             .gender-col
               +genderChart({canvasId: "innovation-curations-gender-1"})
               .gender-col
-                +twoValuesRow({val1: '63', val2: 486, isOrange: false})(class="inno-curations-value")
-                +twoValuesRow({val1: '37', val2: 261, isOrange: true})(class="inno-curations-value")
+                +twoValuesRow({val1: '63', isOrange: false})(class="inno-curations-value")
+                +twoValuesRow({val1: '37', isOrange: true})(class="inno-curations-value")
           section.benefic-section
             h2.benefic-title Beneficiaries by Sector 
             span.benefic-subtitle (Trainings courses)
             .benefic-chart 
               .chart-item(
-                style={'background-color': "#F47D39", width: 0},
-                data-value="670"
+                style={'background-color': "#FFB455", width: 0},
+                data-value="656"
               ) 
               .chart-item(
                 style={"background-color":"#569FD6", width: 0},
                 data-value="54"
+              ) 
+              .chart-item(
+                style={"background-color":"#F47D39", width: 0},
+                data-value="14"
               ) 
               .chart-item(
                 style={"background-color":"#969696", width: 0},
@@ -121,15 +125,20 @@ mixin InnovationCurationsPage()
             .benefic-chart-description 
               .benefic-chart-col
                 +chartInfoIcons({
-                  digit: 670, 
+                  digit: 656, 
                   text: 'Private'
                   })
-                  img(src=require('../../assets/svg/personOrange.svg')) 
+                  img(src=require('../../assets/svg/personYellow.svg')) 
                 +chartInfoIcons({
-                  digit: 4, 
-                  text: 'Academic / Research'
+                  digit: 14, 
+                  text: 'KFAS and Centers'
                   })
-                  img(src=require('../../assets/svg/hatGrey.svg'))    
+                  img(src=require('../../assets/svg/logo50.svg')) 
+                +chartInfoIcons({
+                  digit: 3, 
+                  text: 'NGO'
+                  })
+                  img(src=require('../../assets/svg/globus.svg')) 
               .benefic-chart-col
                 +chartInfoIcons({
                   digit: 54, 
@@ -137,7 +146,7 @@ mixin InnovationCurationsPage()
                   })
                   img(src=require('../../assets/svg/groupBlue.svg'))
                 +chartInfoIcons({
-                  digit: 3, 
-                  text: 'NGO'
+                  digit: 4, 
+                  text: 'Academic / Research'
                   })
-                  img(src=require('../../assets/svg/globus.svg')) 
+                  img(src=require('../../assets/svg/hatGrey.svg'))    
