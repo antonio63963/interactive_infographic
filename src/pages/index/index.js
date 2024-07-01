@@ -62,7 +62,10 @@ import "../organizationalProjects/organizationalProjects.js";
 import "../organizationalAchivements/organizationalAchivements.js";
 
 //Financial Achivements
-import "../financialAchivements/financialAchivements.js"
+import "../financialAchivements/financialAchivements.js";
+
+//Policy Papers
+import "../policyPapers/policyPapers.js";
 
 function displayPopup(popup) {
   popup.classList.remove("hidden");

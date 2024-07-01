@@ -1,0 +1,13 @@
+include ../../common/ui/appHeaderDetails/appHeaderDetails.pug
+include ../../common/ui/popupPage/popupPage.pug
+
+mixin PolicyPapersPage()
+  +popupPage({
+    title: 'Policy Research Papers', 
+    closeClass: 'policyPapersClose',
+    headerColor: '#FFE1D0',
+    buttonColor: '#FFCCAF'
+    })(class="policyPapersPage")
+
+    .container-policy-paperss  
+      
