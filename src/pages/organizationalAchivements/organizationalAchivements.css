@@ -63,6 +63,7 @@
     flex-direction: column;
     padding-top: 36px;
     padding-right: 24px;
+    transition: all 1s ease-in-out;
 
     .org-achivements-row {
       margin-bottom: 28px;
@@ -86,6 +87,10 @@
   .job-anime {
     transform: translateY(-100px);
     opacity: 0;
+  }
+
+  .move-up {
+    transform: translateY(100px);
   }
 }
 

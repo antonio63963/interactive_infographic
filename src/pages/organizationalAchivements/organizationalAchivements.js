@@ -14,11 +14,14 @@ const organizationalAchivementsClose = document.querySelector(
 const job = organizationalAchivementsPage.querySelector(".job");
 const courses = organizationalAchivementsPage.querySelector(".left-col");
 
-const amountsOrgAchieve =
-  Array.from(organizationalAchivementsPage.querySelectorAll(".anime-text"));
+const amountsOrgAchieve = Array.from(
+  organizationalAchivementsPage.querySelectorAll(".anime-text")
+);
 
-  amountsOrgAchieve.forEach(i => console.log("ORGANIZATIONAL: ", i.dataset.isPercent))
-  
+const orgColumn =
+  organizationalAchivementsPage.querySelector(".right-col-bottom");
+
+  console.log(orgColumn)
 
 function onOpacity(e) {
   if (e.target.classList.contains("click-opacity")) {
@@ -32,6 +35,8 @@ function showOrganizationalAchivementsPage(e) {
     job.classList.remove("job-anime");
     courses.classList.remove("trainings-anime");
 
+    orgColumn.classList.remove('move-up');
+console.log("MOVE UP")
     amountsOrgAchieve.forEach((item) =>
       animatedCounter({
         elem: item,
@@ -51,6 +56,7 @@ function closeOrganizationalAchivementsPage() {
   hidePopup(organizationalAchivementsPage);
   job.classList.add("job-anime");
   courses.classList.add("trainings-anime");
+  orgColumn.classList.add('move-up');
   organizationalAchivementsPage.removeEventListener("click", onOpacity);
 }
 toOrganizationalAchivements.addEventListener(
