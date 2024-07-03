@@ -99,6 +99,8 @@
     margin-left: 0;
 
     .gender-info-col {
+      width: 140px;
+      align-items: center;
       margin-left: 0;
     }
   }
