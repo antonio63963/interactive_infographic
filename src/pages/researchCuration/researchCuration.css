@@ -12,17 +12,28 @@
     margin-top: 0;
     margin-bottom: 20px;
   }
+  .sidebar-vertical-item:first-child {
+    margin-top: 16px;
+  }
   .divider-vertical {
-    height: 420px;
+    height: 480px;
   }
 }
 
 .research-curation-content {
   display: flex;
+  flex-direction: column;
   width: 100%;
   justify-content: center;
   padding: 0 clamp(20px, 4.6rem, 46px);
   padding-top: 13px;
+
+  h2.research-curation-title {
+    width: 100%;
+    /* margin-top: 20px; */
+    margin-bottom: 24px;
+    text-align: start;
+  }
 
   .chart {
     display: flex;
@@ -114,11 +125,16 @@
   .container-researchCuration {
     flex-direction: column;
 
+    .sidebar-vertical-item:first-child {
+      margin-top: 0;
+    }
+
     .divider-vertical {
       height: 0;
     }
   }
   .research-curation-content {
+    padding-top: 40px;
     flex-direction: column;
     align-items: center;
   }
