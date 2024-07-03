@@ -50,6 +50,16 @@
           display: inline-block;
         }
       }
+      .gender-breakdown-row__col {
+        margin-left: 0;
+        width: 197px;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .twoValues__val1 {
+          font-size: 42px;
+        }
+      }
     }
   }
 }
