@@ -5,40 +5,60 @@ import { initGenderChart } from "../../common/ui/genderChart/genderChart.js";
 const toMathCuration = document.querySelector(".toMathCuration");
 const mathCurationPage = document.querySelector(".mathCurationPage");
 const mathCurationClose = document.querySelector(".mathCurationClose");
-const mathCurationOpacity = mathCurationPage.querySelector('.click-opacity');
+const mathCurationOpacity = mathCurationPage.querySelector('.click-opacity'); 
 
 const bineficChartsData = [
   {
     title: "KFAS",
     canvas: document.querySelector("#binefic_1"),
+    num: 440,
     values: [205, 290],
     valuesColors: ["#F47D39", "#E0E0E0"],
   },
   {
     title: "google",
+    num: 248,
     canvas: document.querySelector("#binefic_2"),
     values: [118, 340],
     valuesColors: ["#F47D39", "#E0E0E0"],
   },
   {
-    title: "hackaton",
-    canvas: document.querySelector("#binefic_3"),
-    values: [88, 340],
-    valuesColors: ["#FFB455", "#E0E0E0"],
-  },
-  {
     title: "camp",
-    canvas: document.querySelector("#binefic_4"),
+    num: 88,
+    canvas: document.querySelector("#binefic_3"),
     values: [80, 340],
     valuesColors: ["#FFB455", "#E0E0E0"],
   },
   {
+    title: "hackaton",
+    num: 147,
+    canvas: document.querySelector("#binefic_4"),
+    values: [88, 340],
+    valuesColors: ["#FFB455", "#E0E0E0"],
+  },
+  {
     title: "STEM",
+    num: 14,
     canvas: document.querySelector("#binefic_5"),
     values: [14, 340],
     valuesColors: ["#569FD6", "#E0E0E0"],
   },
 ];
+
+// compute % for charts by total num
+const allBeneficsNum = bineficChartsData.reduce((acc, item) => {
+  return acc += item.num;
+}, 0);
+
+const bPercent = 100 / allBeneficsNum;
+bineficChartsData.forEach(item => {
+  const percentDone = Math.round(item.num * bPercent);
+  const percentRest = 100- percentDone;
+  item.values = [percentDone, percentRest];
+})
+
+
+console.log("ALL BENEFICS: ", bineficChartsData)
 
 const allCharts = [];
 
@@ -50,7 +70,7 @@ function initBineficsCharts() {
     allCharts.push(
       initGenderChart(
         document.querySelector("#gender_1"),
-        [60, 40], ["#569FD6", "#F47D39"]
+        [40, 60], ["#569FD6", "#F47D39"]
       )
     );
     clearTimeout(t);
