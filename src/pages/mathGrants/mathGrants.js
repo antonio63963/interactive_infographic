@@ -5,7 +5,7 @@ import { displayPopup, hidePopup } from "../index/index";
 
 const canvas = document.querySelector("#grant-chart");
 const mathGrants = {
-  values: [65, 25, 25, 7, 7, 7],
+  values: [62, 25, 25, 7, 7, 7],
   valuesColor: [
     "#F47D39",
     "#FFB455",
