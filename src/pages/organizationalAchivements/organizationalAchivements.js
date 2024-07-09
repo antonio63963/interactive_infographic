@@ -21,8 +21,6 @@ const amountsOrgAchieve = Array.from(
 const orgColumn =
   organizationalAchivementsPage.querySelector(".right-col-bottom");
 
-  console.log(orgColumn)
-
 function onOpacity(e) {
   if (e.target.classList.contains("click-opacity")) {
     closeOrganizationalAchivementsPage();
@@ -36,7 +34,7 @@ function showOrganizationalAchivementsPage(e) {
     courses.classList.remove("trainings-anime");
 
     orgColumn.classList.remove('move-up');
-console.log("MOVE UP")
+
     amountsOrgAchieve.forEach((item) =>
       animatedCounter({
         elem: item,
