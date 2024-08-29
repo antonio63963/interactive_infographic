@@ -26,8 +26,10 @@ policyGrantClose.addEventListener("click", closePolicyResearchPage);
 //animation elements
 
 const sidebarIcons = policyGrantPage.querySelectorAll(".policy-grant-icon");
-const domainItems = document.querySelectorAll(".policyGrantPage .domain-item");
-
+const domainItems = document.querySelectorAll(
+  ".policyGrantPage .policy-grant-table-row"
+);
+// const domainItems = document.querySelectorAll(".policyGrantPage .domain-item");
 
 function animationMathGrant() {
   Array.from(sidebarIcons)
@@ -38,7 +40,7 @@ function animationMathGrant() {
         clearTimeout(t);
       }, idx * 100 + 50);
     });
-    domainItems.forEach((item, idx) => {
+  domainItems.forEach((item, idx) => {
     const t = setTimeout(() => {
       item.classList.remove("moveUp");
       clearTimeout(t);
