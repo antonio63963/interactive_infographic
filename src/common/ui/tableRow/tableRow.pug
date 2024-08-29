@@ -1,0 +1,15 @@
+
+mixin tableColItem(options) 
+  -const {text, isHeader} = options || {};
+  .tableColItem(class!= attributes.class)
+    if(isHeader)
+      h3.tableRow-title= text 
+    else 
+      p=text 
+
+mixin tableRow(options) 
+  -const {col1, col2, col3, isHeader} = options || {};
+  .tableRow(class!= attributes.class)
+    +tableColItem({text: col1, isHeader: isHeader})
+    +tableColItem({text: col2, isHeader: isHeader})
+    +tableColItem({text: col3, isHeader: isHeader})

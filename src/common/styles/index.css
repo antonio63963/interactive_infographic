@@ -22,6 +22,7 @@
 @import "../ui/bigNumWithTitle/bigNumWithTitle.css";
 @import "../ui/organizationalRow/organizationalRow.css";
 @import "../ui/organizationalColumn/organizationalColumn.css";
+@import "../ui/tableRow/tableRow.css";
 
 @import "../../pages/assignedProjects/assignedProjects.css";
 @import "../../pages/engagementScience/engagementScience.css";

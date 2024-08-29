@@ -32,6 +32,7 @@ module.exports = {
   devServer: {
     watchFiles: ["pages/index/index.html", "pages/auth/auth.html"],
     historyApiFallback: true,
+    port: 3000,
   },
   module: {
     rules: [

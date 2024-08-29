@@ -2,6 +2,7 @@ include ../../common/ui/appHeaderDetails/appHeaderDetails.pug
 include ../../common/ui/popupPage/popupPage.pug
 include ../../common/ui/sidebarHorizontal/sidebarHorizontal.pug
 include ../../common/ui/sidebarIconItem/sidebarIconItem.pug
+include ../../common/ui/tableRow/tableRow.pug
 
 mixin PolicyGrantPage()
   +popupPage({
@@ -47,4 +48,26 @@ mixin PolicyGrantPage()
             li.domain-item.moveUp
               .dot 
               p.domain-item-text Development of a National Prescribing Competency Framework for Kuwait
+          
+          +tableRow({
+            isHeader: true,
+            col1: 'Project',
+            col2: 'Principle Investigator\n(PI) institute',
+            col3: 'Domain'
+          })    
+          +tableRow({
+            col1: 'Kuwait Energy Outlook - Building an Online Energy Planning Dashboard',
+            col2: 'Kuwait Institute for Scientific Research (KISR)',
+            col3: 'Energy'
+          })    
+          +tableRow({
+            col1: 'Preparing engineers for the sustainable future: embedding the new Kuwait 2035 vision into engineering',
+            col2: 'University of Kuwait (AUK) ',
+            col3: 'Education'
+          })    
+          +tableRow({
+            col1: 'Development of a National Prescribing Competency Framework for Kuwait Kuwait',
+            col2: 'Kuwait University',
+            col3: 'Education'
+          })    
                 

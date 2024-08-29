@@ -20,13 +20,14 @@
 
 /* Content */
 .content-policy-grant {
-  padding: 0 clamp(20px, 10rem, 60px);
+  padding: 0 clamp(20px, 4.5rem, 45px) 0 clamp(20px, 6rem, 60px);
   width: 100%;
   display: flex;
   margin: 6px 0 62px 0;
 
   img.policy-grant-icon {
     transition: all 1s ease-in-out;
+    align-self: flex-start;
   }
 
   .policy-grant-col {
