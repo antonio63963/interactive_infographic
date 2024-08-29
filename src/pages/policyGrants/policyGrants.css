@@ -64,6 +64,10 @@
   .content-policy-grant {
     flex-direction: column;
     align-items: center;
+
+    img.policy-grant-icon {
+      align-self: center;
+    }
     
     .policy-grant-col {
       margin: 40px 0 0 0;
